@@ -1,7 +1,9 @@
 package com.coderscampus.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
@@ -10,7 +12,7 @@ public class User {
 	 private String username;
 	 private String password;
 	 
-	 @Id
+	 @Id @GeneratedValue
 	public Long getId() {
 		return id;
 	}
