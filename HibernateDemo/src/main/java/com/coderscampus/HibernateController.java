@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,8 +34,19 @@ public class HibernateController {
 		return user;
 	}
 	
+	@RequestMapping(value = "user/{id}", method = RequestMethod.POST)
+	private @ResponseBody User updateUser(@PathVariable Long id, @RequestParam String userName, @RequestParam String password) {
+		User user = userRepository.findOne(id);
+		
+		user.setUsername(userName);
+		user.setPassword(password);
+
+		userRepository.save(user);
+		return user;
+	}
+	
 	@RequestMapping(value="user/{id}", method= RequestMethod.DELETE)
-	private @ResponseBody void deleteUser(@RequestParam Long id){
+	private @ResponseBody void deleteUser(@PathVariable Long id){
 		userRepository.delete(id);
 	}
 }
