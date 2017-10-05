@@ -8,18 +8,30 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+
 public class Customer {
 	private Long id;
 	private String firstName;
 	private String lastName;
+	private String emailAddress;
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
 	private Set<Order> orders = new HashSet<>();
+
+	@Id
+	@GeneratedValue
 	public Long getId() {
 		return id;
 	}
-	@Id
-	@GeneratedValue
+
 	public void setId(Long id) {
 		this.id = id;
 	}

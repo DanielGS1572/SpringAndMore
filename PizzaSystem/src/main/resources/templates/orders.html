@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Please place your order</title>
+</head>
+
+<body>
+	<h1>Create your order</h1>
+	<div th:each="pizza : ${order.pizzas}">
+		<fieldset>
+		<legend th:text = "${'Pizza #' + (pizza.id)}"></legend>
+		Size <span th:text="${pizza.size}"></span><br/>
+		Crust <span th:text="${pizza.crustType}"></span><br/>
+		Toppings <span th:each="topping, status : ${pizza.toppings}" th:text="${status.last ? topping.description  : topping.description + ', '}"></span><br/>
+		Pizza id: <span th:text="${pizza.id}"></span><br/>
+		</fieldset>
+		
+	</div><form action="" method="post">
+		<button>Add Pizza to Order</button></form>
+</body>
+</html>

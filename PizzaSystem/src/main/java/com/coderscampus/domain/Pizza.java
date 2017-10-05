@@ -14,10 +14,10 @@ import javax.persistence.ManyToOne;
 public class Pizza {
 	private Long id;
 	private Order order;
-	private Set<Topping> topping = new HashSet<>();
+	private Set<Topping> toppings = new HashSet<>();
 	
 	private String size;
-	private String crusType;
+	private String crustType;
 	
 	@Id
 	@GeneratedValue
@@ -35,11 +35,11 @@ public class Pizza {
 		this.order = order;
 	}
 	@ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "pizzas")
-	public Set<Topping> getTopping() {
-		return topping;
+	public Set<Topping> getToppings() {
+		return toppings;
 	}
-	public void setTopping(Set<Topping> topping) {
-		this.topping = topping;
+	public void setToppings(Set<Topping> topping) {
+		this.toppings = topping;
 	}
 	public String getSize() {
 		return size;
@@ -47,11 +47,11 @@ public class Pizza {
 	public void setSize(String size) {
 		this.size = size;
 	}
-	public String getCrusType() {
-		return crusType;
+	public String getCrustType() {
+		return crustType;
 	}
-	public void setCrusType(String crusType) {
-		this.crusType = crusType;
+	public void setCrustType(String crusType) {
+		this.crustType = crusType;
 	}
 	
 	
