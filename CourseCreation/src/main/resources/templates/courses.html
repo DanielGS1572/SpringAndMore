@@ -14,16 +14,22 @@
 <script type="text/javascript">
 	$(function(){
 		$("#create-course-dialog").dialog({
-			autoOpen:true,
+			autoOpen:false,
 			title:"Create course",
 			buttons:{
 				"Create course": function(){
-					alert("You clicked create course");
+					$("#createCourseForm").submit();
 				},
 				Cancel: function(){
 					$("#create-course-dialog").dialog("close");
 				}
+		},
+		close: function(){
+			$("#create-course-dialog").dialog("close");
 		}
+		});
+		$("#createCourse").click(function(){
+			$("#create-course-dialog").dialog("open");
 		});
 	});
 </script>
@@ -39,7 +45,7 @@
 	<div th:if="${#lists.isEmpty(courses)}">There are no courses</div>
 
 	<div id="create-course-dialog">
-		<form action="" th:object="${courses}">
+		<form id="createCourseForm" action="" th:object="${courses}" method="post">
 			<fieldset>
 				Course name: <input type="text" th:field="${course.name}"/>
 			</fieldset>

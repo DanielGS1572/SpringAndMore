@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 public class Course {
 	private String Name;
 	private Long id;
-	private Set<Lesson> lessons = new HashSet<>();
+	private Set<Section> sections = new HashSet<>();
 	
 	@Id
 	@GeneratedValue
@@ -34,12 +34,13 @@ public class Course {
 		Name = name;
 	}
 	@OneToMany(fetch= FetchType.EAGER, cascade=CascadeType.ALL, mappedBy="course")
-	public Set<Lesson> getLessons() {
-		return lessons;
+	public Set<Section> getSections() {
+		return sections;
 	}
 
-	public void setLessons(Set<Lesson> lessons) {
-		this.lessons = lessons;
+	public void setSections(Set<Section> sections) {
+		this.sections = sections;
 	}
+	
 	
 }

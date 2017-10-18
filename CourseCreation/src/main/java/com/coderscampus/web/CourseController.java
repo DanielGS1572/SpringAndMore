@@ -44,7 +44,8 @@ public class CourseController {
 	public String editCourseGet(@PathVariable Long courseId, ModelMap map){
 		Course course = courseRepository.findOne(courseId);
 		map.put("course", course);
-		map.put("lessons", course.getLessons());
+		map.put("sections",course.getSections());
+		
 		return "editCourse";
 	}
 	

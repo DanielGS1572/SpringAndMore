@@ -10,14 +10,15 @@ public class Lesson {
 	private Long id;
 	private Integer number;
 	private String title;
-	private Course course;
+	private Section section;
+	
 	
 	@ManyToOne
-	public Course getCourse() {
-		return course;
+	public Section getSection() {
+		return section;
 	}
-	public void setCourse(Course course) {
-		this.course = course;
+	public void setSection(Section section) {
+		this.section = section;
 	}
 	@Id
 	@GeneratedValue
