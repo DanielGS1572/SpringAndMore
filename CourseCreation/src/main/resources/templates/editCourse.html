@@ -14,47 +14,110 @@
 
 
 <script type="text/javascript">
+	/*<![CDATA[*/
+		var courseId = /*[[${course.id}]]*/ '1';
 	$(function() {
-		$("create-section-form").dialog({
-			autoOpen:false,
-			title: "Create section",
-			width: 350,
+		$("#create-lesson-form").dialog({
+			autoOpen: false,
+			title:"Create lesson",
 			buttons:{
-				"create section": function(){
-					
+				"Create lesson": function(){
+					 $.ajax({
+	  					  url: "createLesson",
+	  					  type: "post",
+	  					  dataType: "json",
+	  					  data: {"courseId": courseId, "sectionId": sectionId, "lessonTitle": $("#lessonTitle").val(), 
+	  						  "lessonNumber": $("#lessonNumber").val()},
+	  					  },
+	  				    success: function (data) {
+	  				    	console.log(data);
+	  				    	$("#create-section-dialog").dialog("close");
+//	   				    	clearFields();
+	  				    	location.reload();
+	  				    },
+	  				    error: function () {
+	  				    	console.log("error");
+	  				    }
+	  				  });
 				},
 				Cancel: function(){
-					
+					$("#create-lesson-form").dialog("close"); 
 				}
 			},
 			close: function(){
-				$("#create-section-form").dialog("close");
+				$("#create-lesson-form").dialog("close"); 
 			}
-		})
-		$("#createSection").click(function(){
-			$("#create-section-form").dialog("open");
 		});
-	});
+		$("#create-section-dialog").dialog({
+  		  autoOpen: false,
+  		  title: "Create New Section",
+  		  buttons: {
+  			  "Create Section": function () {
+  				  $.ajax({
+  					  url: "createSection",
+  					  type: "post",
+  					  dataType: "json",
+  					  data: {"courseId": courseId, "sectionName": $("#sectionName").val()},
+  				    success: function (data) {
+  				    	console.log(data);
+  				    	$("#create-section-dialog").dialog("close");
+//   				    	clearFields();
+  				    	location.reload();
+  				    },
+  				    error: function () {
+  				    	console.log("error");
+  				    }
+  				  });
+  			  },
+  			  cancel: function () {
+  				  $("#create-section-dialog").dialog("close");
+  			  }
+  		  },
+  		  close: function () {
+  			  $("#create-section-dialog").dialog("close");
+  		  }
+  	  });
+  	  
+  	  $("#createSection").click(function () {
+  		  $("#create-section-dialog").dialog("open");
+  	  });
+    });
+	/*]]>*/
 </script>
 </head>
 <body>
 	<h2 th:text="${'Editing course: ' + {course.name}}">
 		Editing course number <span th:text="${courseId}"></span>
 	</h2>
-	<div th:each="section : ${sections}" th:object="${section}">
-		<span th:text="${section.name}"></span>
+	<div th:each="section : ${sections}" th:object="${section}" style="margin-top: 1 em">
+		<fieldset>
+			<span th:id="${'section' + {section.id}}" th:text="${section.name}"></span>
+			<div th:each="lesson : ${section.lessons}" th:object="${lesson}">
+				<span th:text="${'Lesson #' + {lesson.number} + ': ' + {lesson.title}}"></span>
+			</div>
+			<br/>
+			<button th:id="${'createLesson' + {section.id}}">Create new lesson</button>
+		</fieldset>
 	</div>
 
 	<div th:if="${#lists.isEmpty(sections)}">There are no sections to
 		display</div>
 
 	<div style="margin-top: 1em">
-		<button id="createSection">Add a secction</button>
+		<button id="createSection">Add a section</button>
 	</div>
 	
-	<div id="create-section-form">
+	<div id="create-section-dialog">
+		
 		<fieldset>
 			Section Name: <input type="text" id="sectionName"/>
+		</fieldset>
+		
+	</div>
+	<div id="create-lesson-form">
+		<fieldset>
+			Lesson number: <input type="number" id="lessonNumber"/><br/>
+			Lesson title: <input type="text" id="lessonTitle"/>
 		</fieldset>
 	</div>
 </body>

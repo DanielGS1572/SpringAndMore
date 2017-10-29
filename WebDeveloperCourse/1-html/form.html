@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+	</head>
+	
+	<body>
+		<form>
+<!-- Placeholder para que se pueda dar una idea el usuario-->		
+			<p>Username: <input type="text" placeholder="your name"></p>
+<!-- para que muestre el checkbox marcado por default se pone checked -->
+			<p>Stay logged in: <input type="checkbox" checked></p>
+<!-- En los radio buttons para que se sepa que son del mismo se le 
+debe de poner un nombre -->			
+
+<!--Para saber que elemento han seleccionado del radio button es necesario 
+asignarl un value --> 
+			<p>Under 18: <input type="radio" name = "age" value="u18"></p>
+			<p>Over 18: <input type="radio" name = "age" value="o18"></p>
+<!-- Drop down menu -->
+<!-- Para que se seleccione uno por default se pone selected -->
+			<p>Favorite food:
+				<select>
+					<option>Pizza</option>
+					<option selected>Ice Cream</option>
+					<option>Sandwiches</option>
+				</select>
+			</p>
+<!-- Para que se pueda envíar el formulario debe llevar un 
+input type="submit" -->
+			<p><input type="submit" value="click me!"></p>
+		</form>
+	</body>
+	
+</html>
