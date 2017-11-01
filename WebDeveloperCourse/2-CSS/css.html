@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Webpage with styl</title>
+<!--El type se refiere a que aplica al resto del documento-->
+<!--La diferencia entre class y id es que el id es solamente para que se aplique una sola vez, 
+las clases para que puedan ser aplicados varias veces -->
+        <style type="text/css">
+
+
+		.red{
+			color: red;
+		}
+		.large{
+			color: green;
+			font-size: 200%;		
+		}
+		#blue{
+			color: blue;
+		}
+		.underlined{
+			text-decoration:underline;		
+		}
+		#first-section{
+			color:blue;
+			background-color:pink;
+			width:100px;
+		}
+	</style>
+
+    </head>
+
+    <body>
+        
+      	<p class="red">First p</p>
+	<!--Se pueden poner mas de una clase --> 
+    	<p class="red large">The quick brown fox jumped of the lazy dog</p>
+	<!--El font size lo hace con respecto a <p> no a h1 -->
+	<!--<h1 style="color:green;font-size:250%">CSS is cool</h1> -->
+	<p id="blue">Third p</p>
+	<h1 class="large">CSS is cool <span class="underlined">span</span></h1>
+
+        
+	<!--Para agregar estilos a un grupo de tags se usa div (se usa id, pues se hara una sola vez)-->
+	<!--Para depurar se puede poner un background color para ver los limites del div-->
+	<div id="first-section">
+       		<p>First p</p>
+	    	<p>The quick brown fox jumped of the lazy dog</p>
+        <div>
+    </body>
+    
+</html>
+
