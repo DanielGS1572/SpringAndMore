@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Webpage with styl</title>
+<!--El type se refiere a que aplica al resto del documento-->
+<!--La diferencia entre class y id es que el id es solamente para que se aplique una sola vez, 
+las clases para que puedan ser aplicados varias veces -->
+        <style type="text/css">
+
+
+		
+		#first-section{
+			color:blue;
+			background-color:yellow;
+			position: relative;
+			left: 100px;
+			width:100px;
+		}
+		#margin{
+			color:blue;
+			background-color:red;
+			position: relative;
+			margin: 100px; 
+		}
+		#second-section{
+			color:blue;
+			background-color:pink;
+			width:100px;
+
+		}
+	</style>
+
+    </head>
+
+    <body>
+        
+      <div id="first-section">
+       		<p>First p</p>
+	    	<p>The quick brown fox jumped of the lazy dog</p>
+        </div>
+
+	<!--La diferencia entre position (junto con left) [de first section] vs margin... es que margin lo contempla en forma de caja los margenes -->
+	<!--margin puede recibir cuatro valores (clockwise empezando de top), si tiene dos parametros es (top,bottom), (left,right) -->
+	<div id="margin">
+       		<p>First p</p>
+	    	<p>The quick brown fox jumped of the lazy dog</p>
+        </div>
+
+	<div id="second-section">
+       		<p>First p</p>
+	    	<p>The quick brown fox jumped of the lazy dog</p>
+        </div>
+    </body>
+    
+</html>
+
