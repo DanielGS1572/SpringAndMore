@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	
+	<body>
+		<p id="text">Hello world</p>
+
+		<button id="myButton">Change text</button>
+
+		<p id="secondParagraph">Javascript is</p>
+		
+
+		<button id="secondButton">Second button</button>
+
+		<p id="emptyParagraph"></p>
+
+		<button id="fillEmptyParagraph">Fill empty paragraph</button>
+
+		<script type="text/javascript">
+
+			
+			document.getElementById("myButton").onclick = function(){
+				document.getElementById("text").innerHTML = "xxx";
+			}
+
+
+			document.getElementById("secondButton").onclick = function(){
+				document.getElementById("secondParagraph").innerHTML = document.getElementById("secondParagraph").innerHTML + " LKJÑLKJÑLKJ";
+			}
+
+			document.getElementById("fillEmptyParagraph").onclick = function(){
+				document.getElementById("emptyParagraph").innerHTML = "<h1> New data ...</h1>"; /*Se puede meter código html en la asignación*/
+			}
+
+
+		</script>
+	</body>
+	
+</html>

@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Webpage with styl</title>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<!--El tipo de letra va -->
+        <style type="text/css">
+
+	p{
+		font-family: 'Poppins', sans-serif;
+	}
+
+	.bold{
+		font-weight: bold;
+	}
+	.italic{
+		font-style: italic;
+	}
+	.underline{
+		text-decoration: underline;
+	}
+	a{
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: underline;
+		color: green
+	}
+	.big{
+		font-size: 200%;
+	}
+		
+	</style>
+
+    </head>
+
+    <body>
+        <!--Buscar en google font safe family para evitar copyrights -->
+	<!--Tambien se puede usar google fonts -->
+	<!--Donde dice css? esta haciendo un query string -->
+	<!--Si tiene mas de uno es que hace fallback, si no lo encuentra se pasa al siguiente. Lleva comillas si son mas de una palabra --> 
+     	<p>This is some text</p>
+
+	     	<p class="bold">This is some text</p>
+	     	<p class="italic">This is italic text</p>
+	     	<p class="italic">This is <span class="bold">mixed text</span></p>
+	     	<p class="underline">This is underlined text</p>
+		<a href="">Link not underline</a>
+		<p class="big">This is big text</p>
+    </body>
+    
+</html>
+

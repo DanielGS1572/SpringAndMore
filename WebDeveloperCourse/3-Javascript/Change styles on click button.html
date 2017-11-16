@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	
+	<body>
+		<p id="text">Hello world</p>
+
+		<button id="styleText">Change text</button>
+
+		
+		<script type="text/javascript">
+
+			
+			document.getElementById("styleText").onclick = function(){
+				document.getElementById("text").style.color = "red";		//Se usa .style.(propiedad)
+				document.getElementById("text").style.fontSize = "50px";	//No se pone el guión y la nomenclatura es camel case
+//				document.getElementById("text").style.display = "none";		//Esto lo haría desaparecer, incluso mueve todo del flow de la pagina y el botón se mueve para arriba
+			}
+
+
+		
+
+
+		</script>
+	</body>
+	
+</html>
