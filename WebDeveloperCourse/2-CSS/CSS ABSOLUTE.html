@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Webpage with styl</title>
+<!--El type se refiere a que aplica al resto del documento-->
+<!--La diferencia entre class y id es que el id es solamente para que se aplique una sola vez, 
+las clases para que puedan ser aplicados varias veces -->
+        <style type="text/css">
+
+
+		.red{
+			color: red;
+		}
+		.large{
+			color: green;
+			font-size: 200%;		
+		}
+		#blue{
+			color: blue;
+		}
+		.underlined{
+			text-decoration:underline;		
+		}
+	
+		#first-section{
+			background-color: red;
+				width:200px;
+				position:absolute;	<!-- hace que se esconda por completo la segunda sección, hace que se ponga hasta arriba-->
+				<!--Absolute no afecta la forma en la que se posiciona el elemento-->
+				float:left;
+				 left:500px;	<!-- Por alguna razon el left no funciona si no hasta que se le ponga float-->
+				top:300px;
+			
+		}
+		
+		
+		#second-section{
+			color:blue;
+			background-color:yellow;
+			width:400px;
+			
+		}
+		
+		
+	
+		
+	 
+		
+	</style>
+
+    </head>
+
+    <body>
+	
+	<!--ABSOLUTE VS RELATIVE--
+	ABSOLUTE.- la posicion inicia desde la esquina superior izquierda del navegador
+	RELATIVE.- la posicion inicia con respecto a donde esta el elemento, si hay tres elementos y se mueve la posicion relativa del tercero
+	lo hara con respecto al segundo elemento
+	-->
+    <div id="first-section">  
+      	<p class="red">First p</p>
+		<p class="red large">xxx</p>
+		<p id="blue">Third p</p>
+		<h1 class="large">CSS is cool <span class="underlined">span</span></h1>
+	</div>
+        
+	
+	<div id="second-section">
+       		<p>First p</p>
+	    	<p>The quick brown fox jumped of the lazy dog</p>
+	</div>
+    </body>
+    
+</html>
+

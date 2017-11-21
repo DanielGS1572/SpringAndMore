@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Webpage with styl</title>
+<!--El type se refiere a que aplica al resto del documento-->
+<!--La diferencia entre class y id es que el id es solamente para que se aplique una sola vez, 
+las clases para que puedan ser aplicados varias veces -->
+        <style type="text/css">
+
+
+		.red{
+			color: red;
+		}
+		.large{
+			color: green;
+			font-size: 200%;		
+		}
+		#blue{
+			color: blue;
+		}
+		.underlined{
+			text-decoration:underline;		
+		}
+	
+		#first-section{
+			background-color: red;
+				width:200px;
+				position:fixed;	<!-- hace que se no se pierda si se hace scroll-->
+				float:left;
+				 left:500px;
+				top:300px;
+			
+		}
+		
+		
+		#second-section{
+			color:blue;
+			background-color:yellow;
+			width:4000px;
+			height: 4000px;
+			
+		}
+		
+		
+	
+		
+	 
+		
+	</style>
+
+    </head>
+
+    <body>
+    <div id="first-section">  
+      	<p class="red">First p</p>
+		<p class="red large">xxx</p>
+		<p id="blue">Third p</p>
+		<h1 class="large">CSS is cool <span class="underlined">span</span></h1>
+	</div>
+        
+	
+	<div id="second-section">
+       		<p>First p</p>
+	    	<p>The quick brown fox jumped of the lazy dog</p>
+	</div>
+    </body>
+    
+</html>
+

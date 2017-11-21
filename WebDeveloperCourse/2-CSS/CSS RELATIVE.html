@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Webpage with styl</title>
+<!--El type se refiere a que aplica al resto del documento-->
+<!--La diferencia entre class y id es que el id es solamente para que se aplique una sola vez, 
+las clases para que puedan ser aplicados varias veces -->
+        <style type="text/css">
+
+
+		.red{
+			color: red;
+		}
+		.large{
+			color: green;
+			font-size: 200%;		
+		}
+		#blue{
+			color: blue;
+		}
+		.underlined{
+			text-decoration:underline;		
+		}
+		#first-section{
+			color:blue;
+			background-color:pink;
+			position:relative;
+			width:100px;
+			float: left;
+			z-index:2;
+		}
+		#first-section-b{
+			color:blue;
+			background-color:yellow;
+			width:100px;
+			left:50px;
+			position:relative;
+			z-index:1;
+		}
+		
+		#section{
+			background-color: red;
+			float: right;
+			
+		}
+		.section-cleared{
+			clear:both;  <!--Lo que both significa es que elimina ambos lados del float -->
+		}
+		
+		#second-section{
+			background-color: blue;
+			width:150px;
+			position: relative;
+			left: 100px;	<!--esto es un espacio que deja vacio, si se pone left, mueve el elemento a la derecha -->
+			top: 100px;
+		}
+		
+	</style>
+
+    </head>
+
+    <body>
+      <div id="section">  
+      	<p class="red">First p</p>
+	<!--Se pueden poner mas de una clase --> 
+    	<p class="red large">xxx</p>
+	<!--El font size lo hace con respecto a <p> no a h1 -->
+	<!--<h1 style="color:green;font-size:250%">CSS is cool</h1> -->
+	<p id="blue">Third p</p>
+	<h1 class="large">CSS is cool <span class="underlined">span</span></h1>
+	</div>
+        
+	<!--Para agregar estilos a un grupo de tags se usa div (se usa id, pues se hara una sola vez)-->
+	<!--Para depurar se puede poner un background color para ver los limites del div-->
+	<div id="first-section">
+       		<p>First p</p>
+	    	<p>The quick brown fox jumped of the lazy dog</p>
+        </div>
+<!--Si hay dos elementos que se empalman se puede usar z-index y el numero mas alto será el primero en mostrarse "section" vs "first-section-b"
+AMBOS DEBEN TENER POSITION RELATIVE -->
+	<div id="first-section-b">
+		<p>Overlap</p>
+	</div>
+		
+	<!--Si una etiqueta html no tiene la instruccion de float, se pondra acomodar en alguna parte de entre los que son float -->
+	<p>This paragraph is not floated</p>
+	<!--Esto hace que elimine ambos float -->
+	<div class="section-cleared">
+		<p>This paragraph is cleared</p>
+	</div>
+	
+	<!--Positioning se usa para cuando se quiere tener mas precision en lugar de floating -->
+		<div id="second-section">
+       		<p>Second p</p>
+	    	<p>The quick brown fox jumped of the lazy dog</p>
+        </div>
+		
+	
+    </body>
+    
+</html>
+
