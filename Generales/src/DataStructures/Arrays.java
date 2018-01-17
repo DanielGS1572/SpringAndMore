@@ -1,5 +1,8 @@
 package DataStructures;
 
+
+//Arrays vs ArrayList
+//la desventaja de los Arrays es que se debe declarar un tamaño fijo y este no puede cambiar
 public class Arrays {
 	public static void main(String args[]) {
 		//Declarar
