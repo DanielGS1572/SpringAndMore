@@ -33,7 +33,7 @@ public class CustomerController {
 	
 	@RequestMapping("/processForm")
 	public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult bindingResult) {
-		
+		System.out.println(bindingResult);
 		if(bindingResult.hasErrors()) {
 			return "customer-form";
 		}else {
