@@ -24,6 +24,9 @@
 		<br><br>
 		<input type="submit" value="Submit">
 		
+		Course code: <form:input path="courseCode"/>
+		<form:errors path="courseCode" cssClass="error"/>
+		
 	</form:form>
 	
 </body>

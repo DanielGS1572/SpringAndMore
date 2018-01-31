@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.luv2code.springdemo.mvc.validation.CourseCode;
+
 public class Customer {
 
 	
@@ -29,6 +31,17 @@ public class Customer {
 	//al imprimir bindingResult en CustomerController se pueden ver los mensajes de error que manejan:
 	//typeMismatch.customer.freePasses,typeMismatch.freePasses,typeMismatch.java.lang.Integer,typeMismatch
 	// y al ponerlos en un archivo de .properties se hace override sobre estos errores
+	
+	@CourseCode(value = "TOPS")
+	private String courseCode;
+	
+	
+	public String getCourseCode() {
+		return courseCode;
+	}
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
