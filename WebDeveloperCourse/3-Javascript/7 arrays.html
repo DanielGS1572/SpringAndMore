@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	
+	<body>
+		
+		
+		<script type="text/javascript">
+			var myArray = new Array();		/*una forma de declarar un arreglo*/
+			
+			myArray[0] = "Pizza";
+			myArray[1] = "Chocolate";
+			
+			var tweets = ["tweet1", "tweet2"] /*Otra forma de declarar un arreglo, inicializando el arraglo*/
+			tweets.push("tweet3");		/*Agrega un ultimo elemento */
+			
+			
+			console.log(myArray);
+			console.log(myArray.length);
+			
+			console.log(tweets);
+			
+			tweets.splice(1,2);		/*Elimina a partir del prrimer elemento n cantidad de elementos (en este caso es uno*/
+			/*tweets.splice(1,0,"Cornflakes");   Agrega un elemento sin borrar ninguno a despues del primer elemento (esto se puede usar para reemplazar elementos*/
+			console.log(tweets);
+		</script>
+		
+	</body>
+	
+</html>

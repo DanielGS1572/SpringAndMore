@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	
+	<body>
+		<input id="cell" type = "text"> <!-- el type por default es text -->
+		<button id="boton">Change text</button>
+		
+		<p id="text">This is some text</p>
+		<script type="text/javascript">
+			var x = 5;
+			document.getElementById("boton").onclick = function(){
+			var string =  document.getElementById("cell").value; 	/*Para obtener el valor de la celda se usa value*/
+				document.getElementById("text").innerHTML = "The introduced text was: " + string;
+			}
+			
+			
+		</script>
+		
+	</body>
+	
+</html>
