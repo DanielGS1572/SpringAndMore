@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+		<!--Hay varias formas de poner jquery -->
+		<!--Buscando embed jquery y pegando la url que arroja el resultado de google -->
+			<!--La desventaja es que depende de los servidores de google --> 
+		<!--Descargar JQuery de la pagina oficial -->
+			<!--Simplemente se pone la ruta relativa despues de src -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	<!-- buscar en google embed jquery-->
+		
+	</head>
+	
+	<body>
+		Hi there
+
+		<script type="text/javascript">
+			if(typeof jQuery == "undefined"){	/*al jalar el script de googleapis genera una variable que es jQuery, typeof es para ver si existe una variable*/
+				alert("jQuery is not installed");
+			}else{
+				alert("jQuery is installed correctly")
+			}
+		</script>
+
+	</body>
+	
+</html>

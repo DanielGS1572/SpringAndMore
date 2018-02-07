@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta http-equiv="X-Frame-Options" content="allow">
+<html>
+	<head>
+		<title>Javascript</title>
+		
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	<style type="text/css">
+		#circle {
+  			
+  			width: 100px;
+  			height: 100px;
+  			border-radius: 50%;
+  			margin: 10px;
+  			background-color: green;
+		}
+		.square {
+  			
+  			width: 100px;
+  			height: 100px;
+  			margin: 10px;
+  			background-color: blue;
+		}
+	</style>
+		
+	</head>
+	
+	<body>
+
+		<div id="circle"></div>
+
+
+
+		<script type="text/javascript">
+
+		$("#circle").click(function(){
+
+
+				$(this).animate({
+					width:"400px",
+					height:"400px",
+					marginLeft: "100px",/*marginLeft --> version de javascript de css de margin-left*/
+					marginTop: "100px"
+				},2000, function(){
+					$(this).css("background-color","red");
+				}); /*{}es un conjunto de css's*/
+		});
+			
+
+		</script>
+
+	</body>
+	
+</html>

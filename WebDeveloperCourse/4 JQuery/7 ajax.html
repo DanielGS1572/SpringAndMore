@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta http-equiv="X-Frame-Options" content="allow">
+<html>
+	<head>
+		<title>AJAX</title>
+		
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	
+
+	<!--Este archivo debe de estar en un servidor para que pueda funcionar, es decir no funciona con archivos locales -->
+		
+	</head>
+	
+	<body>
+
+		<div id="circle"></div>
+
+
+
+		<script type="text/javascript">
+		/*
+			$.get es una instruccion de ajax (ver que ya no se pone un string) --> no tiene forma de validar si algo falló
+			se manda llamar una función callback para cuando recupere la información (se le pasa como parametro la variable donde contendrá la información)
+		
+		$.get("info.txt", function(data){
+			alert(data);
+		})
+*/
+		/*
+			$.ajax es mas complicado que get pero hace más validaciones, como por ejemplo que pasa si falla obtener la información
+
+			En lugar de poner una funcion callback como parametro, se usa done
+			*/
+		$.ajax("info.txt")
+		 .done(function(data){  //"info.txt" puede ser una url
+			alert(data);
+		}).fail(function(){
+			alert("ERROR getting the data");
+		});
+		</script>
+
+	</body>
+	
+</html>

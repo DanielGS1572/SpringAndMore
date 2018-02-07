@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta http-equiv="X-Frame-Options" content="allow">
+<html>
+	<head>
+		<title>Javascript</title>
+		
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	<style type="text/css">
+		#circle {
+  			
+  			width: 100px;
+  			height: 100px;
+  			border-radius: 50%;
+  			margin: 10px;
+  			background-color: green;
+		}
+		.square {
+  			
+  			width: 100px;
+  			height: 100px;
+  			margin: 10px;
+  			background-color: blue;
+		}
+	</style>
+		
+	</head>
+	
+	<body>
+
+		<div id="circle"></div>
+		<div class= "square"></div>
+		<div class= "square"></div>
+
+
+
+		<script type="text/javascript">
+			
+			$("div").click(function(){
+				
+				$(this).fadeOut("slow",function(){
+					alert('Fadeout has finished')
+				}); /*hay operaciones callback que pueden llamar a otra cosa cuando termine el fadeout por ejemplo. Es ideal para cuando se obtiene informacion de otro website*/
+				
+				/*Ver ejercicios donde hace el toggle (los 2 ejemplos)*/
+
+			});
+		</script>
+
+	</body>
+	
+</html>
