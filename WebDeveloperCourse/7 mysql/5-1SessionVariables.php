@@ -1,6 +1,6 @@
 <?php
  $link = mysqli_connect("localhost"/*server*/,"root","","webcourse"/*db name*/); /*Regularmente a la variable que realiza la conexion con la base de datos se llama link*/
-  
+	session_start();
     if(array_key_exists('email',$_POST) OR array_key_exists('password',$_POST)){
       //  print_r($_POST); --> para ver lo que se puso en los campos al dar submit
         if($_POST['email'] == ''){
@@ -19,6 +19,8 @@
                 $query = "INSERT INTO users (email,password) values ('".mysqli_real_escape_string($link,$_POST['email'])."','".mysqli_real_escape_string($link,$_POST['password'])."')";
                 if(mysqli_query($link,$query)){
                     echo "<p>You have been signed up";
+					$_SESSION['email'] = $_POST['email'];
+				header("Location: 5-2SessionVariables.php");
                 }else{
                     echo "<p>There was an error</p>";
                 }
