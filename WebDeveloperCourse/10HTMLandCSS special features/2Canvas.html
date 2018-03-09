@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>None</title>
+
+		<style>
+			#myCanvas {
+				border: 1px solid grey;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<!--Para hacer uso de canvas debe interactuar con javascript -->
+		<canvas id="myCanvas" width="500" height="400">
+		</canvas>
+		
+
+		<script type="text/javascript">
+			/*Rectangulo*/
+			var myCanvas = document.getElementById("myCanvas");
+			var context = myCanvas.getContext("2d");	/*Se le debe especificar si es 2d o 3d*/
+			context.fillStyle = "#49C900";
+			context.fillRect(0,0,100,50);
+			/*Linea*/
+			context.moveTo(0,400);
+			context.lineTo(500,0);
+			context.strokeStyle = "#F42925";
+			context.lineWidth = 10;
+			context.stroke();	/*Para pintar la linea*/
+
+			/*Circulo*/
+			context.beginPath();
+			context.arc(100,100,50,0,2*Math.PI);
+			context.stroke();
+
+			var textGradient = context.createLinearGradient(200,50,300,50);
+			textGradient.addColorStop(0,"red");
+			textGradient.addColorStop(1,"yellow");
+			context.fillStyle = textGradient;
+			context.font = "20px Arial";
+			context.fillText("My canvas",200,50);
+		</script>
+	</body>
+	
+</html>

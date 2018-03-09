@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>None</title>
+	</head>
+	
+	<body>
+		<form id="myForm">
+			<p>Placeholder:<input type="text" placeholder = "Insert name here" name=""></p>
+			<p>Autofocus:<input type="text" autofocus></p>
+			<p>Autocomplet off:<input type="text" autocomplete="off"></p>
+			<p>Required:<input type="text" required></p>
+			<p>Pattern:<input type="text" pattern="[0-9]"></p> <!-- Buscar html patterns para encontrar varias ideas de regex, la validacion se hace cuando le dan submit-->
+
+
+				<datalist id="names">
+
+						<option value="Rob">Rob</option>
+						<option value="Kirsten">Kirsten</option>
+						<option value="Tommy">Tommy</option>
+
+				</datalist>
+			<p>Autocomplete: <input type="text" list="names"></p><!--El outocomplete es preferible que un dropdown -->
+			<p><input type="submit" value="Submit"></p>
+			<p>Multiple file upload: <input type="file" multiple></p>
+		</form>
+
+		<!--Si se quiere vincular un campo que no esta dentro de un form se le pone un id y se puede poner fuera del bloque de codigo -->
+		<p>Required:<input form="myForm" type="text" required></p>
+	</body>
+	
+</html>
