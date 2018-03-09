@@ -5,24 +5,52 @@
 		<script>document.createElement("container");/*Se puede usar despues como etiqueta*/</script>	
 		<style>
 
-			article {
-				color: green;
+		
+			/*CSS3 --> advanced selectors and pseudo classes, realiza calculos dependiendo del tamaño de la pagina por ejemplo sin tener que usar javascript*/
+			
+			h1{
+				color: red;
 			}
-			/*Vienen siendo como divs pero ya es estandarizado y me legible, por default le da display inline, es decir que no se expande */
-			header, footer, article, section, nav, menu{
-				display:block;
+
+			.green{
+				font-size: 35px;
+			}
+
+			#blue{
+				font-size: 10px;
+			}
+
+			div p{ /*Selecciona todos los p dentro del div*/
+				font-size: 24px;
+			}
+
+			h3~p{ /*el circunflejo indica que todos los p que esten debajo de h3 queden subrayados*/
+				text-decoration: underline;
+			}
+			h3+p{ /*selecciona el paragraph que le sigue*/
+				color: yellow;
 			}
 		</style>
 	</head>
 	
 	<body>
-	
-		<article>
-			I'm an article
-		</article>
-		<container>
-			I'm a container
-		</container>
+		<div>
+
+
+			<h1>I am a heading</h1>
+
+			<h3>hello</h3>
+
+			<p class = "green">I am a paragraph</p>
+
+			<p>I am inside the div</p>
+
+			<a id = "blue" href="">I am a link</a>
+			
+			
+		</div>
 	</body>
+
+	<p>I am outside</p>
 	
 </html>
