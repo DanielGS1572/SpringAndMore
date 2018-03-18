@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cursos de Diseño Web</title>
+  </head>
+  <body>
+		
+		<h2>Creando formularios</h2>
+		
+		<form class="formulario">
+			<label for="name">Nombre</label> <!--El for se usa para cuando se seleccione el label, se active la casilla, se relaciona con el id -->
+			<input type="text" name="nombre" id="name" placeholder="Pon nombre" autocomplete="off"> 
+			<!--El atributo name es utilizado del lado del servidor, cuando se usa php por ejemplo:
+				$nombre = $_POST['nombre'] ;
+				$apellido = $_POST['apellido'];
+				echo "Tu nombre es: $nombre $apellido"; } 
+			-->
+			<br><br>
+			<label for="apellido">Apellido</label>
+			<input type="text" name="apellido" id="apellido" placeholder="Pon apellido" autocomplete="off">
+			<br><br>
+			<input type="submit" value="Enviar">
+		</form>
+
+  
+  </body>
+</html>

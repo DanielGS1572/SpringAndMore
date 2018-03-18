@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cursos de Diseño Web</title>
+  </head>
+  <body>
+  <!--El main, el aside y el footer se ajustarán despues mediante css. Ver que son los elementos mas externos --> 
+	<!--Main es donde se muestra el contenido principal de la pagina -->
+    <div class="contenedor">
+        <header>
+			  <div class="logo">
+                        <img src="img/logo.png">
+              </div>
+              <nav class="menu">
+                  Menu aqui
+              </nav>
+        </header>
+
+        <main class="contenido-principal">
+		<!--El section va seguido por un encabezado que va del 1 al 6 -->
+            <section>
+                <h2>Nuestros Cursos</h2>
+                <div>
+                    <h3>HTML5</h3>
+                    <img src="img/html5.png" alt="curso html5" width="200">
+                </div>
+                <div>
+				<!--Como esto no habla por sí mismo nada mas va dentro de un div, como tal CSS3 no dice nada por si solo --> 
+                    <h3>CSS3</h3>
+                    <img src="img/css3.png" alt="curso css3" width="200">
+                </div>
+                <div>
+                    <h3>JavasScript</h3>
+                    <img src="img/js.jpg" alt="curso javascript" width="200">
+                </div>
+            </section>
+			
+			<section>
+				<h2>Últimas noticias</h2>
+			<!--article se usa para entrada de un blog por ejemplo, o de algun foro (es contenido que "habla por sí mismo" -->
+				<article>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et neque molestie, maximus nunc pharetra, rutrum justo. Fusce iaculis velit sit amet cursus placerat. Aliquam erat volutpat. Mauris varius dignissim orci, vel molestie mauris maximus nec. Suspendisse at tellus pellentesque, placerat est nec, tempus ante. Integer augue sem, vestibulum sit amet velit id, dignissim molestie risus. Aliquam dictum imperdiet tristique. Integer eget lobortis orci. Aliquam vulputate ac ligula in tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis nulla metus, fringilla tempus malesuada nec, rutrum a felis. Aenean commodo egestas dui, et efficitur dolor finibus eget.</p>
+				</article>
+				
+				<article>
+				<p>Nullam mattis risus quis lacus bibendum iaculis. Sed placerat tincidunt pharetra. Phasellus id risus porttitor, posuere dolor porttitor, mollis felis. Duis auctor orci sed purus lobortis pretium. Donec non leo felis. In hendrerit est ac imperdiet fermentum. Vestibulum porttitor pretium nisi non faucibus. Fusce et pretium nibh. Mauris diam ante, tempor mattis metus at, faucibus porta mi. Ut imperdiet at mauris et commodo. Cras volutpat blandit dui quis pretium. Morbi id velit ac sem placerat pulvinar. Nullam feugiat imperdiet vehicula.</p>
+				</article>
+			</section>
+        </main>
+		<!--Es algo que se muestra a un lado del elemento main (principal de la página) -->
+		<aside>
+			<h2>Proximos cursos</h2>
+			<div>
+				<h3>PHP</h3>
+				<p>
+				Nullam mattis risus quis lacus bibendum iaculis. Sed placerat tincidunt pharetra. Phasellus id risus porttitor, posuere dolor porttitor, mollis felis. Duis auctor orci sed purus lobortis pretium. Donec non leo felis. In hendrerit est ac imperdiet fermentum. Vestibulum porttitor pretium nisi non faucibus. Fusce et pretium nibh. Mauris diam ante, tempor mattis metus at, faucibus porta mi. Ut imperdiet at mauris et commodo. Cras volutpat blandit dui quis pretium. Morbi id velit ac sem placerat pulvinar. Nullam feugiat imperdiet vehicula.
+				</p>
+				<h3>MYSQL</h3>
+				<p>
+				Nullam mattis risus quis lacus bibendum iaculis. Sed placerat tincidunt pharetra. Phasellus id risus porttitor, posuere dolor porttitor, mollis felis
+				</p>
+			</div>
+		</aside>
+    </div>
+	
+	<!--Antes del cierre del body va el footer -->
+	<footer>
+		<div class="nosotros">
+			<h3>Sobre nuestra escuela</h3>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et neque molestie, maximus nunc pharetra, rutrum justo. Fusce iaculis velit sit amet cursus placerat. Aliquam erat volutpat. Mauris varius dignissim orci, vel molestie mauris maximus nec. Suspendisse at tellus pellentesque, placerat est nec, tempus ante. Integer augue sem, vestibulum sit amet velit id, dignissim molestie risus. Aliquam dictum imperdiet tristique.
+			</p>
+		</div>
+		
+		<div class="menu">
+			<nav class="navegacion">
+				Menu aqui
+			</nav>
+		</div>
+		<p>Todos los derechos reservados &copy;</p>
+	</footer>
+
+  </body>
+</html>

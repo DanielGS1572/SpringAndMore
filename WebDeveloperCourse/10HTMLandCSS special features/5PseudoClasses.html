@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>None</title>
+	<!--Pseudo clases es para hacer acciones -->
+		<style>
+
+			h1:hover{
+				text-decoration: underline;
+			}
+			input:focus{
+				background-color: blue;
+			}
+
+			/*Cambiar elementos basado en su estatus*/
+			input:enabled{}
+			input:disabled{}
+			input:checked{}
+
+			/*Cambiar elementos basados en su ubicacion*/
+			p:first-child{ 	/*Selecciona el primer p de cada div, pero es el primero consecutivo, si se encuentra en la segunda 
+			posicion ya no lo toma en cuenta */
+				color:red;
+			}
+
+			p:last-child{
+				font-size: 20px;
+			}
+
+		/*	p:only-child{ Solo hace match donde exista un solo hijo
+
+			}*/
+
+			p:first-of-type{/*Selecciona la primer ocurrencia a diferencia de first-child*/
+				font-size: 30px;
+				color: lawngreen;
+			} /*Incluso selecciona I´m outside pues es el primero que se encuentra dentro del body*/
+		</style>
+	</head>
+	
+	<body>
+		<div>
+
+			<p class = "green">I am a paragraph</p>
+
+			<h1>I am a heading</h1>
+
+			<h3>hello</h3>
+
+			
+
+			<p>I am inside the div</p>
+
+			<a id = "blue" target="_blank" href="">I am a link</a>
+			<br>
+			<input type="text" placeholder="Introduce text">Input</input>
+			
+			<p class = "green">Last p child</p>
+			
+		</div>
+
+		<div>
+				<p>Primer parrafo</p>
+				<p>Segundo parrafo</p>
+		</div>
+
+		<div>
+				<h1>Hello</h1>
+				<p>Second element, first p</p>
+
+		</div>
+	</body>
+
+	<p>I am outside</p>
+	
+</html>

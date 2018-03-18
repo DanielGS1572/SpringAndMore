@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cursos de Diseño Web</title>
+  </head>
+  <body>
+
+   <!--La tabla tiene tres elementos con los que se puede construir thead, tbody, tfoot
+   Cuando se trabaja con el head se debe de poner <tr><th>
+   Cuando se trabaja con el body y el foot se debe de poner <tr><td>-->
+		<table width="300" border="line">
+			<caption>Próximos cursos</caption>
+			<thead>
+				<tr>
+					<th>Curso</th>		<!--Le pone el estilo de dejarlo en negritas y centrar el contenido, con td lo alinea a la izquierda -->
+					<th>Precio</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>	<!--El rowspan y el colspan van en el td -->
+					<td rowspan="3">PHP</td> 
+					<td>$99</td>
+					
+				</tr>
+				<tr>	<!--Como falta un td lo que haria es recorrerlo en la primer columna, para eso se pone el rowspan para agrupar -->
+					<td>$99</td>
+				</tr>
+				<tr>
+					<td>$99</td>
+				</tr>
+				
+				<tr>
+					<td>Javascript</td>
+					<td>$99</td>
+				</tr>
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<td colspan="2" align="center">No te lo puedes perder</td>
+				</tr>
+			</tfoot>
+		</table>
+
+  </body>
+</html>

@@ -30,6 +30,16 @@
 			h3+p{ /*selecciona el paragraph que le sigue*/
 				color: yellow;
 			}
+			a[target]{ /*Para seleccionar un elemento que tenga cierto atributo se pone entre [], incluso se le puede decir que valor en especifico, por ejempl
+			target = "www.google.com" si se pone un asterisco antes del igual funciona todo lo que contenga
+				^= - begins with
+				$= - ends with
+				~= - has the value between two spaces
+				|= - has the value separated by hyphens(-)
+			
+			*/
+				color: red;
+			}
 		</style>
 	</head>
 	
@@ -45,7 +55,7 @@
 
 			<p>I am inside the div</p>
 
-			<a id = "blue" href="">I am a link</a>
+			<a id = "blue" target="_blank" href="">I am a link</a>
 			
 			
 		</div>
