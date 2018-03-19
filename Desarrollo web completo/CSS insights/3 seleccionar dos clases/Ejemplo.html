@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Las clases son las que se deben de reutilizar, no los ids -->
+<!--Para seleccionar elementos con id y clase sería #id.clase -->
+<!-- Para seleccion elementos html con id sería h2#titulo siempre deben de ir pegados, lo mismo para una clase seria h2.titulo -->
+	<title>Seleccionar dos clases</title>
+	<style>
+		.clasea.claseb{		/*Como este elemento es mas especifico es el que tomará en cuenta*/
+			color: red;
+		}
+		
+		.clasea{
+			color: blue;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1  class="clasea claseb">Ejemplo h1</h1>
+</body>
+</html>

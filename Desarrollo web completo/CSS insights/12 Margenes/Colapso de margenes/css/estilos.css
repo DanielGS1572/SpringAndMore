@@ -1,0 +1,105 @@
+/** BACKGROUNDS**/
+
+body {
+  background: gray;
+}
+.contenedor {
+  background: white;
+}
+header {
+  background: orange
+}
+nav {
+  background: purple;
+}
+table {
+  background: cyan;
+}
+footer {
+  background: orange;
+}
+footer nav {
+  background: transparent;
+}
+/** Anchos y Altos **/
+.contenedor {
+  width: 1000px;
+}
+nav {
+  height:80px;
+}
+table {
+  width:300px;
+}
+img.logocss3 {
+  width: 90px;
+}
+/** Margenes **/
+.contenedor {
+   margin: 0px auto;
+}
+header {
+  margin: 0px 0px 30px;
+}
+h2 {
+  margin-bottom:30px;
+}
+table {
+  margin: 0px 0px 30px 30px;  /*Al asignarle 30 pixeles a border bottom ya lo respetaria por la ultima instruccion del .contenedor*/
+}
+footer {
+  margin-top: 30px;
+}
+/*** Padding**/
+header {
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+nav {
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+nav ul {
+  padding:0;
+}
+table tr td{
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+footer {
+  padding-top: 20px;
+}
+
+/** Previniendo Margin collpase**/
+/*
+table {
+  margin-bottom: 100px;
+}
+*/
+/**
+.contenedor {
+  overflow: hidden;
+}
+*/
+/*
+.contenedor {
+   border-bottom: 1px solid black;
+}
+
+*/
+/*
+.contenedor {
+  padding: 1px;
+}
+*/
+/*
+table {
+  display: inline-block;
+}
+*/
+/*Esto da solucion al colapso de margenes, regularmente sucede cuando se trata de border bottom y es que no responde de la forma que quisieramos
+pues en lugar de mover la tabla mueve el contenedor completo*/
+.contenedor {
+  padding-bottom: 30px;
+}

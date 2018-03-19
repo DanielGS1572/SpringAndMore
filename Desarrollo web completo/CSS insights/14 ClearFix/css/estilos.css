@@ -1,0 +1,185 @@
+/** BACKGROUNDS**/
+
+body {
+  background: gray;
+}
+.contenedor {
+  background: white;
+}
+header {
+  background: orange
+}
+nav {
+  background: purple;
+}
+table {
+  background: cyan;
+}
+footer {
+  background: orange;
+}
+footer nav {
+  background: transparent;
+}
+/** Anchos y Altos **/
+.contenedor {
+  width: 1000px;
+}
+nav {
+  height:80px;
+}
+table {
+  width:300px;
+}
+img.logocss3 {
+  width: 90px;
+}
+/** Margenes **/
+.contenedor {
+   margin: 0px auto;
+}
+header {
+  margin: 0px 0px 30px;
+}
+h2 {
+  margin-bottom:30px;
+}
+table {
+  margin: 0px 0px 30px 30px;
+}
+footer {
+  margin-top: 30px;
+}
+/*** Padding**/
+header {
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+nav {
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+nav ul {
+  padding:0;
+}
+table tr td{
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+footer {
+  padding-top: 20px;
+}
+
+/** Previniendo Margin collpase**/
+/*
+table {
+  margin-bottom: 100px;
+}
+*/
+/**
+.contenedor {
+  overflow: hidden;
+}
+*/
+/*
+.contenedor {
+   border-bottom: 1px solid black;
+}
+
+*/
+/*
+.contenedor {
+  padding: 1px;
+}
+*/
+/*
+table {
+  display: inline-block;
+}
+*/
+
+.contenedor {
+  padding-bottom: 30px;
+}
+
+
+
+/** Box Model **/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+section#introduccion{
+  width: 400px;
+  background-color: yellow;
+  padding:30px;
+}
+section#cursos {
+  width: 400px;
+  background-color: orange;
+  border: 30px solid black;
+  padding: 30px;
+}
+
+/** Borders **/
+
+section#cursos {
+   border-top: 30px;
+   border-style: dashed;
+   border-color:orange;
+}
+
+section#cursos {
+   border-top: 30px;
+   border-style: dotted; /* dashed, double **/
+}
+section#cursos{
+  border: 30px dotted black;
+}
+
+/* FLOATS **/
+/*
+section#cursos {
+  float: right;
+}
+table {
+  float: right;
+}
+*/
+main.contenido-principal {
+  width: 700px;
+  float: left;
+}
+aside {
+  width: 300px;
+  float: right;
+}
+/*SIEMPRE QUE SE USEN FLOATS SE DEBE DE PONER UN CLEARFIX
+UN FLOAT HACE QUE LOS ELEMENTOS FLUYAN DE FORMA NATURAL
+SOBRE LOS ELEMENTOS QUE SE FLOTAN*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+section#cursos {
+  width: 100%;
+}
+table {
+ margin:0;
+}
+#navegacion ul  {
+  list-style: none;
+}
+#navegacion ul li {
+  float: left;
+  margin-right: 20px;
+}
+
+#navegacion ul li a {
+  color: #ffffff;
+}

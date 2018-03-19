@@ -1,0 +1,5 @@
+para contrarestar las diferentes formas en que los navegadores usan sus propios estilos se debe de "resetear" el css
+Uno de ellos es normalize css
+https://necolas.github.io/normalize.css/8.0.0/normalize.css
+
+La hoja de estilos externa debe de declararse primero
