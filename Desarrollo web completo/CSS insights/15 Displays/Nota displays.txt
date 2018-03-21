@@ -1,0 +1,17 @@
+Todo elemento en html se comporta como un rectangulo y hay 6 formas en las que se puede comportar
+- inline.- cuando se aplica margin o paddin no se mueve verticalmente, solo horizontalmente, no se puede aplicar un 
+	alto o un ancho, span, em, b, a son elementos de tipo inline
+- inline-blok.- sigue el flujo del texto pero se le puede aplicar padding, margins, alto y ancho y el texto seguir el flujo
+	(a diferencia que se cree un bloque en un salto de linea nuevo)
+- block.- muchos elementos ya lo traen por default, como por ejemplo (div, section, listas no ordenadas, h1 y parrafos)
+	y toman todo el espacio que tienen disponible, pero de igual forma se le pueden aplicar diplay:inline-block o inline
+- none.- lo elimina visualmente y lo demas fluye hacia donde estaba el objeto, pero en el DOM sigue existiendo
+- flex(box).-
+- css grid (no se ve en el curso)
+
+- display table.- para centrar verticalmente contenido (puede ser texto u otra cosa),
+	 se usa para darle la vuelta a line-height para querer centrar texto de mas de una linea en un cuadro
+
+Por default todos los elementos en html son inline, pero el navegador aplica ciertos estilos que a veces se
+puede comportar como inline o block, cuando se inspecciona un elemento y se ve que dice user agent: stylesheet
+significa que es un estilo aplicado por el navegador, por ejemplo el h1 lo cambia a display:block

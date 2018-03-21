@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.displaytable{
+				display: table;
+				width:70%;
+				height:150px;
+				background-color:yellow;
+				
+			}
+			.displaycell{
+				display: table-cell;
+				text-align: justify; /*center*/
+				vertical-align: middle;
+			}
+			
+			
+			
+			/* Si el texto fuera de una sola linea es recomendable usar line-height, si no mezaclar displaytable para el contenedor principal
+			y displaycell para el contenedor hijo*/
+			.lineheight{
+				width:70%;
+				height:150px;
+				background-color:green;
+				text-align: center;
+				line-height: 75px;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class="displaytable">
+			<div class="displaycell">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus nunc quis 
+				elit ullamcorper efficitur. Fusce nunc mi, lobortis sit amet bibendum sit amet, volutpat sed erat. Phasellus maximus suscipit est, 
+				non pellentesque augue maximus vel. Morbi varius sit amet tortor sit amet lacinia. Nulla malesuada, dolor sed pretium fringilla, 
+				elit nunc gravida erat, sed molestie neque libero id orci. Pellentesque fringilla lectus a nulla hendrerit, sit amet placerat nunc dictum.</p>
+			</div>
+		</div>
+		<br>
+		<div class="lineheight">
+			<p>Alineacion de texto</p>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.contenedor-flex div{
+				width:120px;
+				height:120px;
+				border: 1px solid black;
+			}
+			
+			body{
+				background-color: green;
+			}
+			.div1{
+				background-color: yellow;
+			}
+			
+			.div2{
+				background-color: brown;
+			}
+			
+			.div3{
+				background-color: blue;
+			}
+			
+			.contenedor-flex{  /*Para que funcion flex debe estar dentro de un contenedor todos sus elementos, como el div, nada mas tener cuidado de no afectar directamente el div poniendole un tamaño pues afecta al contenedor principal*/
+				display:flex;
+					flex-direction: row; 
+				flex-wrap: nowrap; /*si hubiera varios divs los ajusta y los aplana de tal forma que quepa a lo largo en una sola linea, hace override del width y el height*/
+				justify-content:flex-start; /*Es el default*/
+				justify-content:flex-end;
+				justify-content:center;				
+				justify-content:space-around;				
+				justify-content:space-between;						
+			}
+			
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="contenedor-flex">
+			<div class="div1"></div>
+			<div class="div2"></div>
+			<div class="div3"></div>
+		</div>
+			<p>Algo mas</p>	<!--Aqui ya no es necesario hacer un clearfix, pues el parrafo lo mantendra donde debe de estar -->
+	<body>
+
+</html>
