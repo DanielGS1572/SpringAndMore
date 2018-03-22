@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sombras</title>
+		<style>
+			/*Hay dos tipos de sombras
+				- Contenedores (divs, listas,sections) 	--> box shadow
+				- Textos 								--> Text Shadow
+			*/
+			h2{
+				text-shadow: 10px 10px 10px rgb(50,50,50); /*expandir de forma horizontal (derecha o izq) - vertical (arriba o abajo) - blur/distorcion (difuminuado) - color (puede ser rgb, hsl o hex)*/
+			}
+
+			
+			ul{
+				box-shadow: 2px 2px 10px 10px black; /*El cuarto elemento es spread que dicecuanto se va a expandir hacia arriba o hacia abajo*/
+				box-shadow: 2px 2px 10px -1px rgba(0,0,0,.5);   /*Esto le da el efecto que sobre sale... el chiste es jugar con el inspect de chrome*/
+				/*visitar ccs3generator.com ó css3.me*/
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+
+		<h2>Texto de H2</h2>
+		<div class="fig1">
+		</div>
+
+				
+		<br>
+		<br>
+		<br>
+
+
+		<ul>
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			<li>Elemento 3</li>
+			<li>Elemento 4</li>
+		</ul>
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
