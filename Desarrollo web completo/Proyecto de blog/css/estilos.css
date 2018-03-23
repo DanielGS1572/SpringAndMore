@@ -1,0 +1,77 @@
+/**
+*##################################################################
+*######## FORMA RECOMENDADA DE TRABAJAR CON EL border-box #########
+*##################################################################
+**/
+
+html{
+	box-sizing: border-box; /*Con esto se logra que si se agrega un padding la caja no expanda mas alla del tamaño que se definió en el componente*/
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+/**
+*##################################################################
+**/
+
+
+/*Para resetear los bordes del navegador*/
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: verdana, geneva, serif;
+}
+
+header{
+	padding: 20px 0;
+}
+
+div.contenedor{
+	width: 1200px;		/*Para jugar con el auto del margin es necesario que se tenga un width*/
+	margin: 0 auto;		/*El cero es para el margen de arriba y abajo
+						  el auto es para que el sobrante de (pagina-1200px)/2 lo deje 
+						  de margenes de la derecha y de la izquierda */
+}
+
+/*	NAVEGACION */
+.navegacion{
+	background-color:#db008d;
+}
+
+/*Para crear un submenu es necesario crear un padre y un hijo en la que el padre tiene una 
+posición relative*/
+nav{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+nav ul{
+	list-style: none; 	/*Para quitar los puntitos de la lista*/
+}
+nav > ul > li{			/*Selecciona el primer elemento ul de nav 
+						y el primer elemento de li de ul*/
+	float: left;		/*Esto hace que la pagina fluya hacia arriba, por lo que se debe
+						de poner un clearfix (::after) --> 	content:'', display:block, clear:both*/
+}
+nav ul::after{
+	content:'';
+	display:block;
+	clear:both;
+}
+nav ul li a{
+	display: inline-block;		/*Como las ligas son de tipo block, que es el defautl que toma el
+								navegador, se debe hacer override, para que asi se pueda poner un 
+								width*/
+	width: 200px;
+	color:#ffffff;
+	text-align: center;			/*Este text-align es con respecto a los 20px que se le asigno*/
+	text-decoration: none;
+}
+
+nav ul li a:hover{
+	background: #00b8e4;
+}
