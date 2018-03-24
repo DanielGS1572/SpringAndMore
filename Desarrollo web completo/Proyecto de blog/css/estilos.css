@@ -1,10 +1,19 @@
 /*
 			NOTAS GENERALES
 - 	El clearfix siempre debe de ir sobre un padre y debe llevar
-	:after
+	:after, ademas no deben de ir en etiquetas principales, como 
+	footer, header, etc... sino dentro de un div que contiene los 
+	demás elementos
+- 	El clearfix solo aplica para elementos que son flotados
 - 	Para modificar una imagen solo con el puro width la encoje
 	proporcional con el ancho
-
+-	cursor: pointer;	-->			Para que ponga la manita sobre el enlace
+- 	En los selectores es diferente poner "footer, h2" vs "footer h2", el segundo
+	hace que sea mas específico
+- 	No es posible (comparandolo con el html) poner footer.contenedor... esto esta mal
+	pues el selector del punto va de acuerdo con la etiqueta... lo correcto seria 
+	footer div.contenedor --> ver que el div y contenedor estan en la misma etiqueta
+	<div class="contenedor">
 
 */
 
@@ -81,6 +90,7 @@ nav ul li a{
 	color:#ffffff;
 	text-align: center;			/*Este text-align es con respecto a los 20px que se le asigno*/
 	text-decoration: none;
+	padding: 20px;
 }
 
 nav ul li a:hover{
@@ -118,10 +128,7 @@ main{
 	width:70%;
 	padding-right: 40px;
 }
-aside{
-	float:right;
-	width:30%
-}
+
 
 /********************************************************/
 /********** Entradas de posts  **************************/
@@ -153,4 +160,78 @@ h2{
 	text-transform: uppercase;
 	text-decoration: none;
 
+}
+/********************************************************/
+/******************** Sidebar  **************************/
+aside{
+	float:right;
+	width:30%;
+	margin-top: 30px;
+}
+aside ul{			/*Sería lo mismo poner aside ul li pues con el ul selecciona el padre y al aplicar el estilo tambien lo hace en los hijos*/		
+	list-style: none;
+}
+aside ul li{
+	padding: 10px 0 10px 10px;
+	width: 150px;		/*Para que los botones no se vean tan alargados, en lugar de usar margin right, mejor uso width*/
+	text-align: center;			/*Para centrarlos dentro del botón*/
+
+}
+aside ul li:hover{
+	background-color:#00b8e4;
+	cursor: pointer;				/*Para que ponga la manita sobre el enlace*/
+}
+aside ul li a{
+	text-decoration: none;
+	color:#00b8e4;
+}
+aside ul li:hover a{
+	color:#ffffff;
+}
+
+
+/********************************************************/
+/********************** FOOTER **************************/
+/********************************************************/
+footer{
+	background-color: #db008d;
+	/*Ver la diferencia:
+	- padding top es el marge dentro del contenedor del footer
+	- margin-top es el espacio del contenedor con el contenido principal
+	*/
+	padding-top:40px;
+	margin-top:30px;
+}
+footer .contenedor::after{
+		content:'';
+	display:block;
+	clear:both;
+}
+footer h2{
+	color:#ffffff;
+}
+footer div.nosotros{
+	float: left;		
+	width:30%;
+	color:#ffffff;
+}
+footer div.menu{
+	float: right;
+	width: 40%;			/*No necesariamente debe de tener 70% para que sume el 100%*/
+	text-align: right;
+}
+footer nav{
+	width: auto;		/*Como la lista abarca mucho espacio, 
+						hace que el footer ocupe mas de lo que el contenido 
+						principal abarca*/
+}
+footer nav ul li a{		/*Ya se tiene un selector nav ul li a que le aplica un padding: 
+						alrededor de los bordes*/
+	width: 200px;		/*width: auto --> elimina el ancho de los 200px*/	
+}
+p.copyright{
+	text-align: center;
+	color: #ffffff;
+	padding: 20px;		/*Como p es de display block no es necesario ponerle a los lados
+						pues se expande a lo largo del renglon*/
 }
