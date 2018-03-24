@@ -1,3 +1,13 @@
+/*
+			NOTAS GENERALES
+- 	El clearfix siempre debe de ir sobre un padre y debe llevar
+	:after
+- 	Para modificar una imagen solo con el puro width la encoje
+	proporcional con el ancho
+
+
+*/
+
 /**
 *##################################################################
 *######## FORMA RECOMENDADA DE TRABAJAR CON EL border-box #########
@@ -36,8 +46,9 @@ div.contenedor{
 						  el auto es para que el sobrante de (pagina-1200px)/2 lo deje 
 						  de margenes de la derecha y de la izquierda */
 }
-
-/*	NAVEGACION */
+/********************************************************/
+/******************	NAVEGACION **************************/
+/********************************************************/
 .navegacion{
 	background-color:#db008d;
 }
@@ -74,4 +85,72 @@ nav ul li a{
 
 nav ul li a:hover{
 	background: #00b8e4;
+}
+
+/********************************************************/
+/************** Segundo nivel de la navegación **********/
+nav ul ul{
+	position: absolute; /*Como es un hijo se pone abs el padre (nav) tiene rel*/
+	top:100%;			/*Este top 100% sirve para que lo que se despliega de submenu coincida con la franja del menu principal*/
+	background-color: rgba(0,184,228,.7);
+	display: none;
+}
+
+nav ul li:hover > ul{  
+	display: block;		/*Como se escondió el ul, cuando se haga un hover sobre el li, ya mostrará de nuevo la lista*/
+}
+
+nav ul li:hover{		/*Como los ul se encuentran como hijos del ul, cuando se seleccione un submenu, por seleccionar los hijos si aplica esta regla de css*/
+	background-color: rgba(0,184,228,.7);
+}
+
+/********************************************************/
+/********** CONTENIDO PRINCIPAL**************************/
+/********************************************************/
+div.contenido::after{		
+	content:'';
+	display:block;
+	clear:both;
+}
+
+main{
+	float:left;
+	width:70%;
+	padding-right: 40px;
+}
+aside{
+	float:right;
+	width:30%
+}
+
+/********************************************************/
+/********** Entradas de posts  **************************/
+article{
+	margin-top:30px;
+}
+article img{
+	float:left;
+	width:300px;		/*Para modificar una imagen solo con el puro width la encoje proporcional con el ancho*/
+	padding-right: 15px;
+}
+article p{
+	text-align: justify;
+	line-height: 2;
+	
+}
+h2{
+	color:#00b8e4;
+	margin-bottom: 20px;
+}
+.boton{
+	background-color:#00b8e4;
+	padding: 10px 30px;
+	display: inline-block;		/*Como las ligas son inline y se le pone un padding, hace que se empalme un poco con el texto. Para que el 
+								padding no se interponga se pone inline-block, si unicamente se pusiera block el boton se expandiria*/
+	margin-top:10px;			/*Para darle un poquito mas de espacio extra que el que le da por default el inline-block*/
+	color:#ffffff;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+
 }
