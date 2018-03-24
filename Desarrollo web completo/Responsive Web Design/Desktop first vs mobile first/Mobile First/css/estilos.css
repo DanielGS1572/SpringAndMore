@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: orange;
+}
+h1 {
+  color: #ffffff;
+}
+p {
+  color: white;
+}
+div.caja div.contenido {
+  background-color: blue;
+  margin-bottom: 20px;
+  color: white;
+  padding: 20px;
+}
+/*De 500 para abajo aplicara el background de los estilos 
+del codigo anterior a esta linea*/
+@media only screen and (min-width:500px){ /*De 500 para arriba*/
+  body{
+    background-color: purple;
+  }
+}
+@media only screen and (min-width:800px){ /*De 800 para arriba*/
+  body{
+    background-color: cyan;
+  }
+  div.caja{
+    width:33.3%;
+    float:left;
+  }
+}

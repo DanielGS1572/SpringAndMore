@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: orange;
+}
+h1 {
+  color: #ffffff;
+}
+p {
+  color: white;
+}
+div.caja div.contenido {
+  background-color: blue;
+  margin-bottom: 20px;
+  color: white;
+  padding: 20px;
+}
+/*Cuando exista una diferencia con respecto a otro media query
+los estilos se van cascadeando, suponiendo hay uno de 800 y 
+la letra es naranja, en otro media query de 500, el color de 
+la letra naranja se pasará al de 500*/
+@media only screen and (max-width:500px) {  /*Este nunca lo tomará pues ya esta abarcado el 0 a 700 */
+  body {
+    background-color: purple;
+  }
+}
+@media only screen and (max-width:700px) {
+	 body {
+		background-color: yellow;
+	}
+    div.contenido-inferior {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    div.caja {
+      width: 33.3%;
+      float: left;
+      padding: 20px;
+      font-size: 80px;
+    }
+    div.caja div.contenido {
+      background-color: blue;
+    }
+    .contenedor {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+}

@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: arial, helvetica;
+}
+div.contenido-superior {
+  padding: 20px;
+}
+div.contenido-inferior > div {
+  padding:20px;
+}
+@media only screen and (min-width:768px) {  /*MOBILE FIRST --> 768px hacia arriba*/
+  div.contenido-inferior > div {  /*Selecciona el primer div cuya clase dice texto-inferior*/
+    width: 50%;                   /*Quiere decir que cuando supere los 768 dividira en dos columnas*/
+    float: left;
+  }
+  div.contenedor {
+    max-width: 1100px;            /*El max-width limita el ancho máximo, si el navegador se hace mucha mas 
+                                  grande, respetará el width (para que no se vaya hasta las orillas el texto*/
+    margin:0 auto;
+  }
+}

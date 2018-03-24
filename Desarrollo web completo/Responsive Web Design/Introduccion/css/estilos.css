@@ -1,0 +1,24 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    background-color:red; 
+}
+p{
+   font-weight: 400; 
+   
+}
+img{
+    max-width: 100%     /*Para sitios responsivo lo ideal es trabajar con MAX-width,
+                        Si solo se pone width pues ocupara el tamaño de la pagina web*/
+}
+
+@media only screen and (max-width: 599px){ /*quiere decir que los estilos se aplicara de 0 a 599px*/
+    body{
+        background-color: orange;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:799px){ /*Cuando llegue a los 800 caera en el css que no contiene media querias*/
+    body{
+        background-color: purple;
+    }
+}
