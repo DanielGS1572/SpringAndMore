@@ -1,0 +1,6 @@
+- Mobile first toma todo lo que se ponga en el css y se pone la cantidad de pixeles minima para que tome
+ciertos estilos
+	- min width es de la cantidad de pixeles que se le indique hasta que se tope con otro o hasta "infinito"
+	- por eso se dice que es mobile first porque solo se indican las excpecines para tamaños de pantalla
+	mayores a un celular
+- Max width, toma de 0 a la cantidad de pixeles que se le indique
