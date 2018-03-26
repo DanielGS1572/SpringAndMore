@@ -1,0 +1,1 @@
+en lugar de usar jquery, picture se encarga de que se pueda mostrar diferentes imagenes (de mayor tamaño o menor, dependiendo del tamaño de la pantalla)

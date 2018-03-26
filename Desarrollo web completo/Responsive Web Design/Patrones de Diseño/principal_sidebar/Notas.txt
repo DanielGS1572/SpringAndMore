@@ -1,0 +1,1 @@
+Unicamente lo que hace es que el sidebar cuando es en un celular lo pone como si estuviera en el footer

@@ -19,7 +19,7 @@ img {
 }
 
 
-@media only screen and (min-width:480px) {
+@media only screen and (min-width:480px) {  /*TELEFONO MEDIANO*/
     aside {
       float: left;
       padding-right: 20px;
@@ -30,7 +30,7 @@ img {
         padding-right: 20px;
       }
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:768px) {    /*TABLET*/
       aside {
         width: 25%;
       }

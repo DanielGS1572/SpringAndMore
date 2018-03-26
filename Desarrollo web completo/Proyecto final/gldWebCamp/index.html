@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">  <!--Se pega el css de fontawesome -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+
+
+
+
+
+
+
+        <!--INICIO DEL CODIGO DEL PROYECTO-->
+        
+
+        <header class="site-header">
+            <div class="hero">
+                <div class="contenido-header">
+                    <nav class="redes-sociales">
+
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </nav>
+                </div>
+                    <div class="informacion-evento">
+                        <div class="clearfix">      <!--Ya no se crea el clearfix a manita... ya solo con la clase del css del boilerplate que viene por default -->
+                            <p class="fecha"><i class="far fa-calendar-alt"></i>10-12 Dic</p>
+                            <p class="ciudad"><i class="fa fa-map-marker"></i>Guadalajara, MX</p>
+                        </div>   
+                        <h1 class="nombre-sitio">GdlWebCamp</h1>
+                        <p class="slogan">La mejor conferencia de <span>diseño web</span><p>
+           
+                    </div><!--.informacion-evento-->
+                  </div><!--.hero-->
+        </header>
+
+        <div class="barra"> <!--Este sera el contenedor para la seccion -->
+        <!--Recordar que el clearfix debe de ir sobre un elemento mas abajo, es decir no en la etiqueta mas externa, por eso se agrega un div que contendra todo lo de la barra -->
+            <div class="contenedor clearfix"> <!--Este se usara para alinear los elementos dentro de la barra, para que no queden tan pegados del lado izquierdo por ejemplo -->
+                <div class="logo">
+                    <img src="img/logo.svg" alt="logo GdlWebCamp">
+                </div>
+            
+        
+                <div class="menu-movil">
+                    <span></span><!--Estos tres span se usaran para simular el menu tipo hamburguesa -->
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="navegacion-principal clearfix">
+                    <a href="#">Conferencia</a>
+                    <a href="#">Calendario</a>
+                    <a href="#">Invitados</a>
+                    <a href="#">Reservaciones</a>
+                </nav>
+            </div><!--.contenedor-->
+        </div><!--.barra -->
+
+        <section class="seccion contenedor">
+            <h2>La mejor conferencia de diseño web en español</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et mi ut erat pellentesque luctus. Aliquam dapibus ipsum a ex pellentesque, ac faucibus nibh lobortis. Quisque sit amet consectetur felis. Vestibulum a sem efficitur, aliquam felis id, blandit nulla. Vivamus diam purus, efficitur vel cursus vitae, venenatis id mi</p>
+        </section>
+
+        <section class="programa">
+            <div class="contenedor-video">
+                <video autoplay loop poster="bg-talleres.jpg">  <!--El poster es para que no siempre se reproduzca el video -->
+                    <source src="video/video.mp4" type="video/mp4"> <!--Siempre debe estar un mp4, ya que en los ipad si no encuentra primero un mp4 no reproduce nada -->
+                    <source src="video/video.webm" type="video/mp4">
+                    <source src="video/video.ogv" type="video/mp4">
+                </video>
+            </div><!--Contenedor-video -->
+            <div class="contenido-programa">
+                <div class="contenedor">
+                    <div class="programa-evento">
+                        <h2>Programa del evento</h2>
+                        <nav class="menu-programa">
+                            <a href="#talleres"><i class="fa fa-code"></i>Talleres</a>
+                            <a href="#conferencias"><i class="fa fa-comment"></i>Conferencias</a>
+                            <a href="#seminarios"><i class="fa fa-university"></i>Seminarios</a>
+                        </nav>
+
+                        <div id="talleres" class="info-curso ocultar clearfix">
+                            <div class="detalle-evento">
+                                <h3>HTML5, CSS3 y Javascript</h3>
+                                <p><i class="fa fa-clock"></i>16:00hrs</p>
+                                <p><i class="fa fa-calendar"></i>10 de Dic</p>
+                                <p><i class="fa fa-user"></i>Juan Pablo de la torre Valdéz</p>
+                            </div>
+
+                            <div class="detalle-evento">
+                                <h3>Responsive web design</h3>
+                                <p><i class="fa fa-clock"></i>20:00hrs</p>
+                                <p><i class="fa fa-calendar"></i>20 de Dic</p>
+                                <p><i class="fa fa-user"></i>Juan Pablo de la torre Valdéz</p>
+                            </div>
+
+                            <a href="#" class="button float-right">Ver todos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--FIN DEL CODIGO DEL PROYECTO-->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>

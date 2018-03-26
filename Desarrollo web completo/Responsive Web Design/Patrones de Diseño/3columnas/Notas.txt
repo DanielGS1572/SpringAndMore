@@ -1,0 +1,1 @@
+Las columnas de los extremos se van hasta abajo cuando la pagina se hace mas pequeña

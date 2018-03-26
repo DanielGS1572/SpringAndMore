@@ -1,0 +1,2 @@
+Este caso es el mas avanzado, no es TAN recomendable usarlo pues habría que ser consistente a lo largo
+de todas las opciones de la pagina web

@@ -1,0 +1,656 @@
+/*
+                NOTAS
+- CUANDO SE PONGA ::after, siempre debe de llevar content: ''; 
+- /*Para que tome el margin top en el boton debe de tener un display inline-block*/
+
+
+
+
+
+*/
+
+
+
+
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                     GLOBALES
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+html{
+    box-sizing: border-box; /*Para cuando se agregue un padding no afecte*/
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor{
+    width:90%;
+    margin: 0 auto;         /*Esta linea es importante, de lo contrario no tendría caso unicamente ponerle solo un width de 90*/
+}
+@media only screen and (min-width:480px){
+    .contenedor{
+    width:95%;
+    }
+}
+@media only screen and (min-width:768px){
+    .contenedor{
+    width:90%;
+    }
+}
+@media only screen and (min-width:992px){
+    .contenedor{
+    width:90%;
+    max-width: 1100px;
+    }
+}
+
+
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        HEADER
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+
+        
+div.hero{
+    background-image: url(../img/encabezado.jpg);
+    height: 100vh;                          /*100 view per height*/
+    background-position: top center;        /*Unicamente la posiciona*/
+    background-size: cover;                 /*Hace que la imagen ocupe todo el brower*/
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*SI div.contenido-header queda abajo de @media, no funciona el efecto, porque?*/
+div.contenido-header{
+    padding-top:40px;
+}
+@media only screen and (min-width:768px){
+    div.contenido-header{
+    padding-top:10px;
+    }
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++*/
+nav.redes-sociales{
+    text-align: center;
+}
+nav.redes-sociales a{
+    color:#ffffff;
+    font-size: 2em;
+    margin-right: 20px;
+}
+nav.redes-sociales a:last-child{
+    margin-right: 0;                        /*Remueve el margen del ultimo para que se centre bien*/
+}
+div.informacion-evento{
+    text-align: center;
+    color:#ffffff;
+}
+@media only screen and (min-width:768px){
+    div.informacion-evento{
+        width:70%;
+        margin: 0 auto;
+        margin-top:50px;
+    }
+}
+div.informacion-evento p{
+    margin: 0;
+    display:inline;
+    font-size:20px;
+    text-transform: uppercase;
+}
+div.informacion-evento p i{
+    color: #fe4918;
+    font-size: 2em;
+}
+p.fecha{
+    float:left;
+}
+p.ciudad{
+    float:right;
+}
+p.slogan{
+    text-transform: none!important;
+}
+p.slogan span{
+    font-weight: bold;
+}
+h1.nombre-sitio{
+    font-size: 5.9vw;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+}
+h2{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.4em;
+}
+h2::after{
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width:100px;
+    display: block;
+}
+h3{
+    font-size: 1.2em;
+    color: #fe4918;
+}
+.button{
+    text-transform: uppercase;
+    background: #fe4918;
+    text-decoration: none;
+    color: #ffffff;
+    padding:10px 40px;
+
+    display: inline-block;
+    margin-top:20px;            /*Para que tome el margin top en el boton debe de tener un display inline-block*/
+}
+.button:hover{
+    transition: all .5s ease;
+    background-color:#e33000;
+}
+.float-right{
+    float: right;
+}
+@media only screen and (min-width:768px){
+    h1.nombre-sitio{
+    font-size: 11.5vw;
+    margin:0;
+    line-height: 1;                 /*Para que el espacio entre gdlwebcamp y la fecha quede un poco mas pegado*/
+    }
+}
+
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        BARRA
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+div.barra{
+    background-color: #353535;
+    padding: 20px 0;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*
+***********************************************************
+Interesante... 
+si no se pone 
+            div.logo img{
+                width: 100%;
+            }
+el width de div logo no funciona, como que para que funcione
+correctamente la parte responsiva en las imagenes siempre debera 
+llevar el 100%
+
+***********************************************************/
+
+div.logo{                                                   
+    width: 80%;
+    float:left;
+}
+div.logo img{
+    width: 100%;
+}
+@media only screen and (min-width:768px){
+    div.logo{
+    width: 33%;
+    
+    }
+}
+
+/***********************************************************
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+nav.navegacion-principal a{
+    color:#ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size:1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .6s ease;
+    width:100%;
+    display:block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+@media only screen and (min-width:768px){
+    nav.navegacion-principal{
+        width:67%;
+        float:right;
+        text-align: right;
+        display: block;
+   
+    }
+    nav.navegacion-principal a{         /*Para alinear con el logo de GDLWEBCAMP*/
+    
+        padding: 10px 10px;
+        display: inline-block;          /*Es muy importante el inline block, de lo contrario no lo centra pues solo el display es de cada anchor*/
+        width:auto;
+        text-align: center;
+        margin: 10px 10px 0 0;
+    }
+}
+
+nav.navegacion-principal a:last-child{
+    border: 2px solid #fe4918;
+    color: #fe4918;
+}
+nav.navegacion-principal a:last-child:hover{        /*Cuando se haga hover sobre el ultimo hijo*/
+    color: #ffffff;
+}
+nav.navegacion-principal a:hover{
+    background-color: #fe4918;
+}
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        MENU MOVIL
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+
+/*+++++++++++++++++++++++++++++*/
+/*      Menu hamburguesa       */
+div.menu-movil{
+    width:60px;
+    float:right;
+    text-align: right;
+    display: block;
+    margin-top:12px;
+}
+div.menu-movil{
+    cursor: pointer;
+}
+@media only screen and (min-width:768px){
+    div.menu-movil{
+        display: none;
+    }
+}
+div.menu-movil span{
+    height:8px;
+    margin-bottom:6px;
+    background-color:white;
+    display: block;
+}
+
+/*+++++++++++++++++++++++++++++*/
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+     La mejor conferencia de diseño web en español
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+.seccion{
+    padding: 30px 0;
+}
+.seccion p{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            Talleres, seccion que esta arriba del video
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+section.programa{       
+    position: relative;
+}
+div.contenedor-video{
+    max-width: 100%;
+    overflow-x:hidden;          /*En caso que el video se salga de lo ancho recorta la imagen*/
+    
+}
+div.contenido-programa{         /*Para poder meter el contenido del programa arriba del video, es necesario el top 0, position relative y para que se vea bien los 100%*/
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+div.programa-evento{
+    background-color: rgba(255,255,255,.8);
+    padding: 15px;   
+    margin-top:80px;
+}
+@media only screen and (min-width:768px){
+
+     div.programa-evento{
+        width:70%;
+    }
+}
+@media only screen and (min-width:992px){
+     div.programa-evento{
+    width:50%;
+}
+}
+
+
+div.contenedor-video video{width: 100%;}        /*Para que quepa completo el video*/
+
+nav.menu-programa{
+    width:100%;
+    border-bottom: 1px solid #fe4918;
+    padding-bottom: 10px;
+}
+@media only screen and (min-width:768px){
+nav.menu-programa{
+    display: table;                         /*Para que se separen homogeneamente*/             
+}
+}
+nav.menu-programa a{
+    display: block;
+    text-align: center;
+    color:#000;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size:1.2em;
+}
+
+@media only screen and (min-width:768px){
+    nav.menu-programa a{
+        display: table-cell;                /*Para que se acomoden en una sola linea*/
+    }
+}
+nav.menu-programa a i,
+div.detalle-evento p i {
+    color: #fe4918;
+    font-size:1.6em;
+    margin-right: 6px;
+}
+div.detalle-evento{
+    margin-top:20px;
+    border-bottom: 1px solid black;
+    padding-left:10px;
+}
+div.detalle-evento:nth-child(2){
+    border: 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
