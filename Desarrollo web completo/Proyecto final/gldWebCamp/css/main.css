@@ -1,11 +1,12 @@
 /*
                 NOTAS
 - CUANDO SE PONGA ::after, siempre debe de llevar content: ''; 
-- /*Para que tome el margin top en el boton debe de tener un display inline-block*/
-
-
-
-
+-   *Para que tome el margin top en el boton debe de tener un display inline-block
+-   *Al poner una posicion absoluta, el parrafo unicamente ocupara el espacio del parrafo, por lo que se contraresta con un widht:100%
+- webkit son prefijos, y se usan como engine, los que sean compatibles, se agregan funcionalidades especificas para ese navegador, 
+para mozilla es -moz-, opera -o-, no todos funcionan en todos los navegadores
+-   *Siempre que se use el before o after siempre de llevar un content
+- background-attachment: fixed;       *Para dar el efecto de parallax
 
 */
 
@@ -146,6 +147,11 @@ body{
     width:90%;
     max-width: 1100px;
     }
+}
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
 }
 
 
@@ -476,6 +482,117 @@ div.detalle-evento{
 }
 div.detalle-evento:nth-child(2){
     border: 0;
+}
+
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        INVITADOS
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+ul.lista-invitados li{
+    padding:10px;
+    float: left;
+}
+@media only screen and (min-width:480px){
+    ul.lista-invitados li{
+        width:50%;
+    }
+}
+@media only screen and (min-width:768px){
+    ul.lista-invitados li{
+        width:33.3%;
+    }
+}
+
+div.invitado{
+    position: relative;
+    overflow: hidden;       /*Overflow hidden es para que no se empalmen con otras imagenes, en el siguiente estilo que se le pone a la imagen del width 100% es para que no la recorte con el overflow hidden*/
+      
+}
+div.invitado img{
+    width:100%;
+    filter:gray;
+    -webkit-filter: grayscale(1);
+
+     
+}
+div.invitado img:hover{
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+div.invitado p{
+    position: absolute;     /*Al poner una posicion absoluta, el parrafo unicamente ocupara el espacio del parrafo, por lo que se contraresta con un widht:100%*/
+    bottom:0;
+    left:0;
+    padding: 15px 10px;
+    margin:0;               /*Le puso un margen a la p, lo que hacia que se viera muy espaciado*/
+    background-color: rgba(0,0,0,0.55);
+    width: 100%;
+    text-align: left;
+    color:#fe4918;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+}
+div.invitado:hover p{
+    bottom: -80px;
+    opacity: 0;
+}
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        CONTADOR
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+.parallax::before{
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;       /*Para dar el efecto de parallax*/
+    -webkit-filter: brightness(.8);
+    filter: brightness(.8);
+}
+div.contador{
+    position: relative;
+    height: auto;
+}
+div.contador::before{       /*Se puede quitar el before y tendra el mismo resultado, siempre y cuando tambien se quite en .parallax::before*/         
+                          /*Siempre que se use el before o after siempre de llevar un content*/
+    background-image: url(../img/bg-resumen.jpg);
+    content:'';
+}
+ul.resumen-evento{
+    position:relative;
+    padding: 120px 0;
+}
+ul.resumen-evento li{
+    width:50%;
+    float:left;
+    text-align: center;
+    color:#ffffff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size:24px;
+}
+p.numero{
+    color:#fe4918;
+    font-size:4em;
+    display: block;
+    margin: 0 0 10px 0;
+}
+@media only screen and (min-width:768px){
+    ul.resumen-evento li{
+        width: 25%;
+    }
 }
 
 /* ==========================================================================

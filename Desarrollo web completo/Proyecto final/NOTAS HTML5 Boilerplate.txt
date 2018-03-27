@@ -4,8 +4,8 @@ la carpeta css tiene el main y un archivo de normalize
 
 - Normalize se usa para que el pintado de los elementos sea mas consistente a traves de los diferentes browsers
 - El archivo de index ya trae una estructura de html
-- Modernizr.- Revisa la versiÛn del navegador y cambia la experiencia dependiendo del browser
-- En el archivo main.css donde se escribir· el css es en Author¥s customer style
+- Modernizr.- Revisa la versiÔøΩn del navegador y cambia la experiencia dependiendo del browser
+- En el archivo main.css donde se escribirÔøΩ el css es en AuthorÔøΩs customer style
 	- el main css tiene para poder imprimir la pagina
 - para las fuentes de google fonts --> fonts.google
 
@@ -20,3 +20,18 @@ em vs rem
 del css /*Para alinear con el logo de GDLWEBCAMP*/ --> hay forma que no sea con pixeles y que se haga con un text-align o algo parecido?
 /*SI div.contenido-header queda abajo de @media, no funciona el efecto, porque?*/
 revisar porque en el menu hamburguesa no queda bien lo de conferencias /*      Menu hamburguesa       */
+
+
+Porque se tiene relative-relative en una relaci√≥n padre (div.contador) e hijo (ul.resumen-evento)... ignorar (div.contador::before, es nada mas para ubicar el codigo)
+div.contador{
+    position: relative;
+    height: auto;
+}
+div.contador::before{                               /*Siempre que se use el before o after siempre de llevar un content*/
+    background-image: url(../img/bg-resumen.jpg);
+    content:'';
+}
+ul.resumen-evento{
+    position:relative;
+    padding: 120px 0;
+}

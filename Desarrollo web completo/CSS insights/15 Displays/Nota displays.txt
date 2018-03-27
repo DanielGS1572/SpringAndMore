@@ -8,7 +8,7 @@ Todo elemento en html se comporta como un rectangulo y hay 6 formas en las que s
 - none.- lo elimina visualmente y lo demas fluye hacia donde estaba el objeto, pero en el DOM sigue existiendo
 - flex(box).-
 - css grid (no se ve en el curso)
-
+- display table cell para que agrupe horizontalmente (por ejempleo un grupo de ligas [anchors])
 - display table.- para centrar verticalmente contenido (puede ser texto u otra cosa),
 	 se usa para darle la vuelta a line-height para querer centrar texto de mas de una linea en un cuadro
 
