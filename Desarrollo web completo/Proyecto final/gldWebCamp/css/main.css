@@ -254,6 +254,7 @@ h3{
     text-decoration: none;
     color: #ffffff;
     padding:10px 40px;
+     border: 2px solid #fe4918;
 
     display: inline-block;
     margin-top:20px;            /*Para que tome el margin top en el boton debe de tener un display inline-block*/
@@ -261,6 +262,12 @@ h3{
 .button:hover{
     transition: all .5s ease;
     background-color:#e33000;
+}
+.button.hollow,
+.button.hollow:hover{
+    background-color: white;
+    color:#fe4918;
+   
 }
 .float-right{
     float: right;
@@ -588,12 +595,95 @@ p.numero{
     font-size:4em;
     display: block;
     margin: 0 0 10px 0;
+    font-family: 'Oswald', sans-serif;
 }
 @media only screen and (min-width:768px){
     ul.resumen-evento li{
         width: 25%;
     }
 }
+div.tabla-precio{
+    border: 1px solid #e1e1e1;
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+div.tabla-precio:hover{
+    transform: scale(1.1);
+    border: 1px solid #fe4918;
+    box-shadow: 0px 0px 50px #666;
+    transition: all .3s ease;
+}
+div.tabla-precio ul li{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 26px;
+}
+div.tabla-precio ul li:before{
+    color:green;
+    content:'\2714';
+
+    display: inline-block;
+    padding:0.5px;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+    font-size:20px;
+}
+div.tabla-precio h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+div.tabla-precio p.numero{
+    color: #000;
+    margin:20px 0;
+}
+
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                      TABLA DE PRECIOS
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+ul.lista-precios > li{      /*únicamente se seleccionan los li mas externos, por ahorita no importan los internos que viene siendo la lista de la descripcion de lo que incluye*/
+    padding: 10px;
+}
+@media only screen and (min-width:768px){
+    ul.lista-precios > li{
+        float: left;
+        width: 33.3%;
+    }
+}
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                      MAPA
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+div.mapa{
+    height: 420px;
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes
