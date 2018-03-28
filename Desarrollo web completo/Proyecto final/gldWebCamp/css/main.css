@@ -670,8 +670,24 @@ div.mapa{
     background-color: green;
 }
 
-
-
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                      TESTIMONIALES
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+div.testimoniales{
+    padding-bottom:20px;
+}
+div.testimonial{
+    padding: 5px;
+}
+@media only screen and (min-width:768px){
+    div.testimonial{
+        float:left;
+        width:33.3%;
+}
 
 
 
