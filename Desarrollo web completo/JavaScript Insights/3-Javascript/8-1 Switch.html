@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	
+	<body>
+		
+		
+		<script type="text/javascript">
+		var metodoDePago = 'PayPal';
+		/*Cuando se tienen muchas condiciones en un if-else, lo mejor es que se use un switch*/
+  		switch (metodoDePago) {
+			case 'TC':
+				console.log("Ha pagado con tarjeta de credito");
+				break;
+			case 'Efectivo':
+				console.log("Ha pagado con efectivo");
+				break;
+			case 'PayPal':
+				console.log("Ha pagado con PayPal");
+				break;
+			default:
+				console.log("Método de pago no valido");
+				break;
+    }
+		</script>
+		
+	</body>
+	
+</html>

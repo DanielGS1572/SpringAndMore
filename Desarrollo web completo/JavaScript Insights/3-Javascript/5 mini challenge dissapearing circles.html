@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+		<style type="text/css">
+			.circle{
+				width:200px;
+				height:200px;
+				border-radius:50%;
+				float:left;			/*hace que los acomode uno tras otro*/
+				margin-right: 50px;		  /*para hacer una separacion*/
+			}
+			#red{
+				background-color:red;
+			}
+			#blue{
+				background-color:blue;
+			}
+			#yellow{
+				background-color:yellow;
+			}
+		</style>
+	</head>
+	
+	<body>
+        <div class="circle" id="red"></div>
+		<div class="circle" id="blue"></div>
+		<div class="circle" id="yellow"></div>
+		
+		
+		
+        <script type="text/javascript">
+            document.getElementById("red").onclick = function(){
+				document.getElementById("red").style.display = "none";
+            }
+			 document.getElementById("blue").onclick = function(){
+				document.getElementById("blue").style.display = "none";
+            }
+			 document.getElementById("yellow").onclick = function(){
+				document.getElementById("yellow").style.display = "none";
+            }
+        
+        </script>
+        
+    
+
+</body>
+	
+</html>

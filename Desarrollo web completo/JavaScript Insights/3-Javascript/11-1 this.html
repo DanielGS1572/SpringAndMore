@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	
+	<body>
+		
+	
+		
+		<script type="text/javascript">
+		
+		  var auto = {
+			nombre: "Mustang",
+			anio: 1965,
+			motor: 5.5,
+			color: "azul",
+			clasico: true,
+			es_real: false
+		}
+
+
+ 		 function recorrer_objeto(automovil) {
+			console.log(this.nombre);					/*Con this se refiere al objet que se le pasó como argumento a la función*/
+			console.log(this.anio);
+			console.log(this.motor);
+			console.log(this.color);
+			console.log(this.clasico);
+			console.log(this.es_real);
+		}
+    auto.mostrarAuto = recorrer_objeto;					/*La funcion no se le pasa el parametro, simplemente se le asigna como si fuera una propiedad y recorrer objeto ya sabe a que auto asignarle a la funcion*/			
+    auto.mostrarAuto();
+		</script>
+		
+	</body>
+	
+</html>
