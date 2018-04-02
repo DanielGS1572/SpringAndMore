@@ -1,0 +1,13 @@
+En la consola de chrome unicamente se puede acceder directamente con el document:
+    - document
+    - document.head
+    - document.body
+
+Si se quisiera seleccionar algo diferente debe de ser con querySelector
+    - document.querySelector('header');
+    - document.querySelector('#navegacion'); --> para un id
+    - document.querySelector('.navegacion'); --> para una clase
+    * Un shortcut para querySelector es el signo de $ --> $('header')
+
+querySelector es la forma mas nueva y como que no es tán soportada, a su ves sería getElementById
+    - document.getElementById('logo') --> ya no es necesario el signo de #

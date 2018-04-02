@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blog de Viajes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+  </head>
+  <body>
+    <header>
+        <div class="contenedor">
+            <div id="logo" class="logo">
+                <img src="img/logo.png">
+            </div> <!--.logo-->
+
+            <div class="buscador">
+              <form class="formulario" action="index.html" method="post">
+                    <label for="buscador">
+                        <input type="search" id="buscador" name="buscador" placeholder="Buscar">
+                    </label>
+                    <input type="submit" id="buscar" class="buscador" value="Buscar">
+              </form>
+            </div>
+        </div> <!--.contenedor-->
+    </header>
+    <div id="navegacion" class="navegacion">
+        <nav id="menu">
+            <ul class="clearfix">
+                <li><a target="_blank" href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a>
+                  <ul>
+                    <li><a href="#">Mision</a></li>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">Valores</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Blog</a>
+                    <ul>
+                      <li><a href="#">Consejos</a></li>
+                      <li><a href="#">Ciudades</a></li>
+                      <li><a href="#">Promociones</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="contenido" class="contenido">
+        <main>
+            <article>
+                <h2>Viajar a Londres</h2>
+                <img src="img/imagen_1.jpg" alt="visitar londres">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="boton">Leer más</a>
+            </article>
+            <article>
+                <h2>Puente de la Torre</h2>
+                <img src="img/imagen_2.jpg" alt="puente de la torre">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="boton">Leer más</a>
+            </article>
+            <article>
+                <h2>Metro de Londres</h2>
+                <img src="img/imagen_3.jpg" alt="metro de londres">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="boton">Leer más</a>
+            </article>
+        </main>
+
+        <aside id="sidebar" class="sidebar">
+            <h2>Otros posts</h2>
+            <ul>
+              <li><a href="#">Entrada 1</a></li>
+              <li><a href="#">Entrada 2</a></li>
+              <li><a href="#">Entrada 3</a></li>
+              <li><a href="#">Entrada 4</a></li>
+              <li><a href="#">Entrada 5</a></li>
+            </ul>
+        </aside>
+    </div> <!--contenido-->
+
+
+    <footer>
+
+      <div class="contenedor">
+          <div class="nosotros">
+              <h2>Sobre nosotros</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+          </div>
+          <div class="menu navegacion">
+            <h2>Menú de navegación</h2>
+            <nav>
+              <a href="#">Inicio</a>
+              <a href="#">Nosotros</a>
+              <a href="#">Blog</a>
+              <a href="#">Tienda</a>
+              <a href="#">Contacto</a>
+            </nav>
+          </div>
+      </div>
+
+      <p class="copyright">
+          Todos los derechos reservados &copy;. Blog de Viajes 2016
+      </p>
+    </footer>
+    <script>
+    /*Esta funcion se ejecuta una sola vez */
+(function(){
+  'use strict'; /* le dice a javascritp que ejecute la versión estricta */
+  document.addEventListener('DOMContentLoaded', function(){ 
+    /*Este listener se ejecuta cuando se termina de cargar todo el HTML 
+    Este tipo de codigo es buena practica pues a lo mejor y todavia no se cargan todos los 
+    elementos y marcaría error al querer seleccionarlo en javascript*/
+    
+    
+      var logo = document.getElementById('logo');
+      console.log(logo);
+      /*logo.hasAttribute("class")  --> regresa un boolean
+        logo.getAttribute("class") --> regresa lo que se le asigno al atributo
+        logo.setAttribute("class","nueva_clase") --> reemplaza el nombre del atributo 
+       */
+      var navegacion = document.getElementById('navegacion');
+      navegacion.style.display = "none";    /*selecciona la propiedad display de style*/
+    
+    
+  });
+  
+})();
+    </script>
+
+  </body>
+</html>
