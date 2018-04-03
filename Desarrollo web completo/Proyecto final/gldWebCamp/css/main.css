@@ -689,7 +689,7 @@ div.testimoniales{
     padding-bottom:20px;
 }
 div.testimonial{
-    padding: 5px;
+    padding: 5px;    
 }
 @media only screen and (min-width:768px){
     div.testimonial{
@@ -732,6 +732,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 */
 footer.info-testimonial{
     padding:0;
+    background-color: transparent;
 }
 footer.info-testimonial img{
     float: left;

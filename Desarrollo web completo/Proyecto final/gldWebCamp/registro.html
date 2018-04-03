@@ -1,0 +1,216 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">  <!--Se pega el css de fontawesome -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+
+
+
+
+
+
+
+        <!--INICIO DEL CODIGO DEL PROYECTO-->
+        
+
+        <header class="site-header">
+            <div class="hero">
+                <div class="contenido-header">
+                    <nav class="redes-sociales">
+
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </nav>
+                </div>
+                    <div class="informacion-evento">
+                        <div class="clearfix">      <!--Ya no se crea el clearfix a manita... ya solo con la clase del css del boilerplate que viene por default -->
+                            <p class="fecha"><i class="far fa-calendar-alt"></i>10-12 Dic</p>
+                            <p class="ciudad"><i class="fa fa-map-marker"></i>Guadalajara, MX</p>
+                        </div>   
+                        <h1 class="nombre-sitio">GdlWebCamp</h1>
+                        <p class="slogan">La mejor conferencia de <span>diseño web</span><p>
+           
+                    </div><!--.informacion-evento-->
+                  </div><!--.hero-->
+        </header>
+
+        <div class="barra"> <!--Este sera el contenedor para la seccion -->
+        <!--Recordar que el clearfix debe de ir sobre un elemento mas abajo, es decir no en la etiqueta mas externa, por eso se agrega un div que contendra todo lo de la barra -->
+            <div class="contenedor clearfix"> <!--Este se usara para alinear los elementos dentro de la barra, para que no queden tan pegados del lado izquierdo por ejemplo -->
+                <div class="logo">
+                    <img src="img/logo.svg" alt="logo GdlWebCamp">
+                </div>
+            
+        
+                <div class="menu-movil">
+                    <span></span><!--Estos tres span se usaran para simular el menu tipo hamburguesa -->
+                    <span></span>
+                    <span></span>
+                </div>
+<!--
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        MENU MOVIL
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-->
+                <nav class="navegacion-principal clearfix">
+                    <a href="#">Conferencia</a>
+                    <a href="#">Calendario</a>
+                    <a href="#">Invitados</a>
+                    <a href="registro.html">Reservaciones</a>
+                </nav>
+            </div><!--.contenedor-->
+        </div><!--.barra -->
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    REGISTRO DE USUARIOS
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-->
+      <section class="seccion contenedor">
+          <h2>Registro de Usuarios</h2>
+          <form id="registro" class="registro" action="index.html" method="post">
+              <div id="datos_usuario" class="registro caja clearfix">
+                  <div class="campo">
+                    <label for="nombre">Nombre:</label>       <!--El for de un label es para que cuando seleccionen el label se active la casilla, debe de coincidir con el mismo id del input-->
+                      <input type="text" id="nombre" class="nombre" placeholder="tu Nombre">
+                  </div>
+                  <div class="campo">
+                    <label for="apellido">Apellido:</label>      
+                      <input type="text" id="apellido" class="apellido" placeholder="tu Apellido">
+                  </div>
+                  <div class="campo">
+                    <label for="email">Email:</label>      
+                      <input type="text" id="email" class="email" placeholder="tu Email">
+                  </div>
+
+                  <div id="error"></div>                <!--Simplemente se usara para realizar validaciones con javascritp o php -->
+              </div><!--#datos_usuario-->
+
+              <div id="paquetes" class="paquetes">
+                  <h3>Elige tu paquete</h3>
+                  <ul class="lista-precios clearfix">
+                            <li>
+                                <div class="tabla-precio">
+                                    <h3>Pase por día (viernes)</h3>
+                                    <p class="numero">$30</p>
+                                    <ul>
+                                        <li>Bocadillos Gratis</li>
+                                        <li>Todas las conferencias</li>
+                                        <li>Todos los talleres</li>
+                                    </ul>
+                                    <div class="orden">
+                                        <label for="pase_dia">Boletos deseados:</label>
+                                        <input type="number" min="0" id="pase_dia" placeholder="0" max="3">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tabla-precio">
+                                    <h3>Todos los días</h3>
+                                    <p class="numero">$50</p>
+                                    <ul>
+                                        <li>Bocadillos Gratis</li>
+                                        <li>Todas las conferencias</li>
+                                        <li>Todos los talleres</li>
+                                    </ul>
+                                    <div class="orden">
+                                        <label for="pase_todos">Boletos deseados:</label>
+                                        <input type="number" min="0" id="pase_todos" placeholder="0" max="3">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tabla-precio">
+                                    <h3>Pase por 2 días (Viernes y Sábado)</h3>
+                                    <p class="numero">$45</p>
+                                    <ul>
+                                        <li>Bocadillos Gratis</li>
+                                        <li>Todas las conferencias</li>
+                                        <li>Todos los talleres</li>
+                                    </ul>
+                                    <div class="orden">
+                                        <label for="pase_dos">Boletos deseados:</label>
+                                        <input type="number" min="0" id="pase_dos" placeholder="0" max="3">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+              </div><!--#Paquetes-->
+          </form>
+      </section>
+<!--
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    FOOTER DEL SITIO
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-->
+        <footer class="site-footer">
+            <div class="contenedor clearfix">
+                <div class="footer-informacion">
+                    <h3>Sobre <span>gdlwebcamp</span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend justo elit, ac interdum dui scelerisque a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec felis ipsum, placerat at mollis a, auctor at nisi. Vestibulum et rhoncus sapien.</p>
+                </div>  
+                <div class="ultimos-tweets">
+                    <h3>Últimos <span>tweets</span></h3>
+                    <ul>
+                        <li>Quisque euismod sapien ante, et placerat quam tempus ut.</li>
+                        <li>Quisque euismod sapien ante, et placerat quam tempus ut.</li>
+                        <li>Quisque euismod sapien ante, et placerat quam tempus ut.</li>
+                        </ul>
+                </div>
+                <div class="menu">
+                    <h3>Redes <span>sociales</span></h3>
+                    <nav class="redes-sociales">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </nav>
+                </div>
+            </div>
+            <p class="copyright">
+                    Todos los derechos reservados
+            </p>
+        </footer>
+
+        <!--FIN DEL CODIGO DEL PROYECTO-->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
