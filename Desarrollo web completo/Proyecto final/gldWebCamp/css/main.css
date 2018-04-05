@@ -945,7 +945,44 @@ div.paquetes .tabla-precio input{
 .contenido-dia > div time{
     color: #fe4918;
 }
+/*
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                        RESUMEN REGISTRO
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                    
+*/
+div.resumen p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+div.resumen div.extras{
+    float:left;
+    width:50%;
+    padding: 30px;
+}
+div.extras div.orden{
+    text-align: left;
+    margin-bottom: 10px;
+}
+div.extras div.orden input{
+    margin:10px 0 0 0;
 
+}
+div.orden select#regalo{
+    display: block;
+    
+}
+div.resumen div.total{
+    float:right;
+    width: 50%;
+    padding:30px;
+}
+
+div.resumen input{
+    display: block;
+    margin: 10px auto;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
