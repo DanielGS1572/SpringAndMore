@@ -8,6 +8,8 @@ para mozilla es -moz-, opera -o-, no todos funcionan en todos los navegadores
 -   *Siempre que se use el before o after siempre de llevar un content
 - background-attachment: fixed;       *Para dar el efecto de parallax
 -   *Si se quiere hacer crecer un p se hace con padding, no con height*
+-   * clear: both; *De esta forma nos aseguramos que no abarque todos los inputs (esto sucede porque estan flotados a la izquierda)*
+
 */
 
 
@@ -923,7 +925,7 @@ div.paquetes .tabla-precio input{
 }
 .contenido-dia{
     padding:20px;
-    /*display: none;*/
+    display: none;
 }
 @media only screen and (min-width:768px){
     .contenido-dia > div {
@@ -982,6 +984,24 @@ div.resumen div.total{
 div.resumen input{
     display: block;
     margin: 10px auto;
+}
+#lista-productos{
+    background-color: #e1e1e1;
+    padding: 20px;
+    display: none;
+}
+#suma-total{
+    text-align: center;
+    font-size: 2em;
+    color: #fe4918;
+}
+#error{
+    clear: both;                /*De esta forma nos aseguramos que no abarque todos los inputs (esto sucede porque estan flotados a la izquierda)*/
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: none;
 }
 /* ==========================================================================
    Helper classes
