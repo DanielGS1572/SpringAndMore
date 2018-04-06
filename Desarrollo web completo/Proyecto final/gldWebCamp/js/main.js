@@ -1,12 +1,25 @@
 var api = 'AIzaSyBJJ8ZJtpVvz_pXGRi87_Sa2P1SmPaAPtA';
-var map;
 
 function initMap() {
-        map = new google.maps.Map(document.getElementById('mapa'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+		var latLng = {
+			lat: 20.6772885,
+			lng: -103.3856328
+		};
+		var map = new google.maps.Map(document.getElementById('mapa'), {
+          'center': latLng,
+          'zoom': 14,
+          'mapTypeId': google.maps.MapTypeId.ROADMAP,
+          'draggable': false,
+          'scrollwheel': false
         });
+
+        var marker = new google.maps.Marker({
+	      	position: latLng,
+	      	map: map,
+	      	title: 'GDLWEBCAMP'
+      	});
       }
+      
 
 (function(){
 
@@ -142,5 +155,6 @@ var regalo = document.getElementById('regalo');
 	});
 })();
 /*
-5 Abril - 265  - 274
+5 Abril - 265 - 274
+6 Abril - 275 -
 */
