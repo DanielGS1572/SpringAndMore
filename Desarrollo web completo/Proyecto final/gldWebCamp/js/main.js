@@ -18,8 +18,21 @@ function initMap() {
 	      	map: map,
 	      	title: 'GDLWEBCAMP'
       	});
-      }
+
+        var contenido =   '<h2>GDLWEBCAMP</h2>' +
+                        '<p>Del 10 al 12 de Diciembre</p>' +
+                        '<p>Visitanos</p>';
+
+        var informacion = new google.maps.InfoWindow({
+            content: contenido
+        });
       
+      marker.addListener('click', function(){
+            informacion.open(map,marker);
+      });
+}
+
+     
 
 (function(){
 
@@ -154,7 +167,3 @@ var regalo = document.getElementById('regalo');
 
 	});
 })();
-/*
-5 Abril - 265 - 274
-6 Abril - 275 -
-*/
