@@ -60,17 +60,24 @@ var regalo = document.getElementById('regalo');
 		//Extras
 		var camisas = document.getElementById('camisa_evento');
 		var etiquetas = document.getElementById('etiquetas');
-
+		if(calcular !== null){
 		calcular.addEventListener('click',eventoCalcular);
-		
-		pase_dia.addEventListener('blur',mostrarDias);
-		pase_dos.addEventListener('blur',mostrarDias);
-		pase_completo.addEventListener('blur',mostrarDias);
-			
-		nombre.addEventListener('blur',validarCampos);
-		apellido.addEventListener('blur',validarCampos);
-		email.addEventListener('blur',validarCampos);
-		email.addEventListener('blur',validarMail);
+		}
+		if(pase_dia !== null){
+			pase_dia.addEventListener('blur',mostrarDias);
+		}
+		if(pase_dos!==null){
+			pase_dos.addEventListener('blur',mostrarDias);
+		}
+		if(pase_completo !== null){
+			pase_completo.addEventListener('blur',mostrarDias);
+		}
+		if(nombre !== null && apellido  !== null && email  !== null){
+			nombre.addEventListener('blur',validarCampos);
+			apellido.addEventListener('blur',validarCampos);
+			email.addEventListener('blur',validarCampos);
+			email.addEventListener('blur',validarMail);
+		}
 
 
 		function validarMail(){
@@ -167,3 +174,27 @@ var regalo = document.getElementById('regalo');
 
 	});
 })();
+
+
+$(function(){
+
+	/***********************************************
+			PROGRAMA DE CONFERENCIAS (INICIO)
+	 ***********************************************/
+		$('.programa-evento .info-curso:first').show();
+		$('.menu-programa a:first').addClass('activo');
+
+		$('.menu-programa a').on('click',function(){
+			$('.menu-programa a').removeClass('activo');
+			$(this).addClass('activo');
+			$('.ocultar').hide();
+			var enlace = $(this).attr('href');
+			console.log(enlace);
+			$(enlace).fadeIn(1000);
+			return false;				/*Si no se pone este return false hace un brinco en la pagina */
+		});
+
+	/***********************************************
+			PROGRAMA DE CONFERENCIAS (FIN)
+	 ***********************************************/
+});

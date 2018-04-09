@@ -9,7 +9,8 @@ para mozilla es -moz-, opera -o-, no todos funcionan en todos los navegadores
 - background-attachment: fixed;       *Para dar el efecto de parallax
 -   *Si se quiere hacer crecer un p se hace con padding, no con height*
 -   * clear: both; *De esta forma nos aseguramos que no abarque todos los inputs (esto sucede porque estan flotados a la izquierda)*
-
+-   *PARA CENTRAR UN ELEMENTO DE ACUERDO A LO ANCHO DE UN DIV, SE NECESITAN ESTAS CUATRO INSTRUCCIONES
+-   *PARA QUE FUNCIONE EL BACKGROUND IMAGE DEBE TENER UN ALTO Y UN ANCHO
 */
 
 
@@ -446,6 +447,9 @@ div.programa-evento{
     padding: 15px;   
     margin-top:80px;
 }
+div.ocultar{
+    display:none;
+}
 @media only screen and (min-width:768px){
 
      div.programa-evento{
@@ -463,9 +467,10 @@ div.contenedor-video video{width: 100%;}        /*Para que quepa completo el vid
 
 nav.menu-programa{
     width:100%;
-    border-bottom: 1px solid #fe4918;
-    padding-bottom: 10px;
+ 
+   
 }
+
 @media only screen and (min-width:768px){
 nav.menu-programa{
     display: table;                         /*Para que se separen homogeneamente*/             
@@ -479,8 +484,29 @@ nav.menu-programa a{
     margin-bottom: 10px;
     font-family: 'Oswald', sans-serif;
     font-size:1.2em;
+    position:relative;
+       padding-bottom: 10px;
+ border-bottom: 1px solid #fe4918;
 }
-
+nav.menu-programa a.activo::after{
+  position:absolute;
+  content:'';
+/*PARA CENTRAR UN ELEMENTO DE ACUERDO A LO ANCHO DE UN DIV, SE NECESITAN ESTAS CUATRO INSTRUCCIONES*/
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+/***************************************************/
+/*PARA QUE FUNCIONE EL BACKGROUND IMAGE DEBE TENER UN ALTO Y UN ANCHO*/
+    height: 20px;
+    width: 30px;
+/***************************************************/
+    background-image: url('../img/talleres-flecha.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    bottom: -20px;
+ 
+}
 @media only screen and (min-width:768px){
     nav.menu-programa a{
         display: table-cell;                /*Para que se acomoden en una sola linea*/
