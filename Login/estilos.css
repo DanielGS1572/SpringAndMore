@@ -38,6 +38,7 @@ body{
 }
 .formulario__input:focus + .formulario__label{
 	margin-top:-135px;
+	
 }
 .formulario__label{
 	padding-left: 15px;
@@ -45,6 +46,7 @@ body{
 	margin-top: -85px;
 	z-index: -20;
 	color:rgba(0,0,0,0.5);
+	transition: all 0.2s;
 }
 .formulario__submit{
 	background: rgba(0,0,0,0.7);
@@ -52,4 +54,7 @@ body{
 	padding: 10px 20px;
 	cursor: pointer;
 	border:none;
+}
+.fijar{
+	margin-top: -135px;
 }
