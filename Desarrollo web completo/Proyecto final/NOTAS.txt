@@ -1,4 +1,4 @@
-HTML5 Boilerplate es una plantilla que trae imagenes, para google analytics.
+﻿HTML5 Boilerplate es una plantilla que trae imagenes, para google analytics.
 
 la carpeta css tiene el main y un archivo de normalize
 
@@ -35,3 +35,9 @@ ul.resumen-evento{
     position:relative;
     padding: 120px 0;
 }
+
+
+Alternativas interesantes para galerias
+- lightbox		
+- colorbox (permite reproducir video)
+- fancybox

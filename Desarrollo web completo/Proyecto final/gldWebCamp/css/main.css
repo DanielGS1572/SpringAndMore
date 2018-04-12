@@ -157,7 +157,42 @@ ul{
     padding:0;
 }
 
-
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        Pagina de conferencia
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+div.galeria a{
+    display:inline-block;
+    margin-bottom: 5px;
+}
+body.conferencia .navegacion-principal .conferencia{
+    border-bottom: 1px solid #fe4918;
+}
+/*
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        Lettering
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+h1.nombre-sitio span{
+    position:relative;
+    text-shadow: 0 0 30px black;
+}
+@media only screen and (min-width: 992px){
+   .char1{top:20px;right:20px;color:#8c3c26}
+    .char2{top:0px;right:17px;color:#8c3c26}
+    .char3{top:10px;right:20px;color:#8c3c26}
+    .char4{top:5px;right:10px;}
+    .char5{top:15px;right:10px;}
+    .char7{top:15px;right:10px;}
+    .char8{top:0px;right:10px;}
+    .char9{top:10px;right:20px;}
+    .char10{top:0px;right:20px;}
+}
 /*
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

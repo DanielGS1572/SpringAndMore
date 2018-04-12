@@ -13,6 +13,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">  <!--Se pega el css de fontawesome -->
+        
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -77,7 +78,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 -->
                 <nav class="navegacion-principal clearfix">
-                    <a href="#">Conferencia</a>
+                    <a href="conferencia.html">Conferencia</a>
                     <a href="#">Calendario</a>
                     <a href="#">Invitados</a>
                     <a href="registro.html">Reservaciones</a>
@@ -224,10 +225,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         <div class="contador parallax"> <!--La clase de parallax es para que el efecto se haga desde css -->
             <div class="contenedor">
                 <ul class="resumen-evento clearfix">
-                    <li><p class="numero">6</p>Invitados</li>
-                    <li><p class="numero">15</p>Talleres</li>
-                    <li><p class="numero">3</p>Días</li>
-                    <li><p class="numero">9</p>Conferencias</li>
+                    <li><p class="numero"></p>Invitados</li>
+                    <li><p class="numero"></p>Talleres</li>
+                    <li><p class="numero"></p>Días</li>
+                    <li><p class="numero"></p>Conferencias</li>
                 </ul>
             </div>
         </div>
@@ -367,10 +368,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
             <h2>Faltan</h2>
             <div class="cuenta-regresiva contenedor">
                 <ul class="clearfix">
-                    <li> <p class="numero">80</p>Días </li>
-                    <li> <p class="numero">15</p>Horas </li>
-                    <li> <p class="numero">5</p>Minutos </li>
-                    <li> <p class="numero">30</p>Segundos</li>
+                    <li> <p id = "dias" class="numero"></p>Días </li>
+                    <li> <p id = "horas" class="numero"></p>Horas </li>
+                    <li> <p id = "minutos" class="numero"></p>Minutos </li>
+                    <li> <p id = "segundos" class="numero"></p>Segundos</li>
                 </ul>
             </div>
         </section>
@@ -416,7 +417,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>      <!--https://github.com/aishek/jquery-animateNumber -->
+        <script src="js/jquery.countdown.min.js"></script>          <!--http://hilios.github.io/jQuery.countdown/ -->
+        <script src="js/jquery.lettering.js"></script>              <!--https://github.com/davatron5000/Lettering.js -->
+         <script src="js/main.js"></script>
  </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJJ8ZJtpVvz_pXGRi87_Sa2P1SmPaAPtA&callback=initMap"
     async defer></script>

@@ -179,6 +179,14 @@ var regalo = document.getElementById('regalo');
 $(function(){
 
 	/***********************************************
+			LETTERING (INICIO)
+	 ***********************************************/
+		$('.nombre-sitio').lettering();			/*Cuando se agrega esto, si se inspecciona el html se verá que agrega unos spans, en el css se le estaran dando estilos (en la sección de LETTERING) */
+	/***********************************************
+			LETTERING  (FIN)
+	 ***********************************************/
+
+	/***********************************************
 			PROGRAMA DE CONFERENCIAS (INICIO)
 	 ***********************************************/
 		$('.programa-evento .info-curso:first').show();
@@ -196,5 +204,30 @@ $(function(){
 
 	/***********************************************
 			PROGRAMA DE CONFERENCIAS (FIN)
+	 ***********************************************/
+
+	/***********************************************
+			ANIMACION DE LOS NUMEROS
+	 ***********************************************/
+		$('.resumen-evento li:nth-child(1) p').animateNumber({number : 6},1200);
+		$('.resumen-evento li:nth-child(2) p').animateNumber({number : 15},1200);
+		$('.resumen-evento li:nth-child(3) p').animateNumber({number : 3},1600);
+		$('.resumen-evento li:nth-child(4) p').animateNumber({number : 9},1500);
+	/***********************************************
+			ANIMACION DE LOS NUMEROS (FIN)
+	 ***********************************************/
+
+	/***********************************************
+			CUENTA REGRESIVA
+	 ***********************************************/
+
+		$('.cuenta-regresiva').countdown('2018/12/12', function(event){
+			$('#dias').html(event.strftime('%D'));
+			$('#horas').html(event.strftime('%H'));
+			$('#minutos').html(event.strftime('%M'));
+			$('#segundos').html(event.strftime('%S'));
+		});
+	/***********************************************
+			CUENTA REGRESIVA (FIN)
 	 ***********************************************/
 });
