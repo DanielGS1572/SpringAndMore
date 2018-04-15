@@ -13,11 +13,15 @@ class A{
 	A(int i){
 		System.out.println("A " + i);
 	}
+	void method(){
+		System.out.println("hey");
+	}
 }
 
 class B extends A{
 	B(){
-		super(3);					/*Manda llamar el constructor que tiene parametro*/
+		super(3);					/*Manda llamar el constructor que tiene parametro (debe ser llamado primero)*/
+		super.method(); 			/*Manda llamar el metodo del padre*/
 		System.out.println("B");
 	}
 }
