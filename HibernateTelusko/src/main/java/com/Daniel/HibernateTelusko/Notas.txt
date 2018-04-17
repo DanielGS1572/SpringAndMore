@@ -1,0 +1,54 @@
+En una relacion uno a uno no hay problema, se crean una tabla para los diferentes entities
+
+Laptop
+	- lid
+	- lname
+	
+Student
+	- rollno
+	- name
+	- marks
+	
+		laptop				student
+| lid  |  lname |		| rollno | name | marks
+
+
+Pero en el caso que un estudiante tenga muchas laptops se tiene una
+relación de oneToMany en donde el estudiante debe pertenecer como propiedad 
+en Laptop y contener una lista de laptops, (si no se crea la relacion del
+esutidante en el entity de laptop, se generaria una tercer columna que vincula
+ambas tablas)
+Laptop
+	- lid
+	- lname
+	- Student	[ManyToOne] --> se debe de marcar
+Student
+	- rollno
+	- name
+	- marks
+	- List<Laptop>	[OneToMany](mappedBy="student") --> tambien se le debe de indicar el mappedBy, de lo contrario
+														generaría una tercer tabla
+	
+		Laptop								Student
+| lid | lname | rollno |			| rollno | name | marks |	
+						(3er columna)
+						student_laptop
+						| rollno | lid |
+						
+						
+ManyToMany
+Sería lo mismo que OneToMany, pero en este caso ambos deben de contener una lista
+Laptop
+	- lid
+	- lname
+	- List<Student>	[ManyToMany] 
+Student
+	- rollno
+	- name
+	- marks
+	- List<Laptop>	[ManyToMany](mappedBy="student")	--> si no se pone el mappedBy, se generarian 4 tablas
+															Si se pone solo se hacen 3
+
+
+	
+	

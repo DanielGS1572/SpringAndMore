@@ -18,9 +18,7 @@ public class App
     public static void main( String[] args )
     {
        Alien telusko = new Alien();
-       telusko.setAid(106);
-       telusko.setAname("navin");
-       telusko.setColor("Green");
+       
        Configuration con = new Configuration().configure().addAnnotatedClass(Alien.class);  /*.configure, lee el archivo de configuracion que se encuentra dentro de src, addAnnotatedClass para que lea las anotaciones del archivo */
        ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry();
        SessionFactory factory = con.buildSessionFactory(reg);
@@ -30,8 +28,20 @@ public class App
        /*Se debe de agregar un archivo xml de configuracion File -> new -> other -> y se busca hibernate, seleccionar el archivo cfg.xml*/
        
        Transaction tx = session.beginTransaction();
-       session.save(telusko);
+	/******Para guardar********/
+       telusko.setAid(101);
+       AlienName aN = new AlienName();
+       aN.setFname("Daniel");
+       aN.setLname("Gonzali");
+       aN.setMname("Saucedo");
+       telusko.setAlienName(aN);
+       telusko.setColor("Green");
+     session.save(telusko);       
        tx.commit();
+/******Para obtener valores de la base de datos******/
+       telusko = (Alien) session.get(Alien.class, 105);
+       
+       System.out.println(telusko);
        
     }
 }

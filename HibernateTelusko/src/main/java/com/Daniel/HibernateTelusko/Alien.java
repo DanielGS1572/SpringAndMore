@@ -13,8 +13,8 @@ public class Alien {
 	private int aid;
 	/*Si en la tabla ya se tiene una columna llamada aname y se anota con @transient, no elimina la columna, simplemente mete valor nulo*/
 	/*Pero si se crea desde cero con transient no agrega la columna, si despues se quita el transient agrega la columna con todos los datos anteriores nulos*/
-	@Transient					
-	private String aname;
+//	@Transient					
+	private AlienName alienName;
 	
 	@Column(name="alien_color")
 	private String color;
@@ -24,17 +24,22 @@ public class Alien {
 	public void setAid(int aid) {
 		this.aid = aid;
 	}
-	public String getAname() {
-		return aname;
+	
+	public AlienName getAlienName() {
+		return alienName;
 	}
-	public void setAname(String aname) {
-		this.aname = aname;
+	public void setAlienName(AlienName alienName) {
+		this.alienName = alienName;
 	}
 	public String getColor() {
 		return color;
 	}
 	public void setColor(String color) {
 		this.color = color;
+	}
+	@Override
+	public String toString() {
+		return "Alien [aid=" + aid + ", aname=" + alienName + ", color=" + color + "]";
 	}
 	
 }
