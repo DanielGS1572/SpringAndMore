@@ -1,4 +1,4 @@
-package com.Daniel.HibernateTelusko;
+package com.Daniel.HibernateTelusko.Intro;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

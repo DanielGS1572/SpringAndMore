@@ -1,4 +1,4 @@
-package com.Daniel.HibernateTelusko;
+package com.Daniel.HibernateTelusko.Intro;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
