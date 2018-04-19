@@ -1,0 +1,22 @@
+Para ver la configuración del second level cache, revisar:
+	- POM
+	
+				<dependency>
+					<groupId>net.sf.ehcache</groupId>
+					<artifactId>ehcache</artifactId>
+					<version>2.10.3</version>
+				</dependency>
+Integración de ehcache			
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-ehcache</artifactId>
+					<version>5.2.6.Final</version>			4.1.6.Final		<<-- IMPORTANTE ... esta versión debe de coincidir con la de org.hibernate del POM por lo que se cambia a --> 4.1.6.Final
+				</dependency>
+	- hibernate.cfg.xml
+	- Anotaciones
+		*@Cacheable
+		*@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)	--> el default es CacheConcurrencyStrategy.NONE 
+		
+		
+		
+De esta forma hara el caching		
