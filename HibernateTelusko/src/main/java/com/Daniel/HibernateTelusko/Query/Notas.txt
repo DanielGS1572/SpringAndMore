@@ -1,0 +1,9 @@
+A pesar de que se haya configurado el second level cache
+solamente aplica para el metodo get --> telusko2 = (Alien) session2.get(Alien.class, 101)
+por lo que se configura el hibernate.cfg.xml con:
+
+			<property name="hibernate.cache.use_query_cache">true</property>
+			
+y setear el Query q con:
+
+			q1.setCacheable(true);

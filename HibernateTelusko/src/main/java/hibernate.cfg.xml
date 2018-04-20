@@ -14,8 +14,11 @@
         <!-- Para ver los queries que genera hibernate -->
         <property name="show_sql">true</property>
         
-        <!-- Configuración Second Level Caching -->
+        <!-- Configuración Second Level Caching para get-->
         <property name="hibernate.cache.use_second_level_cache">true</property>
         <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>		<!-- Se obtiene el nombre del jar de hibernate-ehcache -->
+        
+        <!-- Configuración Second Level Caching para Query -->
+        <property name="hibernate.cache.use_query_cache">true</property>
     </session-factory>
 </hibernate-configuration>
