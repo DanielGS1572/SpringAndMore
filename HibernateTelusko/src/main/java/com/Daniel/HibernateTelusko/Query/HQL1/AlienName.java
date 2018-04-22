@@ -1,4 +1,4 @@
-package com.Daniel.HibernateTelusko.Query;
+package com.Daniel.HibernateTelusko.Query.HQL1;
 
 import javax.persistence.Embeddable;
 
