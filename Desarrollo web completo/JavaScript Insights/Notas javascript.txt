@@ -1,0 +1,8 @@
+Hay 7 tipos de datos diferentes en javascript
+	- undefined
+	- null
+	- boolean
+	- string
+	- simbol
+	- number
+	- object
