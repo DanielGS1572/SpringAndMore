@@ -1,0 +1,14 @@
+JPA .- Java Persistance Api
+
+JPA es una especificacion en la que se montan:
+	- Hibernate
+	- iBatis
+	- TopLink
+	- SpringBoot JPA
+Si actualmente se trabaja con Hibernate y en un futuro se quisiera cambiar a iBatis, como ambos implementan JPA
+la transición sería mucho más sencilla
+
+Si en un inicio se desarrolla sobre la implementacion de JPA no hay problemas con el cambio
+Pero, si se desarrolla con unas cosas de hibernate y otras de JPA, se tendrán problemas
+
+No se puede hacer una solucion sola de JPA, se necesita algun framework
