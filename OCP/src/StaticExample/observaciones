@@ -1,0 +1,15 @@
+OVERRIDE (STATIC Y FINAL)
+
+No se puede hacer override de un metodo estatico sin que se especifique que es estatico tambien en el hijo
+
+
+En la clase padre el metodo no se puede especificar como final pues en Lion se estará sobreescribiendo
+	- pero si puede ser final en Lion
+	
+	
+final	--> evita que una variable sea modificada
+		--> evita que un metodo sea overriden
+		--> puede ir tambien a nivel clase y significa que no puede usar herencia
+		
+static 	--> aplica para variables, metodos y clases
+		--> en las clases, static, va de la mano con clases anidadas
