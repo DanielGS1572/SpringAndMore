@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Para practicar</title>
-	</head>
 
+	<head>
+		<title>titulo</title>
+	</head>
 	<body>
-		<button onClick="alert('hey')">Botón</button>
-	
-	<script	type="text/javascript">
-		alert('hey');
-	</script>
+		<p id="parrafo">Texto a modificar</p>
+		<button id="boton">Boton</button>
+
+		<script type="text/javascript">
+			document.getElementById("boton").onclick = function(){
+				document.getElementById("parrafo").style.color = "red";
+		}
+		</script>
 	</body>
 </html>
