@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
 
+<html>
 	<head>
-		<title>titulo</title>
+		<title>Javascript</title>
+		
 	</head>
 	<body>
-		<p id="parrafo">Texto a modificar</p>
-		<button id="boton">Boton</button>
-
+		<input id="inp" type="text"></input>
+		<button id="btn">Cambiar texto</button>
+		
+		<p id="modified">This is some text</p>
+		
 		<script type="text/javascript">
-			document.getElementById("boton").onclick = function(){
-				document.getElementById("parrafo").style.color = "red";
-		}
+					document.getElementById("btn").onclick = function(){
+						var string = document.getElementById("inp").value;
+						document.getElementById("modified").innerHTML = "The introduced text was " + string;
+						
+					}
 		</script>
+	
 	</body>
+
 </html>
