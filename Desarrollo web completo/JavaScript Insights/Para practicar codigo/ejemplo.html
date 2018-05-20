@@ -6,16 +6,13 @@
 		
 	</head>
 	<body>
-		<input id="inp" type="text"></input>
-		<button id="btn">Cambiar texto</button>
-		
-		<p id="modified">This is some text</p>
 		
 		<script type="text/javascript">
-					document.getElementById("btn").onclick = function(){
-						var string = document.getElementById("inp").value;
-						document.getElementById("modified").innerHTML = "The introduced text was " + string;
-						
+					var iteration = 0;
+					
+					while(iteration < 3){
+						alert('test');
+						iteration++;
 					}
 		</script>
 	
