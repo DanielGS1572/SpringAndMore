@@ -8,12 +8,21 @@
 	<body>
 		
 		<script type="text/javascript">
-					var iteration = 0;
-					
-					while(iteration < 3){
-						alert('test');
-						iteration++;
+		
+			var arreglo = [1,2,3,4,5,6,7,8,9,10];
+					var auto = {
+						placas: "xxx",
+						modelo: 88,
+						auto: "mustang"
 					}
+					function recorrerAuto(Automovil){
+						console.log(this.placas);
+						console.log(this.modelo);
+						console.log(this.auto);
+					}
+					
+					auto.mostrarAuto = recorrerAuto;
+					auto.mostrarAuto();
 		</script>
 	
 	</body>
