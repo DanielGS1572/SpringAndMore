@@ -116,7 +116,7 @@
   document.addEventListener('DOMContentLoaded', function(){ 
       
       var contenido = document.querySelectorAll('main');
-      var nuevoContenido = contenido[0].cloneNode(true);
+      var nuevoContenido = contenido[0].cloneNode(true);		/*Si fuera false no clona todo los elementos anidados*/
       var sidebar = document.querySelector('aside');
       sidebar.insertBefore(nuevoContenido,sidebar.childNodes[4]);
       /*

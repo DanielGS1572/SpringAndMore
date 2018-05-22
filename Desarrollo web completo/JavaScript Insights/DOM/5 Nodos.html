@@ -114,26 +114,34 @@
 (function(){
   'use strict'; 
   document.addEventListener('DOMContentLoaded', function(){ 
+   /*querySelector es como un getElementById pero se le pasa # para el id o el . para la clase*/
+    var enlaces = document.querySelectorAll('#menu ul li:nth-child(2)')[0]; /*Como es un arreglo con [0] desde un principio se le pide que traiga el primero*/
+
    
-    var enlaces = document.querySelectorAll('#menu ul li a')[0]; /*Como es un arreglo con [0] desde un principio se le pide que traiga el primero*/
-    console.log(enlaces.nodeType);      
+         
     /*
     De acuerdo a esta pagina:
     https://developer.mozilla.org/es/docs/Web/API/Node/nodeType
     lo que se despliega en enlaces.nodeType es un element node (de acuerdo a la tabla pues regresa un 1)
     Esta pagina se usa para ver todo lo relacionado con ese tipo de nodo 
     */
+     console.log("nodo", enlaces);
+    console.log("nodeType ", enlaces.nodeType);
+    console.log("nodeName ",enlaces.nodeName);
+    console.log("atributos ", enlaces.attributes);      
+console.log("firstChild", enlaces.firstChild);
+    console.log("Tiene nodos hijos: ", enlaces.hasChildNodes());  
+console.log("numero de nodos hijos: ", enlaces.childNodes.length); 
 
-    console.log(enlaces.nodeType);
-    console.log(enlaces.nodeName);
-    console.log(enlaces.attributes);      
 
-    console.log(enlaces.firstChild);  
-    console.log(enlaces.firstChild.nodeValue);  
+    
 
 /*Para cambiar el valor de un nodo...*/
-    enlaces.firstChild.nodeValue = "home";
-    
+    	console.log("Para cambiar el valor de un nodo...");
+   	var element2 = document.querySelectorAll('#menu ul li a')[0];
+	console.log("element2: ",element2);
+	console.log(element2.firstChild);  /*Valor por el que se cambiará a home, por alguna razón no muestra el dato original, si se quita la siguiente linea ya lo muestra*/
+	element2.firstChild.nodeValue = "home2";
   });
   
 })();

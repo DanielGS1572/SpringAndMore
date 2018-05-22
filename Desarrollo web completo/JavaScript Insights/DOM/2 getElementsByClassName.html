@@ -115,11 +115,25 @@
   'use strict'; 
   document.addEventListener('DOMContentLoaded', function(){ 
     
-    var contenido = document.getElementsByClassName('contenido');
+    var contenido = document.getElementsByClassName('contenido'); /*Como se pueden tener diferentes clases (a diferencia de los ids que solo se pueden usar una sola vez) por eso es en plural*/
+
+/*
+	Si se quisieran afectar a todos los elementos cuya clases contengan la palabra 'contenido' sería:
+		for(var i=0; i < contenido.length; i++){
+			x[i].style.backgroundColor = "red";
+		}
+
+
+*/
     console.log(contenido[0]); /*--> puede regresar muchos selectores, 
     getElementsById --> solo regresara uno pues un id se supone que siempre será uno por documento*/
     contenido[0].style.display = 'none';    /*No serviriá poner contenido.style pues debe seleccionarse un elemento del arreglo*/
-    
+
+
+	/*Para obtener el elemento padre de un elemento*/
+			var sidebar = document.getElementsByClassName('sidebar');
+			console.log(sidebar[0].parentNode);
+			
   });
   
 })();
