@@ -7,9 +7,10 @@ public class VisistorTicketTracker {
 	private static VisistorTicketTracker instance;
 	private VisistorTicketTracker(){}
 	
-	private static VisistorTicketTracker getInstance(){
+	private static /*synchronized*/ VisistorTicketTracker getInstance(){
 		if(instance == null)
-			instance = new VisistorTicketTracker();		//Not thread safe!!!
+			instance = new VisistorTicketTracker();		//Not thread safe!!! Para hacerlo safe thread despues del
+//			static se agrega la palabra synchronized, de esta manera se asegura que no se cree más de un objeto
 		return instance;
 	}
 }
