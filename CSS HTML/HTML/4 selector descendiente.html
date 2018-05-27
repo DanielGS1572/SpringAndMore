@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <style>
+       div p {              /*Ver como no se pone body .. ..*/
+         color: red;
+       }
+
+       div ul div{          /*Truco para que no pinte el bullet*/
+           color: yellow;
+       }
+
+
+       .secondul {          /*Para quitar los bullets*/
+            list-style-type: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+   <p> My paragraph here. </p>
+   <ul>
+      <li><div> List Item 1</div></li>
+      <li> List Item 2</li>
+   </ul>
+
+   <ul class="secondul">
+      <li class="warning">Something went Wrong </li>
+      <li> List Item 4</li>
+   </ul>   
+</div>
+
+<p> Paragraph outside of div </p>
+
+
+</body></html>

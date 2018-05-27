@@ -1,0 +1,41 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <style>
+       #container > ul > li {              
+          color: #00f;
+       }
+        #container > ul > li > ul{              
+          color: #000;
+       }
+      
+       #container > ul {                /*Selecciona los hijos directos de la jerarquia, no va mas alla*/
+          border: 1px solid black;
+       }
+    </style>
+</head>
+<body>
+
+   <div id="container">
+    <ul>
+        <li> List Item
+                <ul>
+                    <li> Child </li>
+                </ul>
+        </li>
+    </ul>
+    <ul>
+         <li> List Item </li>
+         <li> List Item </li>
+         <li> List Item </li>
+    </ul>
+
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+   </div>
+
+
+
+</body></html>

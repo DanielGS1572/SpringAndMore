@@ -2,7 +2,7 @@ package FactoryPattern;
 
 public class Hay extends Food{
 
-	public Hay(int quantity) {
+	 Hay(int quantity) {
 		super(quantity);
 	}
 
