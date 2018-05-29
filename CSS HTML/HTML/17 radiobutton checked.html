@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <style>
+       input[type=radio]:checked + label {
+          color: blue;
+       }
+    </style>
+</head>
+<body>
+
+   <form>
+	<!--La agrupacion del radiobutton lo hace a traves del name, y la etiqueta lo vincula por el id -->
+	      	<input type="radio" name="rad1" id="rada" value="RadioButton1">
+	      	<label for="rada"> Radio Button 1</label>
+
+		<input type="radio" name="rad1" id="radb" value="RadioButton2">
+		<label for="radb"> Radio Button 2</label>
+	
+   </form>
+
+
+</body></html>
