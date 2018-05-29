@@ -1,4 +1,4 @@
-package Generics;
+package GenericClasses;
 
 public class App {
 
