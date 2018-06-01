@@ -1,0 +1,1 @@
+Como se prueban los casos en los que se tiene un hover, y se quieren ver las propiedades de cuando esta en hover

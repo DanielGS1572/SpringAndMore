@@ -46,6 +46,7 @@ public class BoundExample {
 		listaEnteros.add(new Integer(12));
 		listaEnteros.add(new Integer(11));
 		System.out.println(total(listaEnteros));
+		
 /*			UPPER BOUNDED	(Consideraciones)			*/
 		List<? extends Number> birds = new ArrayList<Integer>();
 //		birds.add(new Integer(14));			/*Esta declaracion no se puede hacer porque 

@@ -3,13 +3,30 @@
     <meta charset="UTF-8">
     <title>CSS Selectors</title>
     <style>
-       input[type=radio]:checked + label {
-          color: blue;
-       }
+       div:hover {
+          border-bottom: 1px solid black;		/*Se supone que se ve mejor que
+		  el css nativo de las ligas*/
+		}
+		
+	   div{
+			display: inline-block;		/*Para que se tengas que parar arriba del texto 
+			si no como el elemento es block, funcionaría si se pone el mouse
+			arriba de la linea de texto que abarca todo el browser, esto cancela*/
+			el display:block nativo del browser*/
+	   }
+	   a:hover{
+			color:blue;
+			border-bottom: 1px solid black;
+	   }
+	   a{
+		color:red;
+		text-decoration: none;
+	   }
     </style>
 </head>
 <body>
 
-   ver ejemplo de clearfix donde se crea contenido despues de un elemento como truco para darle la vuelta al overflow: hidden
+   <div>Hola</div>
+   <a href="#" target="_blank">Liga</a>
 
 </body></html>
