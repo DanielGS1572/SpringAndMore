@@ -1,0 +1,10 @@
+List.- acepta duplicados y se accesan a traves de un indice
+Set.- No acepta duplicados
+Queue.- first in, first out
+Map.- llave-valor, la llave no se puede repetir, no implementa Collection interface, pero si se considera
+dentro de Collections por agrupar elementos
+
+			Collection						Map
+		|		|		|
+	   List	    Set	  Queue
+

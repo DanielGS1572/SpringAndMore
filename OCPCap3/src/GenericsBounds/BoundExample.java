@@ -55,6 +55,8 @@ public class BoundExample {
 		 * por lo que al definir "new ArrayList<Integer>();" Java se asegura que 
 		 * no se pueda agregar un List<Double>*/
 		
+/*			LOWER BOUNDED	(Ver clase LowerBounded)			*/
+		
 	}
 
 }
