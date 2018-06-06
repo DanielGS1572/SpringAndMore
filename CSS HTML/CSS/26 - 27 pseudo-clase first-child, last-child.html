@@ -1,0 +1,50 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <style>
+
+       ul {
+         width: 200px;
+         background: #292929;
+         color: white;
+         list-style: none;
+         padding-left: 0;
+      }
+
+      li {
+         padding: 10px;
+         border-bottom: 1px solid black;
+         border-top: 1px solid #3c3c3c;
+      }
+
+ li:first-child {
+    border-top: none;
+	color:red;
+}
+
+li:last-child {
+   border-bottom: none;
+   color: green;
+}
+    </style>
+</head>
+<body>
+
+   <div id="container">
+      <ul>
+         <li> List Item </li>
+         <li> List Item </li>
+         <li> List Item </li>
+      </ul>
+
+	<ul>
+		<ul>
+			<li> List Item </li>
+		</ul>
+		<ul>
+			 <li> List Item </li>
+			 <li> List Item </li>
+	      	</ul>
+	</ul>
+
+</div></body></html>

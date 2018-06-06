@@ -1,0 +1,35 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <style>
+       div p:only-of-type {	/*Afecta a los elementos que solo contengan uno solo de su tipo agrupado por un elemento padre*/
+         color: green;
+      }
+
+      ul li:only-of-type {
+         font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+
+<div>
+   <p> My paragraph here. </p>
+   <ul>
+      <li> List Item </li>
+      <li> List Item </li>
+   </ul>
+</div>
+
+<div>
+   <p> Two paragraphs total. </p>		<!--No afecta a estos porque hay dos -->
+   <p> Two paragraphs total. </p>
+   <ul>
+      <li> List Item </li>
+   </ul>
+</div>
+
+
+
+
+</body></html>
