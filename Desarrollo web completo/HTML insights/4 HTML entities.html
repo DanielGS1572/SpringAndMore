@@ -37,12 +37,16 @@
         }
         .carta {
             float:left;
-            width:48%;
+            width:48%;			<!--No se puede poner 50 porque no lo dejara a las mitades -->
             text-align: center;
             font-size: 160px;
             margin-bottom: 20px;
             border-radius: 20px;
             border:2px solid black;
+<!--box-sizing: border-box respeta el tamaño del width, sin importar
+el tamaño de padding que usa en la herencia
+box-sizing: content-box es lo que se pone por default y el padding y
+el tamaño del borde hace que crezca-->
             box-sizing: border-box;
             margin-right: 5px;
             height: 300px;

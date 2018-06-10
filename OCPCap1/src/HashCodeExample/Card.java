@@ -11,6 +11,10 @@ package HashCodeExample;
 public class Card {
 	public String suit;
 	public String rank;
+	
+	public Card(){
+		
+	}
 	public Card(String s, String r) {
 		if(s == null || r == null)
 			throw new IllegalStateException();
@@ -24,6 +28,18 @@ public class Card {
 	}
 	public int hashCode() {
 		return rank.hashCode();
+	}
+	public String getSuit() {
+		return suit;
+	}
+	public void setSuit(String suit) {
+		this.suit = suit;
+	}
+	public String getRank() {
+		return rank;
+	}
+	public void setRank(String rank) {
+		this.rank = rank;
 	}
 
 }

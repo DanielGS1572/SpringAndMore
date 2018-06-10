@@ -1,0 +1,35 @@
+
+
+
+Se crea un proyecto Maven con el Arquetipo de webapp
+Se crea un Source Folder para poder meter ahi los paquetes de java
+Se debe levantar con tomcat (Si al intentar levantar manda error de puertos:
+	- You need to shutdown it. Go to /bin subfolder of the Tomcat installation folder and execute the shutdown.bat (Windows) or shutdown.sh (Unix) script
+	- En la seccion de servers dar clic derecho sobre el server y darle clean y clean tomcat work directory...
+Se debe exponer en web.xml (ver archivo)
+	- Se debe especificar el servlet que cachara las peticiones del servicio rest
+	
+	
+http://localhost:8080/RestJR/services/Servicio/validaUsuario		si al pegar la URL en el navegador
+																	manda un error 4xx esta bien, pues no se esta haciendo un POST PERO la peticion no es correcta --> https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9 
+	Contexto de la aplicación web: http://localhost:8080/RestJR/
+			RestJR es el contexto, el nombre donde se tiene la aplicación
+	services es el url-pattern de web.xml
+	RestJR es el artifactid cuando se crea el proyecto
+		
+	
+	
+	
+A traves de postman hacer un post a la url
+http://localhost:8080/RestJR/services/Servicio/validaUsuario
+y pasarle en formato JSON los datos
+	{
+		"usuario" : "user",
+		"password" : "pwd"
+	}
+	
+	
+Para hacer servicios REST se usa JAX-RS que es una API para servicios web RESTful
+
+Es posible que se debe de Project > clean ... Project > Build, seleccionar el proyecto desde workspace
+dar clic derecho y darle refresh
