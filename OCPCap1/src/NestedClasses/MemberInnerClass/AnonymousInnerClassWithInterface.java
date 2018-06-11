@@ -7,7 +7,7 @@ public class AnonymousInnerClassWithInterface {
 		 más pueda acceder a ella, se podría poner a nivel de la clase y sobre-escribir el metodo
 		 pero quedaría disponible cada que se instancie la clase AnonymousInnerClassWithInterface */
 			public int dollarsOff() {		//Las interfaces requieren modificadores de acceso tipo
-//											public cada que se implemente (pues es el default en cada interfaz y no se puede restringir
+//											public cada que se implemente 
 				return 3;
 			}
 		};

@@ -1,0 +1,88 @@
+
+/******************************************************************************************/
+
+                                        COMPONENTS
+
+/******************************************************************************************/
+Cuando se crea un proyecto dentro de src app, hay un archivo que se llama app.component.ts
+que es con el que se trabaja desde un inicio (ts viene de typescript)
+
+Los componentes se separan en tres secciones diferentes ver notas de "app.component.ts"
+
+
+Para crear un componente nuevo se hace desde consola (en este caso la cli es cmder)
+        -- ng generate component [nombreDelComponente]
+        -- la version abreviada seria ng g c [nombreDelComponente] 
+        -- ver que los component se generan debajo de la estructura de app
+(Cada componente generado crea un .ts, .scss, .html)
+
+dentro del html (del componente original) para agregar componentes se debe usar routerLink
+[ver: app.component.html]
+
+Cada componente tiene en la seccion de decorador una forma de seleccionar dicho componente
+    por ejemplo en about.component.ts en la parte de selector tiene 'app-about'
+    el selector es con lo que se anida en app.component.html (ver archivo)
+
+    index.html es el archivo principal que se carga cuando se inicia el proyecto
+    ver que de ahi hay un <app-root></app-root> que hace referencia a <app-root></app-root>
+    de app.component.ts
+
+
+Ver que en app.modules.ts se importan y se declaran en component los componentes generados
+    de about y home y se tiene la anotacion @NgModule como punto de entrada
+
+
+/******************************************************************************************/
+
+                                TEMPLATING AND STYLING
+
+/******************************************************************************************/
+
+Dentro de templateUrl: de cada .ts se puede poner directamente codigo html usando backticks
+pero en lugar de templateUrl debe ser template: `<br>code works`,
+        lo mismo sucede con styleUrls: pero a su vez, se pone styles: [``]
+
+Se tiene una hoja de estilos general que esta dentro del proyecto [Proyecto]/src/styles
+a su vez, se tiene un estilo propio por cada componente
+
+grid es una mejora de flexbox [home.component.scss]
+
+
+/******************************************************************************************/
+
+                    PROPERTY & EVENT BINDING (A TRAVES DE INTERPOLATION)
+                            [ ESTO HACE QUE SEA MAS INTERACTIVO]
+
+/******************************************************************************************/
+
+        [ONE WAY DATA-BINDING]
+
+Interpolation es la forma en la que se pueden obtener los valores de las propiedades
+        Esto se hace en el html (ver home.component.html) --> {{ itemCount }} 
+        Ver que en home.component.ts el tipo de dato se pone todo en minusculas, y la asignación
+            de la variable se hace con :
+
+        Se pueden cambiar las propiedades html a traves de interpolation 
+        <input type="submit" class="btn" value="{{ btnText }}"> (ver home.component.html) 
+        otra forma de hacerlo es a traves de property binding
+        <input type="submit" class="btn" [value]="btnText"> 
+                --> (se va a modificar value con la variable  btnText 
+
+        [TWO WAY DATA-BINDING]
+Para que haya comunicación de un componente hacia un template 
+    y de un template hacia un componente 
+    se usa el ng-model, que se debe de importar el FormsModule en app.module.ts
+        - se declara el importa
+        - se agrega en imports
+
+ver que el uso de ngModel es como para setear un valor al input [(ngModel)]="goalText">
+y para ver que funciona bidireccionalmente ver como cambia con el valor de interpolacion {{ }}
+
+
+                    /********************************************************/
+
+                                    EVENT BINDING
+
+                    /********************************************************/
+
+Hasta aqui llegue: https://youtu.be/oa9cnWTpqP8

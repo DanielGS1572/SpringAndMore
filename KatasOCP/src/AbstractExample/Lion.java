@@ -1,10 +1,10 @@
 package AbstractExample;
 
 public class Lion extends Cat{
-	public void metodo1() {
-		System.out.println("metodo1");
+	public void method1(){
+		System.out.println("test");
 	}
-	public void metodo2() {
-		System.out.println("metodo2");
+	void clean(){
+		System.out.println("overriden");
 	}
 }

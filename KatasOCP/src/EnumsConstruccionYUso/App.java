@@ -2,15 +2,19 @@ package EnumsConstruccionYUso;
 
 public class App {
 	public static void main(String args[]) {
-		Season s1 = Season.WINTER;
-		System.out.println(s1.name() + " - " + s1.ordinal());
-		System.out.println(Season.valueOf("SPRING"));
+		System.out.println(Season.WINTER.name() + " " + Season.WINTER.ordinal());
 		
-		switch(s1) {
-		case FALL: System.out.println("fall"); break;
-		case WINTER: System.out.println("winter"); break;
-		case SPRING: System.out.println("spring"); break;
-		default: System.out.println("none");
+		Season temporada = Season.valueOf("FALL");
+		
+		switch(temporada){
+		case WINTER: System.out.println("winter");
+		break;
+		case SPRING: System.out.println("spring");
+		break;
+		case FALL: System.out.println("fall");	
+		break;
+		default: System.out.println("default");
+		
 		}
 	}
 

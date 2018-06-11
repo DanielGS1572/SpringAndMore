@@ -1,14 +1,15 @@
 package EnumsConstructor;
 
 public enum Seasons {
-	WINTER("A"),FALL("B"),AUTUMN("C"),X("D");
-	private String clasificacion;
-	private Seasons(String clasificacion){
-		this.clasificacion = clasificacion;
-	}
-	public String getClasificacion() {
-		return clasificacion;
+	WINTER("a"), AUTUMN("b"), FALL("c");
+	private String calificacion;
+	
+	private Seasons(String calificacion){
+		this.calificacion = calificacion;
 	}
 	
+	public String getCalificacion(){
+		return calificacion;
+	}
 	
 }
