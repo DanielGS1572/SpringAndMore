@@ -5,6 +5,10 @@ package NestedClasses.MemberInnerClass;
 //Puede extender de cualquier clase o implementar cualquier interfaz
 //Puede acceder a los miembros privados dentro de la clase
 //		NO puede declarar campos o metodos estaticos
+
+
+//La UNICA diferencia con AnonymousInnerClass es que en lugar de hacer overload simplemente se 
+//llama en uno de los metodos
 public class MemberInnerClass {
 	private String greeting = "Hi";
 	

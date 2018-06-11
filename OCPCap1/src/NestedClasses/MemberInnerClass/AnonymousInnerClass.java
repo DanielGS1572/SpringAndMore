@@ -27,7 +27,7 @@ public class AnonymousInnerClass {
 			};				//como sale se esta asignando a algo... aqui debe llevar ;
 			return basePrice - sale.dollarsOff();
 		}
-//		La forma corta de escribir clases anonimas es con "Functional Programmin"
+//		La forma corta de escribir clases anonimas es con "Functional Programming"
 		public static void main(String args []) {
 			AnonymousInnerClass aIC = new AnonymousInnerClass();
 			System.out.println(aIC.admission(8));

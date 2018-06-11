@@ -1,5 +1,5 @@
 package NestedClasses.MemberInnerClass;
 
-public interface SaleTodayOnly {
+public interface SalesTodayOnly {
 	int dollarsOff();
 }
