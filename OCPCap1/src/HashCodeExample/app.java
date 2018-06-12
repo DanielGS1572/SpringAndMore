@@ -13,7 +13,7 @@ public class app {
 		Card card4 = new Card("Rank1","Suit1");
 		Card card5 = new Card("Rank6","SuitD");
 		Card card6 = new Card("Rank7","SuitE");
-		Card card7 = new Card();		/*Se debe de agregar al Set con Setters si no no lo agrega, ve que es un mismo objeto que card4*/
+		Card card7 = new Card();		/*No agrega este objeto pues se tiene la misma informacion*/
 		card7.setRank("Rank1");
 		card7.setOther("Suit1");
 		

@@ -23,7 +23,7 @@ public class Card {
 	public boolean equals(Object obj){
 		if(!(obj instanceof Card)) return false;
 		Card card = (Card) obj;
-		return this.rank.equals(card.rank) && this.other.equals(card.other);
+		return this.rank.equals(card.rank);
 		
 	}
 	
