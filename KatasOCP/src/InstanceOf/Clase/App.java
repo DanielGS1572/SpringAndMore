@@ -3,17 +3,14 @@ package InstanceOf.Clase;
 public class App {
 
 	public static void main(String[] args) {
-		HeavyAnimal hipoHA = new Hipo();
-		HeavyAnimal elephant = new Elephant();
-		
+		Elephant elephant = new Elephant();
 		Hipo hipo = new Hipo();
 		
-		System.out.println(hipoHA instanceof HeavyAnimal);
-		System.out.println(elephant instanceof HeavyAnimal);
-		
-		System.out.println(hipoHA instanceof Elephant);
+		HeavyAnimal heavyHipo = new Hipo();
+		HeavyAnimal heavyElephant = new Elephant();
 		
 		System.out.println(hipo instanceof HeavyAnimal);
+//		System.out.println(hipo instanceof Elephant);
 		
 		
 		

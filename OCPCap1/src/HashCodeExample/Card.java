@@ -1,6 +1,4 @@
 package HashCodeExample;
-
-
 /*El hashcode se usa para apilar elementos de una lista llave-valor y cuando se sobreescribe debe ser un valor
  * que no tenga valores variables, es decir el valor de hashcode que retorne no debe cambiar con el tiempo
  * 
@@ -9,37 +7,47 @@ package HashCodeExample;
  * 
  * Sobreescribir el hashcode no puede usar mas variables que cuando se sobreescribe el equals*/
 public class Card {
-	public String suit;
-	public String rank;
-	
+	private String rank;
+	private String other;
 	public Card(){
 		
 	}
-	public Card(String s, String r) {
-		if(s == null || r == null)
+	public Card(String rank, String other){
+		if(rank == null || other == null)
 			throw new IllegalStateException();
-		suit = s;
-		rank = r;
+		this.rank = rank;
+		this.other = other;
 	}
-	public boolean equals(Object obj) {
-		if( !(obj instanceof Card)) return false;
+	
+
+	public boolean equals(Object obj){
+		if(!(obj instanceof Card)) return false;
 		Card card = (Card) obj;
-		return suit.equals(card.suit) && rank.equals(card.rank);
+		return this.rank.equals(card.rank) && this.other.equals(card.other);
+		
 	}
-	public int hashCode() {
-		return rank.hashCode();
+	
+	public int hashCode(){
+		return other.hashCode();
 	}
-	public String getSuit() {
-		return suit;
-	}
-	public void setSuit(String suit) {
-		this.suit = suit;
-	}
+
 	public String getRank() {
 		return rank;
 	}
+
 	public void setRank(String rank) {
 		this.rank = rank;
 	}
 
+	public String getOther() {
+		return other;
+	}
+
+	public void setOther(String other) {
+		this.other = other;
+	}
+	
+	public String toString(){
+		return this.rank + " " + this.other;
+	}
 }

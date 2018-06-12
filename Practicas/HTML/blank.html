@@ -1,20 +1,61 @@
 <!DOCTYPE HTML>
 <html>
-	<meta charset="UTF8">
-	<meta name="name" content="content">
+
 	<head>
 		<style>
-			.one{
+			.container{
+				width:600px;
+				margin: 0 auto;
+			}
+
+			.carta{
+				font-size:140px;
+				float:left;
+				width:48%;
+				border: 1px solid black;
+				border-radius: 20px;
+				text-align:center;
+				margin-right:10px;
+				margin-bottom:10px;
+			}
+
+			.espadas{
 				color:red;
 			}
-			.two{
-				color:blue;
+
+			.corazon{
+				color:red;
+			}
+			p{
+				text-align:center;
+			}
+
+			.container::after{
+				content:"";
+				display:table;
+				clear:both;
 			}
 		</style>
-		
-	</head>
-	
+	<head>
+
 	<body>
-		<p><span class="one">um&emsp;es simplemente</span>el texto de <span class="two">relleno</span> de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N.&nbsp;del&nbsp;T.&nbsp;persona&nbsp;que&nbsp;se&nbsp;dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente i</p>
+		<div class="container">
+			<div class="carta espadas">
+				&spades;
+			</div>
+			<div class="carta trebol">
+				&clubs;
+			</div>
+			<div class="carta diamantes">
+				&diams;
+			</div>
+			<div class="carta corazon">
+				&hearts;
+			</div>
+
+		</div>
+		
+		<p>Todos los derechos reservados &copy;</p>
 	</body>
+
 </html>

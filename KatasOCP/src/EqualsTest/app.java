@@ -2,16 +2,22 @@ package EqualsTest;
 
 public class app {
 
-	public static void main(String[] args) {
-		ObjetoUno objUno = new ObjetoUno();
-		ObjetoDos objDos = new ObjetoDos();
-		objUno.setId(1);
-		System.out.println(objUno.equals(objDos));
-		System.out.println();
+	public static void main(String args[]) {
+		ObjetoDos obj2 = new ObjetoDos();
+		ObjetoUno obj1 = new ObjetoUno();
 		
-		objDos.setId(1);
-		System.out.println(objUno.equals(objDos));
+		obj2.setId(1);
+		obj1.setId(2);
+		
+		System.out.println(obj2.equals(obj1));
+		
+		System.out.println();
 
+		obj2.setId(1);
+		obj1.setId(1);
+		
+		System.out.println(obj2.equals(obj1));
+		
+		
 	}
-
 }

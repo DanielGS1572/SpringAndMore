@@ -15,7 +15,7 @@ public class app {
 		Card card6 = new Card("Rank7","otherE");
 		Card card7 = new Card();		/*Se debe de agregar al Set con Setters si no no lo agrega, ve que es un mismo objeto que card4*/
 		card7.setRank("Rank1");
-		card7.setOther("ohter1");
+		card7.setSuit("ohter1");
 		
 		HashSet<Card> hashSet = new HashSet<>();
 		hashSet.add(card1);

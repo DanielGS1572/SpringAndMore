@@ -3,12 +3,8 @@ package InstanceOf.InterfacePractice;
 public class App {
 
 	public static void main(String[] args) {
-		Elephant el = new Elephant();
+		Hipo el = new Hipo();
 		System.out.println(el instanceof Mother);
-		
-		
-		
-		
 
 	}
 
