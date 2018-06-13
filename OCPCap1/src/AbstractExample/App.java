@@ -7,7 +7,7 @@ public class App {
 		leon.clean();
 		leon.clean2();
 		
-		/*No importa que la clase apunte a Cat, el metodo sobreescrito siempre será llamado*/
+		/*No importa que la clase apunte a Cat, el metodo sobreescrito siempre serï¿½ llamado, ese es el chiste del polimorfismo*/
 		Cat leon2 = new Lion();
 		leon.clean2();
 
