@@ -1,58 +1,51 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
 
+<html>
 	<head>
 		<style>
 			.container{
-				width:600px;
+				width: 600px;
 				margin: 0 auto;
 			}
-
 			.carta{
-				font-size:140px;
-				float:left;
 				width:48%;
+				font-size:60px;
+				float:left;
+				margin-left:2px;
+				margin-bottom:2px;
 				border: 1px solid black;
-				border-radius: 20px;
-				text-align:center;
-				margin-right:10px;
-				margin-bottom:10px;
+				border-radius:20px;
+				text-align: center;
+				height:300px;
+				padding-top:125px;
+				box-sizing:border-box;
 			}
-
-			.espadas{
-				color:red;
-			}
-
-			.corazon{
-				color:red;
+			.container:after{
+				content:'';
+				display:table;
+				clear:both;
 			}
 			p{
 				text-align:center;
 			}
-
-			.container::after{
-				content:"";
-				display:table;
-				clear:both;
-			}
 		</style>
-	<head>
-
+	</head>
+	
 	<body>
 		<div class="container">
 			<div class="carta espadas">
 				&spades;
 			</div>
-			<div class="carta trebol">
+			<div class="carta treboles">
 				&clubs;
+			</div>
+			<div class="carta corazones">
+				&hearts;
 			</div>
 			<div class="carta diamantes">
 				&diams;
 			</div>
-			<div class="carta corazon">
-				&hearts;
-			</div>
-
+			
 		</div>
 		
 		<p>Todos los derechos reservados &copy;</p>

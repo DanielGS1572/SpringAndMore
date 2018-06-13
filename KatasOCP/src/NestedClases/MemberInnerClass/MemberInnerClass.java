@@ -2,20 +2,19 @@ package NestedClases.MemberInnerClass;
 
 public class MemberInnerClass {
 	class Test{
-		public String getResult(){
-			return "tested";
+		public void out(){
+			System.out.println("a");
 		}
 	}
-	
-	public void returnStdOut(){
+	public void muestra(){
 		Test test = new Test();
-		System.out.println(test.getResult());
+		test.out();
+		
 	}
-	public static void main(String[] args) {
-		MemberInnerClass memberInnerClass = new MemberInnerClass();
-		memberInnerClass.returnStdOut();
-		System.out.println(memberInnerClass.new Test().getResult());
-
+	public static void main(String args[]){
+		MemberInnerClass miC = new MemberInnerClass();
+				miC.muestra();
+				miC.new Test().out();
 	}
 
 }
