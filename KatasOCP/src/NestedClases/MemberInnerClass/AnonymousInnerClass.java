@@ -1,26 +1,21 @@
 package NestedClases.MemberInnerClass;
 
 public class AnonymousInnerClass {
-	protected class Price{
-		public int finalPrice(){
+	class SalesToday{
+		 int getValue(){
 			return 3;
 		}
 	}
-	
-	public int finalDiscountPrice(int percentage){
-		Price price = new Price(){
-			public int finalPrice(){
-				return 5;
+	public int getAdmision(int base){
+		SalesToday sales = new SalesToday(){
+			 int getValue(){
+				return 8;
 			}
 		};
-		return percentage - price.finalPrice();
+		return base - sales.getValue();
 	}
-
-	public static void main(String[] args) {
+	public static void main(String [] args){
 		AnonymousInnerClass aIC = new AnonymousInnerClass();
-		System.out.println(aIC.finalDiscountPrice(8));
-		Price price = aIC.new Price();		//acceso a una LocalInnerClass
-		
+		System.out.println(aIC.getAdmision(10));
 	}
-
 }

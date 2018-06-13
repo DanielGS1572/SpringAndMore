@@ -1,6 +1,7 @@
 OVERRIDE (STATIC Y FINAL)
 
 No se puede hacer override de un metodo estatico sin que se especifique que es estatico tambien en el hijo
+Sobreescribir un metodo estatico hace lo que se llama ocultamiento, pues no se hace override como tal, simplemente la firma del metodo es la misma
 
 
 En la clase padre el metodo no se puede especificar como final pues en Lion se estará sobreescribiendo
