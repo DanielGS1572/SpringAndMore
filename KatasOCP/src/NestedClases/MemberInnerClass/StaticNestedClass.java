@@ -1,14 +1,15 @@
 package NestedClases.MemberInnerClass;
 
 public class StaticNestedClass {
-	static class Test{
-		public void muestra(){
+	public static class Test{
+		public void show(){
 			System.out.println("test");
 		}
 	}
 	
-	public static void main(String args[]){
-		Test test  = new Test();
-		test.muestra();
+	public static void main(String [] args){
+		Test test = new Test();
+		test.show();
 	}
+	
 }

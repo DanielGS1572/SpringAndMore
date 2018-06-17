@@ -1,21 +1,22 @@
 package NestedClases.MemberInnerClass;
 
 public class AnonymousInnerClass {
-	class SalesToday{
-		 int getValue(){
-			return 3;
+	class BasicTicket{
+		public int getBaseEntrance(){
+			return 5;
 		}
 	}
-	public int getAdmision(int base){
-		SalesToday sales = new SalesToday(){
-			 int getValue(){
+	
+	public int getTotalPrice(int dollars){
+		BasicTicket basic = new BasicTicket(){
+			public int getBaseEntrance(){
 				return 8;
 			}
 		};
-		return base - sales.getValue();
+		return basic.getBaseEntrance() + dollars;
 	}
-	public static void main(String [] args){
-		AnonymousInnerClass aIC = new AnonymousInnerClass();
-		System.out.println(aIC.getAdmision(10));
+	public static void main(String args[]){
+		AnonymousInnerClass a = new AnonymousInnerClass();
+		System.out.println(a.getTotalPrice(10));
 	}
 }

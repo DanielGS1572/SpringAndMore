@@ -1,19 +1,18 @@
 package NestedClases.MemberInnerClass;
 
 public class LocalInnerClass {
-	public int calcula(){
-		int width = 5;
-		class Inner{
-			int multiplica(int valor){
-				return valor*width;
+	public int getPrice(int dollarsOff){
+		class BasePrice{
+			public int getBase(){
+				return 5;
 			}
 		}
-		Inner inner = new Inner();
-		return inner.multiplica(8);
+		BasePrice base = new BasePrice();
+		return dollarsOff - base.getBase();
 	}
-
 	public static void main(String args[]){
-		LocalInnerClass lIC = new LocalInnerClass();
-		System.out.println(lIC.calcula());
+		LocalInnerClass l = new LocalInnerClass();
+		System.out.println(l.getPrice(3));
 	}
+	
 }

@@ -2,21 +2,20 @@ package NestedClases.MemberInnerClass;
 
 public class AnonymousInnerClassWithInterface {
 	
-	
-	public int getDiscount(int base){
+	public int getDollarsOff(int base){
 		SalesTodayOnly sales = new SalesTodayOnly() {
 			
 			@Override
 			public int dollarsOff() {
 				// TODO Auto-generated method stub
-				return 20;
+				return 10;
 			}
 		};
-		System.out.println(sales.getClass());
-		return base - sales.dollarsOff();
+		return sales.dollarsOff() - base;
 	}
+	
 	public static void main(String args[]){
-		AnonymousInnerClassWithInterface test = new AnonymousInnerClassWithInterface();
-		test.getDiscount(30);
+		AnonymousInnerClassWithInterface a = new AnonymousInnerClassWithInterface();
+		System.out.println(a.getDollarsOff(211));
 	}
 }
