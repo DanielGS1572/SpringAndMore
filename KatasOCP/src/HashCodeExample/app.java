@@ -1,34 +1,25 @@
 package HashCodeExample;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class app {
 
 	public static void main(String[] args) {
-		Card ref = new Card("Rank1","other1");
-		Card card1 = new Card("Rank2","otherA");
-		Card card2 = new Card("Rank3","otherB");
-		Card card3 = new Card("Rank4","otherC");
-		Card card4 = new Card("Rank1","other1");
-		Card card5 = new Card("Rank6","otherD");
-		Card card6 = new Card("Rank7","otherE");
-		Card card7 = new Card();		
-		card7.setRank("Rank1");
-		card7.setSuit("other1");
+		Card referencia = new Card(1,"CartaRef");
+		Card carta1 = new Card(1,"Carta1");
+		Card carta2 = new Card(2,"Carta2");
+		Card carta3 = new Card(3,"Carta3");
+		Card carta4 = new Card(4,"Carta4");
 		
-		HashSet<Card> hashSet = new HashSet<>();
-		hashSet.add(card1);
-		hashSet.add(card2);
-		hashSet.add(card3);
-		hashSet.add(card4);
-		hashSet.add(card5);
-		hashSet.add(card6);
-		hashSet.add(card7);
-	
-		for(Card card:hashSet){			
-			System.out.println(card.equals(ref) + " -- " + card.toString() + " card.hashSet() " + card.hashCode() +
-					" other.hashSet " + ref.hashCode());
+		List<Card> lista = new ArrayList<>();
+		lista.add(carta1);
+		lista.add(carta2);
+		lista.add(carta3);
+		lista.add(carta4);
+		
+		for(Card obj: lista){
+			System.out.println(obj.equals(referencia) + " " +  obj.getRank());
 		}
 
 	}

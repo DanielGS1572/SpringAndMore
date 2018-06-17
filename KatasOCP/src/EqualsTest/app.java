@@ -1,23 +1,25 @@
 package EqualsTest;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class app {
 
 	public static void main(String args[]) {
-		ObjetoDos obj2 = new ObjetoDos();
-		ObjetoUno obj1 = new ObjetoUno();
+		Objeto obj1 = new Objeto(1);
 		
-		obj2.setId(1);
-		obj1.setId(2);
+		Objeto obj2 = new Objeto(1);
+		Objeto obj3 = new Objeto(11);
+		Objeto obj4 = new Objeto(12);
 		
-		System.out.println(obj2.equals(obj1));
+		List<Objeto> lista = new ArrayList<>();
+		lista.add(obj4);
+		lista.add(obj3);
+		lista.add(obj2);
+		lista.add(obj1);
 		
-		System.out.println();
-
-		obj2.setId(1);
-		obj1.setId(1);
-		
-		System.out.println(obj2.equals(obj1));
-		
-		
+		for(Objeto obj:lista){
+			System.out.println(obj.equals(obj1) + " " + obj.getId());
+		}
 	}
 }
