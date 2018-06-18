@@ -5,7 +5,7 @@ public class Lion extends Animal{
 	@Override
 	void feed() {
 		
-		
+		feedTheLion();
 	}
 
 	private void feedTheLion() {
