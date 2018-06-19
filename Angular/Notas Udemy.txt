@@ -1,0 +1,22 @@
+systemjs.config.js
+	- Se usa para administrar los modulos y la compilacion de typescript a javascript
+tsconfig.json
+	- Es la configuracion del typescript transpiler
+
+En lugar de poner tags con script = ... se descomponen en modulos para asi administrarlos mejor y se le deja 
+la tarea a un module-loader para que cargue cada modulo cada que se necesite, el que se usa en plunker es systemjs, el de linea de comandos usa webpack
+Por ejemplo lo siguiente serian modules
+ <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+  
+<script src="https://unpkg.com/zone.js@0.7.4?main=browser"></script>
+  
+<script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+
+System.import('script.ts')		--> carga un archivo typescript, dicho archivo no puede ser puesto directamente en tags pues es necesario compilarlo a .js
+
+Lo navegadores no soportan ES6, pero typescript es un superconjunto de es6,es5... por lo que para que el browser entienda typescript se usa transpiler que puede
+convertirlo a ES6 ó ES5 de javascript, por eso en el archivo tsconfig.json el target indca es5
+
+Las aplicaciones que se hagan se empaquetan en angular modules
+
+Components son los building blocks de toda aplicacion en angular
