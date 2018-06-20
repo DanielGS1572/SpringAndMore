@@ -10,8 +10,9 @@ public class App {
 	public static void main(String args[]) {
 		Animal leon = new Lion();
 		Animal conejo = new Rabbit();
-		
+		Rabbit conejo2 = new Rabbit();
 		conejo.feed();
-		System.out.println(conejo.name);
+		System.out.println(conejo.name);		/*Apunta a la clase Padre*/
+		System.out.println(conejo2.name);		/*Apunta a la clase hija*/
 	}
 }
