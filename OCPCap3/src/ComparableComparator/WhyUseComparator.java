@@ -24,9 +24,9 @@ public class WhyUseComparator {
 			List<Duck> ducks = new ArrayList<>();
 			ducks.add(new Duck("Quack",7));
 			ducks.add(new Duck("Puddles",10));
-			Collections.sort(ducks);
+			Collections.sort(ducks);					/*Originalmente ordena por nombre pues asi esta implementado con el Comparable*/
 			System.out.println(ducks);
-			Collections.sort(ducks, byWeight);		
+			Collections.sort(ducks, byWeight2);		
 			System.out.println(ducks);
 		}
 }

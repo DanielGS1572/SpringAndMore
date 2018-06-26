@@ -2,8 +2,10 @@ package Collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class CollectionMethods {
@@ -30,7 +32,7 @@ public class CollectionMethods {
 		
 		List<Integer> listaEnteros = new ArrayList(Arrays.asList(3,4,3,8,10));
 		System.out.println(listaEnteros);
-		listaEnteros.remove(new Integer(3));			//El remove solo removerá la primera coincidencia
+		listaEnteros.remove(new Integer(3));			//El remove solo removerï¿½ la primera coincidencia
 		System.out.println(listaEnteros);
 		listaEnteros.remove(3);							//Tener cuidado con remover indices vs objetos en una 
 														//lista de Integers
@@ -41,5 +43,15 @@ public class CollectionMethods {
 //clear()		--> 	void clear();
 //contains()	-->		boolean contains(Object object)		--> este metodo llama a equals() en cada elementos 
 															//del arraylist (va barriendo por cada uno)
+		
+		Map<Integer,String> mapa = new HashMap<>();
+		mapa.put(1, "uno");
+		mapa.put(2, "dos");
+		mapa.put(null, "nulo");											/*Ver como el mapa si acetpa nulos, tanto en sus llaves como en sus valores*/
+		mapa.put(3, null);
+		mapa.put(null, null);
+		for(Map.Entry<Integer, String> entry: mapa.entrySet()) {
+			System.out.println(entry.getKey() + " - " + entry.getValue());
+		}
 	}
 }

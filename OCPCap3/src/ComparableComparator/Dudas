@@ -1,1 +1,17 @@
 Se puede hacer override de un comparator del wrapper Integer?	--> ComparableExample.java
+
+
+
+
+Como sería con lambdas?
+Comparator<Duck> comp = new Comparator<Duck>() {
+
+			@Override
+			public int compare(Duck o1, Duck o2) {
+				
+				return o1.getName().compareTo(o2.getName());
+			}
+			
+		};
+		
+		
