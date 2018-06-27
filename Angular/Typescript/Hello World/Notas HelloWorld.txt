@@ -1,0 +1,9 @@
+tsc -w hello.ts
+	para que compile una vez que detecte cambios en automatico 
+
+tsc -t ES6 -w hello.ts
+	para que la transpolación la haga en ES6 y compile hello.ts cada que detecte cambios
+
+tsc --init
+	Crea un archivo de configuracion json (donde se le puede especificar el tipo de transpolation que hará js5 o js6)
+	Si al tener el .json de configuracion se pone tsc -w vera todos los cambios cada que se guarde
