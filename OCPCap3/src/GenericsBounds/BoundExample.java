@@ -19,7 +19,7 @@ public class BoundExample {
 		for(Object x:lista)
 			System.out.println(x);
 	}
-/*			UPPER BOUNDED				*/
+/*			UPPER BOUNDED				*/							/*Se llama upper bound pues es mas generica la clase, se llama lower pues la funcionalidad de la clase es mas baja (por ejemplo la de object)*/
 	public static long total(List<? extends Number> list){ 
 /*	Si Number fuera una interfaz (lo cual sería valido) tambien sería extends y no implements*/
 		long count = 0;
@@ -39,13 +39,19 @@ public class BoundExample {
 		List<String> lista = new ArrayList(Arrays.asList("uno","dos","tres"));
 		unbounded(lista);
 		
+//		total(lista);		Manda Un error pues solo estaría aceptando de tipo Integer
+		List<Integer> listaEnteros = new ArrayList(Arrays.asList(new Integer(5),new Integer(10),new Integer(3)));
+		total(listaEnteros);
+		
+		List<Object> listaObjetos = new ArrayList<>(Arrays.asList(new Object(),new Object(),new Object()));
+//		total(listaObjetos);			--> Solo acepta de Numbers para abajo en jerarquia, por lo que por eso no acepta Object
 		
 /*			UPPER BOUNDED				*/	
-		List<Integer> listaEnteros = new ArrayList<>();
-		listaEnteros.add(new Integer(15));
-		listaEnteros.add(new Integer(12));
-		listaEnteros.add(new Integer(11));
-		System.out.println(total(listaEnteros));
+		List<Integer> listaEnteros2 = new ArrayList<>();
+		listaEnteros2.add(new Integer(15));
+		listaEnteros2.add(new Integer(12));
+		listaEnteros2.add(new Integer(11));
+		System.out.println(total(listaEnteros2));
 		
 /*			UPPER BOUNDED	(Consideraciones)			*/
 		List<? extends Number> birds = new ArrayList<Integer>();
