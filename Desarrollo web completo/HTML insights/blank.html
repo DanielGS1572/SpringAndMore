@@ -2,54 +2,39 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Cursos de Diseño Web</title>
 	<style>
-		.container{
-			width:600px;
-			margin:0 auto;
-			
+		body{
+			margin-top:40px;
+		}
+		.box{
+			border: 1px solid black;
+			padding-top:10px;
+			text-align: center;
 		}
 
-		.carta{
-			border: 1px solid black;
-			border-radius:20px;
-			float: left;
-			width: 46%;
-			height: 240px;
-			text-align:center;
-			box-sizing: border-box;
-			padding: 120px;
-			margin-right:20px;
-			margin-bottom:20px;
-			font-size:40px;
+		.yellow-box{
+			
+			background-color: yellow;
+
 		}
-		p{
-			text-align:center;
+		.red-box{
+			background-color: red;
+margin: 0px 10px 10px 10px;
+
 		}
-		.container:after{
-			content:'';
-			display: table;
-			clear:both;
+		.green-box{
+			background-color: green;
+			margin: 0px 10px -10px 10px;
+			
 		}
 	</style>
   </head>
   <body>
+	<div class="box yellow-box">
 
-	<div class="container">
-		<div class="spades carta">
-			&spades;
-		</div>
-		<div class="clubs carta">
-			&clubs;
-		</div>
-		<div class="hearts carta">
-			&hearts;
-		</div>
-		<div class="diams carta">
-			&diams; 
-		</div>
-		
+		<div class="box red-box"></div>
+		<div class="box green-box"></div>
+
 	</div>
-	<p>Todos los derechos reservados &copy;</p>
   </body>
 </html>

@@ -3,16 +3,14 @@ package GenericInterfaces;
 public class App {
 
 	public static void main(String[] args) {
-		Zebra z = new Zebra();
-		Robot r = new Robot();
+		Zebra zebra = new Zebra();
+		Robot robot = new Robot();
 		
+		ShippableAbstractCrate<Robot> sACRobot = new ShippableAbstractCrate<>();
+		sACRobot.ship(robot);
 		
-		ShippableAbstractCrate<Robot> sAC = new ShippableAbstractCrate<>();
-		
-		
-		ShippableZebraCrate sRC = new ShippableZebraCrate();
-		sRC.shipt(z);
-
+		ShippableZebraCrate<Zebra> sZC = new ShippableZebraCrate<>();
+		sZC.ship(zebra);
 	}
 
 }

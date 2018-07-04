@@ -1,6 +1,6 @@
 package GenericInterfaces;
 
 
-public interface Shippable<T> {
-	public void shipt(T t);
+public interface Shippable<T>{
+	public abstract void ship(T t);
 }

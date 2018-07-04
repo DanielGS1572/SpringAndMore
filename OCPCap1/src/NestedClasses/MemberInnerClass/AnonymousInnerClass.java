@@ -16,6 +16,7 @@ public class AnonymousInnerClass {/*UNA CLASE DENTRO DE UNA CLASE*/
 //			abstract int dollarsOff();
 			 
 				 int dollarsOff(){return 1;};
+				 int newDollars() {return 10;};
 			
 		}
 		
@@ -25,6 +26,7 @@ public class AnonymousInnerClass {/*UNA CLASE DENTRO DE UNA CLASE*/
 					return 3;
 				}
 			};				//como sale se esta asignando a algo... aqui debe llevar ;
+//			System.out.println(sale.newDollars());
 			return basePrice - sale.dollarsOff();
 		}
 //		La forma corta de escribir clases anonimas es con "Functional Programming"

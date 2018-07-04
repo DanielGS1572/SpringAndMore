@@ -2,13 +2,14 @@ package GenericInterfaces;
 
 
 
-public class ShippableZebraCrate implements Shippable<Zebra>{
+public class ShippableZebraCrate<Zebra> implements Shippable<Zebra>{
 
 	@Override
-	public void shipt(Zebra t) {
-		// TODO Auto-generated method stub
-		
+	public void ship(Zebra t) {
+		System.out.println("Zebra shipped");
 	}
+
+	
 
 	
 	

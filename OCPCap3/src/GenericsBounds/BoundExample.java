@@ -3,8 +3,11 @@ package GenericsBounds;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+/*Como que los upper y lower bounds aplica nada mas para los casos en los que se quiere restringir elementos de listas que solo acepten cierta
+ * jerarquia de clases pues en las listas no se puede hacer un instanceof*/
 
-/*Como java trata a los genericos como tipo Objects, se tiene la restricción de que los metodos
+
+/*Como java trata a los genericos como tipo Objects, se tiene la restricciï¿½n de que los metodos
  * disponibles sean muy limitados, para solucionar eso existen los Bounds
  * 
  * Unbounded wildcard					List<?> l = new ArrayList<String>()
@@ -21,7 +24,7 @@ public class BoundExample {
 	}
 /*			UPPER BOUNDED				*/							/*Se llama upper bound pues es mas generica la clase, se llama lower pues la funcionalidad de la clase es mas baja (por ejemplo la de object)*/
 	public static long total(List<? extends Number> list){ 
-/*	Si Number fuera una interfaz (lo cual sería valido) tambien sería extends y no implements*/
+/*	Si Number fuera una interfaz (lo cual serï¿½a valido) tambien serï¿½a extends y no implements*/
 		long count = 0;
 		for(Number number:list){		/*Ver que cuando se itera, ya no se trata como un Object*/
 			count += number.longValue();	/*Incluso se tienen acceso a sus metodos*/
@@ -34,12 +37,12 @@ public class BoundExample {
 /*			UNBOUNDED				*/
 		
 		/*si en el metodo unbounded recibiera un List<Object> y se le esta pasando un 
-		 * List<String> no suena logico hacer esa asignación, por lo que por eso se pone el wildcard.
-		 * Pero eso sí, se trata a cada elemento de la lista como un tipo Object*/
+		 * List<String> no suena logico hacer esa asignaciï¿½n, por lo que por eso se pone el wildcard.
+		 * Pero eso sï¿½, se trata a cada elemento de la lista como un tipo Object*/
 		List<String> lista = new ArrayList(Arrays.asList("uno","dos","tres"));
 		unbounded(lista);
 		
-//		total(lista);		Manda Un error pues solo estaría aceptando de tipo Integer
+//		total(lista);		Manda Un error pues solo estarï¿½a aceptando de tipo Integer
 		List<Integer> listaEnteros = new ArrayList(Arrays.asList(new Integer(5),new Integer(10),new Integer(3)));
 		total(listaEnteros);
 		
