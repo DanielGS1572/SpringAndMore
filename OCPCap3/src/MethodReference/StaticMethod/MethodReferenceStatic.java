@@ -20,6 +20,7 @@ public class MethodReferenceStatic {
 //		es la lista que esta en el operador diamante
 		/*Con Lambda*/
 //		Consumer<List<Integer>> lambda = l -> Collections.sort(l);
+		methodRef1.accept(lista);
 		System.out.println();
 		System.out.println("lista ordenada");
 		System.out.println(lista);
