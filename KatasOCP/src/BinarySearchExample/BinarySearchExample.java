@@ -7,11 +7,12 @@ import java.util.List;
 public class BinarySearchExample {
 
 	public static void main(String[] args) {
-		List<Integer> list = Arrays.asList(8,4,10,22,3);
-		Collections.sort(list);
-		System.out.println(list);
-		System.out.println(Collections.binarySearch(list, 3));
-		System.out.println(Collections.binarySearch(list, 2));
+		List<Integer> lista = Arrays.asList(83,15,19,40);
+		Collections.sort(lista);
+		System.out.println(lista);
+		System.out.println(Collections.binarySearch(lista, 19));
+	
 	}
+	
 
 }

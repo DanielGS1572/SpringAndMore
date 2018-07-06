@@ -7,27 +7,22 @@ import java.util.TreeMap;
 public class HashTreeMap {
 
 	public static void main(String[] args) {
-	Map<String,String> hash = new HashMap<>();
-		
-		hash.put("ocho", "ocho");
-		hash.put("tres", "tres");
-		hash.put("quince", "quince");
-		
-		for(String str: hash.values()) {
-			System.out.println(str);
-		}
-		
-		System.out.println();
-		
-	Map<String,String> tree = new TreeMap<>();
-
-	tree.put("ocho", "ocho");
-	tree.put("tres", "tres");
-	tree.put("quince", "quince");
-		
-		for(String str: tree.values()) {
-			System.out.println(str);
-		}
+	Map<Integer,String> hash = new HashMap<>();
+	
+	hash.put(333, "3");
+	hash.put(1, "1");
+	hash.put(4, "4");
+	
+	System.out.println(hash);
+	
+	Map<Integer,String> tree = new TreeMap<>();
+	
+	tree.put(333, "3");
+	tree.put(1, "1");
+	tree.put(4, "4");
+	
+	System.out.println(tree);
 	}
+	
 
 }
