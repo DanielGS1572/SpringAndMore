@@ -10,10 +10,10 @@ dentro de Collections por agrupar elementos
 
 
 Las siguientes listas no aceptan nulos:
-- TreeMap.- no nulos en sus llaves
--												 Hashtable.- no nulos en sus llaves o valores (esta lista ya es muy vieja por lo que ya no se usa)
 - TreeSet.- no nulos en sus elementos
 - ArrayDeque.- no nulos en sus elementos
+- TreeMap.- no nulos en sus llaves
+-												 Hashtable.- no nulos en sus llaves o valores (esta lista ya es muy vieja por lo que ya no se usa)
 
 Practicar tabla 3.9 de OCP (pagina 194 en xodo, página 142 en OCP)
 

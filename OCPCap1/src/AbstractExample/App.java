@@ -9,7 +9,7 @@ public class App {
 		
 		/*No importa que la clase apunte a Cat, el metodo sobreescrito siempre ser� llamado, ese es el chiste del polimorfismo*/
 		Cat leon2 = new Lion();
-		leon.clean2();
+		leon2.clean2();
 
 	}
 

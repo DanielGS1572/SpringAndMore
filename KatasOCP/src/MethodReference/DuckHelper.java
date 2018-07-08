@@ -1,14 +1,11 @@
 package MethodReference;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class DuckHelper {
-	public static int compareAge(Duck d1, Duck d2) {
-		return d1.getAge() - d2.getAge();
-	}
-	public static void main(String[] args) {
-		Comparator<Duck> comp = DuckHelper::compareAge;
-
-	}
+	
 
 }

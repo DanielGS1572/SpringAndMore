@@ -1,11 +1,12 @@
 package FactoryPattern;
 
 public class FoodFactory {
-		public Food create(String animal){
-			switch(animal){
-			case "one": return new Fish(20);
-			case "two": return new Hay(10);
-			}
-			throw new IllegalArgumentException();
+	public static Food getFood(String food){
+		
+		switch(food){
+		case "fish": return new Fish(10);
+		case "hay": return new Hay(20);
 		}
+		throw new UnsupportedOperationException("No existe");
+	}
 }

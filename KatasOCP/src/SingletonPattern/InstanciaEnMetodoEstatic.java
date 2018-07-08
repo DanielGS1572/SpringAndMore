@@ -8,10 +8,12 @@ public class InstanciaEnMetodoEstatic {
 	private static final InstanciaEnMetodoEstatic instance;
 	
 	static{
-		instance = new InstanciaEnMetodoEstatic();	/*Se instancia en el momento que la clase es cargada*/
+		instance = new InstanciaEnMetodoEstatic();
 	}
-	private InstanciaEnMetodoEstatic(){}
-	public static InstanciaEnMetodoEstatic getInstance(){
+	private InstanciaEnMetodoEstatic(){
+		
+	}
+	public static synchronized InstanciaEnMetodoEstatic getInstance(){
 		return instance;
 	}
 }
