@@ -1,12 +1,18 @@
-npm install -g angular-cli          Instala el cli (no importa en que directorio estemos parados)
-ng -v                               Version de ng
-ng new codecraft                    For bootstraping a new project
+npm install -g angular-cli          	--> Instala el cli (no importa en que directorio estemos parados)
+ng -v                               	-->	Version de ng
+ng new codecraft                 		--> For bootstraping a new project
     Genera varios archivos, entre ellos:
-        - carpeta de app    --> es donde regularmente se estará trabajando
-        - carpeta de assets --> es donde se pondrán imagenes y demás recursos
-        - karma.conf.js     --> se usa para correr pruebas  (unit testing)
-        - package.json      --> standard node package file
-        - protractor.conf.js--> end to end testing
-        - carpeta e2e       --> end to end, van los archivos para generar pruebas
+        - carpeta de app    			--> es donde regularmente se estará trabajando
+        - carpeta de assets 			--> es donde se pondrán imagenes y demás recursos
+        - karma.conf.js     			--> se usa para correr pruebas  (unit testing)
+        - package.json      			--> standard node package file
+        - protractor.conf.js			--> end to end testing
+        - carpeta e2e       			--> end to end, van los archivos para generar pruebas
 		
 	Ver comentario de codecraft -> src -> app -> app.component.ts
+		app.module.ts 
+		main.ts
+		
+		
+		
+ng serve 								--> Construye la aplicación, bundles all the code using webpack y lo hace disponible en localhost 4200			
