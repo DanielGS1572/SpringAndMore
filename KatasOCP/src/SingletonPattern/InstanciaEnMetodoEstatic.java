@@ -6,14 +6,13 @@ package SingletonPattern;
  * Como por ejemplo el acceso a la escritura de un archivo*/
 public class InstanciaEnMetodoEstatic {
 	private static final InstanciaEnMetodoEstatic instance;
-	
 	static{
 		instance = new InstanciaEnMetodoEstatic();
 	}
-	private InstanciaEnMetodoEstatic(){
-		
-	}
-	public static synchronized InstanciaEnMetodoEstatic getInstance(){
+	private InstanciaEnMetodoEstatic(){}
+	
+	public synchronized static InstanciaEnMetodoEstatic getInstance(){
 		return instance;
 	}
+	
 }

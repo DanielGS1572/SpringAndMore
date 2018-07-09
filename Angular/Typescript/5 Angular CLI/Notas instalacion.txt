@@ -16,3 +16,19 @@ ng new codecraft                 		--> For bootstraping a new project
 		
 		
 ng serve 								--> Construye la aplicación, bundles all the code using webpack y lo hace disponible en localhost 4200			
+ng generate component Header            --> Genera todos la estructura de los css, ts y html dentro de app, le agrega la palabra Component al final (HeaderComponent)
+    ng g component Header (De forma abraviada)      --> Cuando hay una nomenclatura con camelCase, cuando genera la carpeta lo pone todo en minusculas y le agrega un guion
+                                        --> al crearse un componente se puede crear estando en una ruta particular o diciendole explicitamente
+
+ng g directive My                       --> para crear un directive (lo genera como my.directive.ts), igual le agrega la palabra al final MyDirective
+ng g pipe My
+ng g service My
+ng g class MyClass                      --> Para generar una clase, se le debe especificar el nombre completo
+ng g interface MyInterface              --> se le debe de dar el nombre completo
+ng g enum MyEnum
+ng build                                --> para empaquetar y ponerlo en un servidor (host) --> esto inyecta lineas indicando js en dist->index.html
+ng build --prod                         --> los archivos que genera los hace mas livianos y genera mas archivos con numeros raros
+
+
+npm install moment --save               --> para instalar un plugin y que Angular sepa empaquetarlo dentro de dist (package.json -> Aqui es donde se pone el registro de lo que se empaquetará)
+ng test                                 --> para hacer unit testings
