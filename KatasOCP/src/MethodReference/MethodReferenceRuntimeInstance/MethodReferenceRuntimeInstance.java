@@ -7,9 +7,8 @@ import java.util.function.Supplier;
 public class MethodReferenceRuntimeInstance {
 
 	public static void main(String[] args) {
-		Predicate<String> x = String::isEmpty;
-		Predicate<String> y = s -> s.isEmpty();
-		
+		Predicate<String> s = String::isEmpty;
+		System.out.println(s.test("a"));
 	}
 
 }

@@ -11,6 +11,9 @@ public class InstanceMethodSpecificInstance {
 		Predicate<String> methodRef2 = str::startsWith;			/*Ver que se le pasa la instancia directamente como tal (en lugar de pasarselo como argumento)*/
 		/*Ejemplo con lambda*/
 		Predicate<String> lambda = s -> str.startsWith(s);
+		
+		System.out.println(lambda.test("x"));
+		System.out.println(methodRef2.test("abcd"));
 	}
 
 }
