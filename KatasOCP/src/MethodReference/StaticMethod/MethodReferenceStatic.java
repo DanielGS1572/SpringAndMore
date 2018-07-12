@@ -10,19 +10,16 @@ import java.util.function.Supplier;
 public class MethodReferenceStatic {
 	
 	public static void main(String[] args) {
-		List<Integer> lista = Arrays.asList(4,5,2,8);
+		List<String> lista = Arrays.asList("b","a","z","e");
+		Consumer<List<String>> consumer = Collections::sort;
+		consumer.accept(lista);
 		System.out.println(lista);
 		
-		Consumer<List<Integer>> listOrder = Collections::sort;
-		listOrder.accept(lista);
-		System.out.println(lista);
 		
-		List<Integer> lista2 = Arrays.asList(4,5,2,8);
-		Consumer<List<Integer>> ord = l -> Collections.sort(l);
-		ord.accept(lista2);
-		System.out.println(lista2);
-	
-	
+		List<String> list = Arrays.asList("b","a","z","e");
+		Consumer<List<String>> c = l -> Collections.sort(list);
+		c.accept(list);
+		System.out.println(list);
 	}
 	
 

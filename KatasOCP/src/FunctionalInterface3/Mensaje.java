@@ -1,5 +1,5 @@
 package FunctionalInterface3;
 @FunctionalInterface
 public interface Mensaje {
-	public String muestra(String str);
+	public void muestra(String s);
 }
