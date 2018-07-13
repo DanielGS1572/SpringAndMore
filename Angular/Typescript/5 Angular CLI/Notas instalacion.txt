@@ -1,13 +1,20 @@
-npm install -g angular-cli          	--> Instala el cli (no importa en que directorio estemos parados)
+﻿npm install -g angular-cli          	--> Instala el cli (no importa en que directorio estemos parados) --> usa webpack loading que hace module loading, bundling y minificación
 ng -v                               	-->	Version de ng
 ng new codecraft                 		--> For bootstraping a new project
     Genera varios archivos, entre ellos:
         - carpeta de app    			--> es donde regularmente se estará trabajando
         - carpeta de assets 			--> es donde se pondrán imagenes y demás recursos
         - karma.conf.js     			--> se usa para correr pruebas  (unit testing)
-        - package.json      			--> standard node package file
+        - package.json      			--> standard node package file, es la relación que tiene para descargar las dependencias
         - protractor.conf.js			--> end to end testing
         - carpeta e2e       			--> end to end, van los archivos para generar pruebas
+	- main.ts				--> hace bootstrap de todo
+	- tsconfig.json				--> archivo de configuración de typescript para transpilar typescript a javascript
+	- typings.d.ts				--> type definition file
+
+	- app.component.ts			--> declaracion del componente
+	- app.module.ts				--> top level configuration 
+	- main.ts				--> donde se hace el bootstraping del componente de app.component.ts
 		
 	Ver comentario de codecraft -> src -> app -> app.component.ts
 		app.module.ts 
@@ -15,7 +22,7 @@ ng new codecraft                 		--> For bootstraping a new project
 		
 		
 		
-ng serve 								--> Construye la aplicación, bundles all the code using webpack y lo hace disponible en localhost 4200			
+ng serve 				--> Construye la aplicación, bundles all the code using webpack y lo hace disponible en localhost:4200			
 ng generate component Header            --> Genera todos la estructura de los css, ts y html dentro de app, le agrega la palabra Component al final (HeaderComponent)
     ng g component Header (De forma abraviada)      --> Cuando hay una nomenclatura con camelCase, cuando genera la carpeta lo pone todo en minusculas y le agrega un guion
                                         --> al crearse un componente se puede crear estando en una ruta particular o diciendole explicitamente
