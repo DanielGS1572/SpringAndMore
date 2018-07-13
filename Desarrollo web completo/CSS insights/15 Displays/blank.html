@@ -1,39 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE hmtl>
 <html>
 	<head>
+		<title>block</title>
 		<style>
-            .contenedor{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-            .div1, .div2, .div3{
-                width: 100px;
-                height: 20px;
-                border: 1px solid black;
-            }
-            
-            .div1{
-                background-color:red;
-            }
-            
-            .div2{
-                background-color:green;
-            }
-            
-            .div3{
-                background-color:blue;
-            }
-            
+			.container{
+				display: flex;
+				justify-content: space-around;
+				
+			}
+			.box{
+				border: 1px solid black;
+				background-color: green;
+				width:10px;
+				height:20px;
+			}
 		</style>
 	</head>
-
+	
 	<body>
-		<div class="contenedor">
-            <div class="div1"></div>
-            <div class="div2"></div>
-            <div class="div3"></div>
-        </div>
+			<div class="container">
+				<div class="box box1"></div>
+				<div class="box box2"></div>
+				<div class="box box3"></div>
+				<div class="box box4"></div>
+			</div>
 	</body>
 
 </html>
