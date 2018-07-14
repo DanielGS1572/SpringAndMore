@@ -1,6 +1,8 @@
 package MethodReference;
 
+import java.util.Map;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 public class MR1ReferenceExample {
@@ -17,6 +19,15 @@ public class MR1ReferenceExample {
 		
 		Stream.generate(Math::random).limit(5).forEach(System.out::println);;		/*El generate recibe como parametro un supplier Funcion que no recibe nada pero regresa algo, se
 		usa un method reference de un metodo static*/
+		
+		Function<String,Integer> cons = String::length;
+		Stream.of("abc","bd","c").map(cons).forEach(printer);							/*como el lenght() se usa valor.length() no recibe ningun argumento por eso se usa String::length*/
+		Stream.of("abc","bd","c").map(String::length).forEach(printer);	
+		
+		
+		System.out.println();
+		System.out.println("valor".length());
+		
 	}
 
 }
