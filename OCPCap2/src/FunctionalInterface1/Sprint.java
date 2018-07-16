@@ -9,5 +9,5 @@ package FunctionalInterface1;
 
 @FunctionalInterface
 public interface Sprint {
-	public void sprint(Object animal);
+	public Object sprint(Object animal);
 }

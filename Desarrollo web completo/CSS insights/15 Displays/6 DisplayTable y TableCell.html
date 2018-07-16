@@ -3,15 +3,15 @@
 	<head>
 		<style>
 			.displaytable{
-				display: table;
+				display: table;							/*Debe contener div hijos para que pueda especificarse un comportamiento*/
 				width:70%;
 				height:150px;
 				background-color:yellow;
 				
 			}
 			.displaycell{
-				display: table-cell;
-				text-align: justify; /*center*/
+				display: table-cell;					/*Se comporta como un td (una columna), tambien se tiene table-row*/
+				text-align: /*justify;*/ center;
 				vertical-align: middle;
 			}
 			
@@ -33,10 +33,10 @@
 	<body>
 		<div class="displaytable">
 			<div class="displaycell">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus nunc quis 
-				elit ullamcorper efficitur. Fusce nunc mi, lobortis sit amet bibendum sit amet, volutpat sed erat. Phasellus maximus suscipit est, 
-				non pellentesque augue maximus vel. Morbi varius sit amet tortor sit amet lacinia. Nulla malesuada, dolor sed pretium fringilla, 
-				elit nunc gravida erat, sed molestie neque libero id orci. Pellentesque fringilla lectus a nulla hendrerit, sit amet placerat nunc dictum.</p>
+				<p>proin xxx.</p>
+			</div>
+			<div class="displaycell">
+				<p>TEST dictum.</p>
 			</div>
 		</div>
 		<br>

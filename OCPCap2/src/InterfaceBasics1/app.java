@@ -15,7 +15,7 @@ public class app {
 		var = 8;		/*A pesar de ser static y final, se puede modificar*/
 		System.out.println(var);
 		
-		/*MAX_SPEED puede ser accedido desde Fly e Eagle que lo implementa, el metodo no*/
+		
 		int var2 = Fly.MAX_SPEED;
 		Fly.calculateSpeed(5, 6);
 		

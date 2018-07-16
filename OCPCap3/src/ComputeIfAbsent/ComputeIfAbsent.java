@@ -11,12 +11,12 @@ public class ComputeIfAbsent {
 		counts.put("Jenny",15);
 		counts.put("Tom", null);
 		
-		/*ComputeIfAbsent setea los valores si la llave viene nula ó si no existe el elemento en la lista*/
+		/*ComputeIfAbsent setea los valores si el valor viene nulo o si no existe el elemento en la lista*/
 		Function<String,Integer> mapper = (k) -> 1;		/*Simplemente recibe un valor y regresa un integer*/
 		System.out.println(counts);
 		Integer jenny = counts.computeIfAbsent("Jenny", mapper);
 		Integer sam = counts.computeIfAbsent("Sam", mapper);		//NO EXISTE EN LA LISTA
-		Integer tom = counts.computeIfAbsent("Tom", mapper);		//LLAVE NULA
+		Integer tom = counts.computeIfAbsent("Tom", mapper);		//VALOR NULO
 		
 		System.out.println(counts);
 	}

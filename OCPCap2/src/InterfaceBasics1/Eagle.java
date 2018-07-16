@@ -7,10 +7,8 @@ public class Eagle implements Fly {
 	
 	public void land(){
 		System.out.println("Eagle is diving fast");
+		System.out.println(MAX_SPEED);
+		Fly.calculateSpeed(3,2);
 	}
-	
-	//Estos dos no se pueden llamar aqui, seria en una
-	//clase que no la implemente, ver app2
-//	Fly.MAX_SPEED
-//	Fly.calculateSpeed
+		
 }
