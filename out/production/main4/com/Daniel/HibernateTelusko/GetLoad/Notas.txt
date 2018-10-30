@@ -1,0 +1,5 @@
+Hay dos formas de hacer "Fetch" obtener datos de la base
+	- session.get --> cada vez que se mande llamar, a pesar que no se use... impacta a la base de datos
+	- session.load --> no dispara un query (en caso que no se use el objeto asignado)
+	
+La diferencia radica en el tipo de excepciones, y de performance

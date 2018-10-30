@@ -1,0 +1,5 @@
+Como usar los method ref para que surta efecto (al menos e MethodReference.StaticMethod no esta funcionando)
+-- Se le pasa como parametro a otros lambdas, por ejemplo list.removeIf --> recibe un predicado,
+	ver RemoveIfExample
+	
+	A lo mejor y hay otros casos que en lugar de un predicado recibe un consumer por ejemplo

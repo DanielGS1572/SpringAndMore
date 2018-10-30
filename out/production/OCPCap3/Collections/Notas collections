@@ -1,0 +1,23 @@
+List.- acepta duplicados y se accesan a traves de un indice
+Set.- No acepta duplicados
+Queue.- first in, first out
+Map.- llave-valor, la llave no se puede repetir, no implementa Collection interface, pero si se considera
+dentro de Collections por agrupar elementos
+
+			Collection						Map
+		|		|		|
+	   List	    Set	  Queue
+
+
+Las siguientes listas no aceptan nulos:
+- TreeSet.- no nulos en sus elementos
+- ArrayDeque.- no nulos en sus elementos
+- TreeMap.- no nulos en sus llaves
+-												 Hashtable.- no nulos en sus llaves o valores (esta lista ya es muy vieja por lo que ya no se usa)
+
+Practicar tabla 3.9 de OCP (pagina 194 en xodo, página 142 en OCP)
+
+Cuando se ordena la prioridad es:
+	- numeros
+	- primera letras mayusuculas 
+	- primera letras minusculas 

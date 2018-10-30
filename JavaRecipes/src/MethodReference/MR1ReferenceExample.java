@@ -21,13 +21,13 @@ public class MR1ReferenceExample {
 
 		Supplier<Double> supplier = Math::random;
 		Consumer<Double> consumer = System.out::println;
-		Stream.generate(supplier).limit(5).forEach(consumer);;		/*El generate recibe como parametro un supplier Funcion que no recibe nada pero regresa algo, se
+		Stream.generate(supplier).limit(5).forEach(consumer);		/*El generate recibe como parametro un supplier Funcion que no recibe nada pero regresa algo, se
 		usa un method reference de un metodo static*/
 		/*Hay tres formas de usar method references
 		* 		- object::instanceMethod --> System.out::println
 		* 		- Class::staticMethod 	 --> Math::max
 		* 		- Class::instanceMethod	 --> String::length 	--> se usa como objetivo, no como argumento, por ejemplo x.length()*/
-		/*Ver que Strem.of se le estan pasando los numero como tal y Stream.generate los genera a partir de una función supplier*/
+		/*Ver que Stream.of se le estan pasando los numero como tal y Stream.generate los genera a partir de una función supplier*/
 		
 		Function<String,Integer> cons = String::length;
 		Stream.of("abc","bd","c").map(cons).forEach(printer);							/*como el lenght() se usa valor.length() no recibe ningun argumento por eso se usa String::length*/

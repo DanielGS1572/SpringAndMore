@@ -1,0 +1,32 @@
+En hibernate una sentencia select es muy similar a SQL pero en lugar de poner una tabla
+se pone la clase y en lugar de una columna se pone una propiedad
+
+por ejemplo
+
+select 		rollno		from		student	
+			(TABLA)					(COLUMNA)
+
+select 		rollno		from		Student		(HQL)
+		  (PROPIEDAD)				(CLASE)
+		  
+
+selec * from student		(SQL)
+from Studen					(HQL)
+
+
+
+/**************************************************************/
+Formas de obtener resultados
+
+CON JDBC
+			ResultSet rs = st.executeQuery(sql);
+			while(rs.next()){
+			
+			]
+			
+			
+CON HQL
+			List<Student>st = query.list();
+			for(Student s: st){
+			
+			}

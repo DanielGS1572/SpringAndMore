@@ -1,0 +1,72 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-indexer-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-aspects-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jms-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-aop-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-expression-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-oxm-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-webflux-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-core-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-beans-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-oxm-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-beans-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jcl-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-orm-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-messaging-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-tx-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-instrument-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jms-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-websocket-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-orm-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jdbc-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-orm-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-messaging-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-websocket-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jdbc-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-instrument-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-tx-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-webflux-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-expression-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jcl-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-aspects-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-core-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jcl-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-aspects-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-webmvc-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-oxm-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jms-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-messaging-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-support-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-core-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-jdbc-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-indexer-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-beans-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-aop-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-webflux-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-tx-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-websocket-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-test-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-support-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-test-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-indexer-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-aop-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-expression-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-webmvc-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-instrument-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-context-support-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-web-5.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-web-5.0.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-webmvc-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-web-5.0.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spudemy-spring-demo-one/lib/spring-test-5.0.1.RELEASE-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

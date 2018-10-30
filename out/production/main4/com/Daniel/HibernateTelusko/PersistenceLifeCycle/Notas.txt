@@ -1,0 +1,25 @@
+Hibernate Obect States / Persistence Life Cycle
+En hibernate siempre se usa session que tiene diferentes metodos:
+	- save
+	- update
+	- delete...
+	
+Y al aplicar estos metodos se cambian los estados
+
+Todo objeto java por default cuando se crea un objeto se hace con un new 
+y cuando muere se manda llamar el garbage collector.
+Entre estos dos puntos hay diferentes estados intermedios
+
+new --> garbage collector
+
+En hibernate
+
+new --> Transient --> save() | persist() --> persistent --> detach() | commit()--> Detached
+			|									 |
+			|--	  -->  get()| find()			 |--	-->	remove() --> Removed
+								|
+								|-- 	--> persistent
+
+1) Transient.- Siempre que se crea un objeto, nace con el estado de Transient
+2) Persistent.- Es el estado despues de que se guarda en base de datos. En caso que se modifique alguna
+propiedad despues de llamar el persisten, aun así se actualizará en base de datos

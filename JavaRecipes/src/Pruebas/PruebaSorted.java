@@ -9,7 +9,7 @@ public class PruebaSorted {
 	public static void main(String[] args) {
 		List<String> lista = Arrays.asList("B","a","C");
 		
-		List<String> orden1 = lista.stream().sorted((s1,s2) -> s2.compareTo(s1)).collect(Collectors.toList());
+		List<String> orden1 = lista.stream().sorted((s1,s2) -> s1.compareTo(s2)).collect(Collectors.toList());
 		System.out.println(orden1);
 		
 		List<String> orden2 = lista.stream().sorted(String::compareTo).collect(Collectors.toList());

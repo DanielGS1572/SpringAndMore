@@ -1,0 +1,21 @@
+Si un usuario realiza una peticion de datos a la base, lo que regrese como resultado
+se guarda en el servidor (como parte de la sesion), a esto se le llama First Level Cache
+y no se comparte el cache entre las diferentes sesiones
+
+Sin embargo hay un Second Level Cache que si se comparte a traves de las diferentes sesiones
+(esto debe de ser configurado), hay diferentes caches disponibles (esto es a traves de librerias):
+	- ehcache (la mas papular)
+		* Se deben de configurar ciertas propiedades
+			- pom.xml	
+				ehcache 			-> provee las funcionalidades
+				hibernate-ehcache	-> realiza la configuración
+			- hibernate.cfg.xml	(Aqui se hailita el second level cach)	
+				- Se dan permisos
+				- Se indica quien es el provider (en este caso es ehcache)
+			- Entity ( No todas las entidades tienen por default la opcion de cachable)
+				- @Cachable -> Esta entidad es elegible para "caching"
+				- @Cache	-> Se debe especificar las estrategias (aqui es donde se configura el Second Level Cache)
+	- OS
+	- swarm
+	
+Cada sesión tiene su propio level cache

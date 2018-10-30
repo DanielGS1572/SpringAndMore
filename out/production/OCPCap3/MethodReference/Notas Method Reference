@@ -1,0 +1,11 @@
+Hay 3 tipos de interfaces funcionales:
+	- Predicate: Toma un solo parametro de cualquier tipo y regresa un boolean
+	- Consumer: Toma un solo parametro de cualquier tipo y el tipo de retorno es void
+	- Supplier: No toma ningun parametro y regresa cualquier tipo de objeto
+	
+Hay 4 formatos de referencias de metodos
+	- Metodos estaticos
+	- Instancia de metodos en instancias particulares
+	- Instancias de metodos en una instancia que es determinada en runtime
+	- Constructores
+	
