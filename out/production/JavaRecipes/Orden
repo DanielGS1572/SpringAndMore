@@ -4,5 +4,5 @@ Mostrar la longitud de una cadena de string
 Ordenar String por lambda y por method Reference
 De una lista de objetos obtener una propiedad y crear una lista de sus nombres por ejemplo
 De una lista de sus nombres crear una lista de objetos
-
 Generar 5 números aleatorios
+Ordenar una lista de strings por tamaño y por cada tamaño ordenar alfabeticamente
