@@ -36,6 +36,9 @@ public class ConsumerExample {
                 .map(String::toUpperCase)
                 .peek(e -> System.out.println("Mapped value: " + e))
                 .collect(Collectors.toList());
+
+        //http://www.deadcoderising.com/2015-09-07-java-8-functional-composition-using-compose-and-andthen/
+        /*El consumer tiene un metodo default que se llama andThen que se usa para composition*/
     }
 
 
