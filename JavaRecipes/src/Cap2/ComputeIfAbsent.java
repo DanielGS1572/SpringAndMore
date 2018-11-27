@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-public class Varios {
+class Varios {
 
     public static void main(String args[]){
 /*ComputIfAbsent solo sirve para los casos que el valor no esta presente, no sirve para la llave*/
