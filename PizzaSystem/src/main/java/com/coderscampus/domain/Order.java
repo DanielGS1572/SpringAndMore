@@ -27,14 +27,14 @@ public class Order {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	@ManyToOne
+	@ManyToOne			//Customer 1 -> * Order -- ver como Order es el hijo, por eso es ManyToOne (Una orden no puede existir sin un cliente)
 	public Customer getCustomer() {
 		return customer;
 	}
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "order")
+	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "order")		//Una pizza no puede existir sin una orden por lo que el padre es la orden -> OneToMany, por eso en mapped by se pone order pues es el padre
 	public Set<Pizza> getPizzas() {
 		return pizzas;
 	}

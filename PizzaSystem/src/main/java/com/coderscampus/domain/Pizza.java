@@ -34,7 +34,7 @@ public class Pizza {
 	public void setOrder(Order order) {
 		this.order = order;
 	}
-	@ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "pizzas")
+	@ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "pizzas")  //Como es una relacion muchos a muchos el mappedBy indica quien es el padre
 	public Set<Topping> getToppings() {
 		return toppings;
 	}

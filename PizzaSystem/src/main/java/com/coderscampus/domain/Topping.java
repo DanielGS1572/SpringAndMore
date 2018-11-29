@@ -39,10 +39,11 @@ public class Topping {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	@ManyToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinTable(name = "pizza_topping",
-	joinColumns = @JoinColumn(name="topping_id"), 
-	inverseJoinColumns = @JoinColumn(name="pizza_id"))
+	@ManyToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)		//el mapped by nada mas iría en el padre
+	//el nombre del join table es la concatenacion de las relaciones empezando por el padre
+	//joinColumn se refiere al nombre de la columna respecto a este objeto
+	//inverseJoinColumn se refiere al nombre de la columna del otro objeto por la relación ManyToMany
+	@JoinTable(name = "pizza_topping",joinColumns = @JoinColumn(name="topping_id"),inverseJoinColumns = @JoinColumn(name="pizza_id"))
 	public Set<Pizza> getPizzas() {
 		return pizzas;
 	}
