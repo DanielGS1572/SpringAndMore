@@ -1,0 +1,28 @@
+Error:
+java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'
+
+Solución:
+- Version MySQL-connector-java.png
+- Si se usa una versión vieja mandara error de caching_sha2_password
+- Por lo que en el POM se pone la versión 8.0.13
+
+Error:
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+
+Solución:
+- Comentar el tomcat que embebe al crear un nuevo projecto de spring boot
+(spring-boot-starter-tomcat)
+
+
+Error:
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+
+Solución:
+- Ver la contraseña si concuerda con la base de datos
+
+
+- Para que descargue las dependencias hay que hacer un mvn reimport
+- El clean install -DskipTests es para que genere de nuevo el jar/war
+
+
+
