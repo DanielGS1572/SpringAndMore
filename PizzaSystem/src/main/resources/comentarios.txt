@@ -1,0 +1,8 @@
+https://howtoprogramwithjava.com/hibernate-manytomany-unidirectional-bidirectional/
+
+
+Es posible que al arrancar mander error con un tema de seguridad de sha, por lo que hay que cambiar el conector --> mysql-connector-java
+para que actualice los jars hay que darle reimport a maven
+
+el clean install -DskipTests es para que genere los wars
+
