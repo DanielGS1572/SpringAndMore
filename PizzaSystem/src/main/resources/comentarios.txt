@@ -1,3 +1,5 @@
+Queda incompleto, para terminar revisar por el minuto 45 del segundo video
+
 https://howtoprogramwithjava.com/hibernate-manytomany-unidirectional-bidirectional/
 
 
@@ -6,3 +8,6 @@ para que actualice los jars hay que darle reimport a maven
 
 el clean install -DskipTests es para que genere los wars
 
+
+En resources se puede tener un archivo "import.sql" que prellene información en la base de datos
+Esto solo funciona si en el archivo de propiedades spring.jpa.hibernate.ddl-auto esta en create (en modo update no funciona)

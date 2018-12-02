@@ -17,7 +17,8 @@ import com.coderscampus.repository.OrderRepository;
 import com.coderscampus.repository.ToppingRepository;
 
 @Controller
-@RequestMapping("/orders/{orderId}/pizzas")
+@RequestMapping("/orders/{orderId}/pizzas")		//Esto se relaciona con orderPost de OrderController y a su
+//vez se relacion con PathVariable de pizzaGet
 public class PizzaController {
 	private ToppingRepository toppingRepo; 
 	private OrderRepository orderRepository;
@@ -34,7 +35,7 @@ public class PizzaController {
 	
 	@RequestMapping(value="", method=RequestMethod.POST)
 	public String pizzaPost(@ModelAttribute Pizza pizza, @PathVariable Long orderId, ModelMap model){
-		Order order = orderRepository.findOne(orderId);
+		Order order = orderRepository.findOne(orderId);		//Para guardar un registro de pizza es necesario guardar a la relación padre
 		
 		for(Topping topping: pizza.getToppings()){
 			topping.getPizzas().add(pizza);

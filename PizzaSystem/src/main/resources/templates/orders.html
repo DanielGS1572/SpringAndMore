@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://thymeleaf.org"> <!-- xmlns = xml name space -->
 <head>
 <title>Please place your order</title>
 </head>
@@ -15,7 +15,7 @@
 		Pizza id: <span th:text="${pizza.id}"></span><br/>
 		</fieldset>
 		
-	</div><form action="" method="post">
+	</div><form action="" method="post">		<!-- Manda llamar al metodo post de orderController -->
 		<button>Add Pizza to Order</button></form>
 </body>
 </html>

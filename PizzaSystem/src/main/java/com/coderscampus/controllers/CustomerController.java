@@ -22,7 +22,8 @@ public class CustomerController {
 		return "redirect:/customers";
 	}
 
-	@RequestMapping(value = "/customers", method = RequestMethod.GET)
+	@RequestMapping(value = "/customers", method = RequestMethod.GET)		
+//Se usa por convencion que sea plural
 	public String customers(ModelMap model) {
 		Customer customer = new Customer();
 		model.put("customer", customer);
@@ -30,10 +31,13 @@ public class CustomerController {
 	}
 
 	@RequestMapping(value = "/customers", method = RequestMethod.POST)
-	public String customersPost(HttpServletRequest request, @ModelAttribute Customer customer, ModelMap model) {
+	public String customersPost(HttpServletRequest request /*Esto es para hacer "trampa" y setear el customer en la sesión, esto no es necesario con spring security*/,
+			@ModelAttribute Customer customer,
+			ModelMap model) {
 
 		Customer customerSaved = customerRepo.save(customer);
 		request.getSession().setAttribute("customer", customerSaved);
-		return "redirect:/orders";
+		return "redirect:/orders";		
+//cada que se haga un post method se debe hacer un redirect
 	}
 }

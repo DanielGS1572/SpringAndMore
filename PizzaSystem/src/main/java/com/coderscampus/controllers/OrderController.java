@@ -22,7 +22,7 @@ public class OrderController {
 	
 	private OrderRepository orderRepo;
 	
-	@RequestMapping(value="", method=RequestMethod.GET)
+	@RequestMapping(value="", method=RequestMethod.GET)		//value esta "" porque ya se esta anotando a nivel de la clase
 	public String orderGet(ModelMap model){
 		
 		Order order = new Order();
@@ -45,7 +45,7 @@ public class OrderController {
 	
 	@RequestMapping(value="{orderId}", method=RequestMethod.POST)
 	public String orderPost(@PathVariable Long orderId, HttpServletRequest request, @ModelAttribute Order order, ModelMap mode){
-		return "redirect:orders/"+orderId+"/pizzas";
+		return "redirect:orders/"+orderId+"/pizzas";		/*Esto se relaciona con pizza controller*/
 	}
 	
 	
@@ -61,7 +61,8 @@ public class OrderController {
 
 	
 
-	@Autowired
+	@Autowired		//Para hacer unit testing por ejemplo con moquito de preferencia la anotacion
+//	se pone en el setter y no en la propiedad
 	public void setOrderRepo(OrderRepository orderRepo) {
 		this.orderRepo = orderRepo;
 	}

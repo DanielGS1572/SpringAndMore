@@ -6,8 +6,8 @@
 	
 	<body>
 		<h1>Create your customer profile</h1>
-		<form method="post" action="" th:object="${customer}">
-			First name:<input type="text" th:field="*{firstName}"/><br/>
+		<form method="post" action="" th:object="${customer}">	<!-- action="" indica que "apuntara hacia si mismo, es decir hacia customers -->
+			First name:<input type="text" th:field="*{firstName}"/><br/>	<!-- También se podría poner como customer.firstName -->
 			Last name:<input type="text" th:field="*{lastName}"/><br/>
 			Email address:<input type="email" th:field="*{emailAddress}"/><br/>
 			<button>Create customer</button>
