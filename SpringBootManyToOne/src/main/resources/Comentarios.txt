@@ -1,0 +1,5 @@
+primero
+https://howtoprogramwithjava.com/hibernate-manytoone-unidirectional-tutorial/
+https://howtoprogramwithjava.com/hibernate-onetomany-bidirectional-relationship/
+Despues
+https://howtoprogramwithjava.com/hibernate-onetoone-annotation/
