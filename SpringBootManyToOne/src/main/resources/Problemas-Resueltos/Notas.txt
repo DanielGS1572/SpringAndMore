@@ -1,0 +1,5 @@
+Para que funcione el model mvc debe tener la misma estructura de paquetes
+
+por ejemplo el paquete de controllers debe estar contenido dentro del paquete principal
+com.springboot.app
+
