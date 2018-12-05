@@ -5,22 +5,14 @@ import javax.transaction.Transactional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.springboot.app.domain.Employee;
+import com.springboot.app.domain.Employeex;
 
-@Transactional  
-@Repository  
-public class EmployeeDao  
+@Repository
+public interface EmployeeDao extends JpaRepository<Employeex, Long>
 {  
-  @Autowired  
-  SessionFactory sessionFactory;  
-    
-  public void save (Employee employee)  
-  {  
-    Session session = sessionFactory.getCurrentSession();  
-      
-    session.save(employee);  
-  }  
+ 
       
 }  

@@ -6,7 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.app.domain.Employee;
+import com.springboot.app.domain.Employeex;
 import com.springboot.app.domain.Employer;
 import com.springboot.app.repository.EmployeeDao;
 
@@ -22,11 +22,11 @@ public class HomeController
         Employer employer = new Employer();  
         employer.setEmployerName("Employer 1");  
           
-        Employee employee1 = new Employee();  
+        Employeex employee1 = new Employeex();  
         employee1.setEmployeeName("Trevor Page");  
         employee1.setEmployer(employer);  
           
-        Employee employee2 = new Employee();  
+        Employeex employee2 = new Employeex();  
         employee2.setEmployeeName("John Doe");  
         employee2.setEmployer(employer);  
           

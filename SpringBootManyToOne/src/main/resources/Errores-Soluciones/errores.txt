@@ -1,0 +1,20 @@
+Del archivo mySQL5Dialect
+Antes se tenia simplemente mySQLDialect (sin el 5 y mandaba el error de MyISAM)
+Fuente de solución:
+https://stackoverflow.com/questions/43716068/invalid-syntax-error-type-myisam-in-ddl-generated-by-hibernate
+
+Del archivo sessionfactory
+A pesar que estaba haciendo Autowired me mandaba
+el error que no habia el bean de session, supuse que
+no estaba bien configurado para que funcionara el @Autowired y lo 
+cambie a spring data que hace el implements.jpg y funciona
+
+hibernate_sequences.jpg
+Generaba una tercer columna porque el generationtype estaba en auto y no en identity
+Solucion
+https://stackoverflow.com/questions/32424852/hibernate-creating-empty-table-hibernate-sequence-at-startup
+
+
+
+Ya nada mas hace falta ver porque no funciona entrar a localhost:8080
+
