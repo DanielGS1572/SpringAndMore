@@ -15,7 +15,7 @@ Esto solo funciona si en el archivo de propiedades spring.jpa.hibernate.ddl-auto
 
 
 
-
+w
 *******************************
 Cuando hay una relación unidireccional se usa joinColumn
 @OneToOne
