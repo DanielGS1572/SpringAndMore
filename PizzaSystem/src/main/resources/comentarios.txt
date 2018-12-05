@@ -11,3 +11,18 @@ el clean install -DskipTests es para que genere los wars
 
 En resources se puede tener un archivo "import.sql" que prellene información en la base de datos
 Esto solo funciona si en el archivo de propiedades spring.jpa.hibernate.ddl-auto esta en create (en modo update no funciona)
+
+
+
+
+w
+*******************************
+Cuando hay una relación unidireccional se usa joinColumn
+@OneToOne
+@joinColumn(name="llavePrimariaObjetoPapa)
+public Employee getEmployee
+
+
+En una relacion ManyToMany
+La anotacion va en el objeto hijo en el getter del padre
+@JoinTable(name="author_book", joinColumns=@JoinColumn(name="book_id"), inverseJoinColumns=@JoinColumn(name="author_id"))

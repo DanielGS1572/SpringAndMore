@@ -3,3 +3,16 @@ https://howtoprogramwithjava.com/hibernate-manytoone-unidirectional-tutorial/
 https://howtoprogramwithjava.com/hibernate-onetomany-bidirectional-relationship/
 Despues
 https://howtoprogramwithjava.com/hibernate-onetoone-annotation/
+
+
+
+
+https://howtoprogramwithjava.com/hibernate-creating-data-access-objects-daos/
+https://howtoprogramwithjava.com/hibernate-life-cycle/
+
+
+
+
+
+https://howtoprogramwithjava.com/hibernate-persistence-beginners/
+https://howtoprogramwithjava.com/podcast-episode-33-intro-to-spring-framework/
