@@ -1,0 +1,50 @@
+npm install -g @angular/cli
+ng new ng7
+
+ng serve -o				-- 	open defautl browser 4200
+
+los componentes son los elementos mas basicos de angular:
+ - html templating
+ - logic
+ - styling
+
+
+en la estructura scr > app van los componentes, servicios y demás
+
+src > index.html
+	se tienen las etiquetas <app-root> se accede a través de src > app > app.components.ts (selector)
+	app.component.ts es el "main-component"
+
+en export class AppComponent -- se tiene la logica
+
+
+por cada componente se generan 4 archivos diferentes (nomenclatura app.component...)
+	- html
+	- sass
+	- spect.ts (para realizar pruebas)
+	- ts
+Se tiene un archivo general css (en lugar de tener por cada componente)
+
+
+
+Para generar un componente nuevo es 
+	ng generate component nav
+	se actualiza el archivo app.module.ts, donde simplemente agrega importa y la declaración
+
+
+Interpolation .- es el simple hecho de imprimir información
+
+
+app-routing-module.ts proviene despues de hacer un new ng project
+
+
+ng generate service data
+
+
+template base form
+reactive form   -- pueden ser unit tested
+
+
+starplus
+polymer
+como se manda la informacion al servidor?

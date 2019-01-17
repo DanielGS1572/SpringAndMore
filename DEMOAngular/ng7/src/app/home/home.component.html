@@ -1,0 +1,16 @@
+<h1 [class.gray]="h1Style">HOME1</h1>      <!-- [  ]  Attribute binding de la definicion de estilos (class = gray)-->
+<h1 [ngClass]="{
+    'gray' : h1Style,
+    'large' : !h1Style
+}">HOME2</h1>      <!-- se puede afectar dinamicamente varias propiedades de css-->
+
+
+<h1 [style.color]="h1Style ? 'gray' : 'black'">HOME3</h1>     
+
+<h1 [ngStyle]="{
+    'color' : h1Style ? 'gray' : 'black',
+    'font-size' : h1Style ? '1em' : '4em'
+}">HOME3</h1>     
+
+
+<button (click) = 'firstClick()'>Click me</button>    <!--Event Binding va entre parentesis-->
