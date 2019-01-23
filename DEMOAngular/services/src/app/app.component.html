@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+  <h2>Employee list</h2>
+    <ul *ngFor = "let emp of employees">
+        <li>{{emp.name}}</li>
+    </ul>
+
+<app-employee-detail></app-employee-detail>
+<router-outlet></router-outlet>

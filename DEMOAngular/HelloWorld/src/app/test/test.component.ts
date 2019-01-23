@@ -87,7 +87,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 <!-- ngFor -->
-        <div *ngFor="let color of colors; index as i;first as f">             <!-- first indica con booleano si es el primer elemento o no (last, odd, even)-->
+        <div *ngFor="let color of colors; index as i;first as f">             <!-- first indica con booleano si es el primer elemento o no (first,last, odd, even)-->
               <h2>{{f}} {{i+1}} {{color}}</h2>
         </div>
       `,

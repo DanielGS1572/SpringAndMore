@@ -1,5 +1,6 @@
 <h1>
   {{message}}
 </h1>
+<h1>{{str}}</h1>
 <app-test (childEvent)="message=$event" [parentData]="name"></app-test>       <!-- parentData esta en app-test y name es lo que se le pasa de app-root-->
                                                 <!-- [parentData] es el child component selector -->
