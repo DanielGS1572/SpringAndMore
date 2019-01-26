@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';             //la mejor forma de compartir datos entre componentes
 
 @Injectable()
 export class DataService {
