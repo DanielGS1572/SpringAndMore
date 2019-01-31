@@ -10,13 +10,14 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { MatCheckboxModule, MatMenuModule, MatButtonModule, MatIconModule,
   MatDatepickerModule,        // <----- import(must)
   MatNativeDateModule,        // <----- import for date formating(optional)
-  MatInputModule,MatSelectModule
+  MatInputModule,MatSelectModule, MatTableModule, MatPaginatorModule, MatSortModule, MatInput, MatFormField
 } from '@angular/material';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { TreeViewModule } from '@progress/kendo-angular-treeview';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -39,7 +40,9 @@ import { FormsModule } from '@angular/forms';
     MatIconModule, 
     MatDatepickerModule,        // <----- import(must)
     MatNativeDateModule,        // <----- import for date formating(optional)
-    MatInputModule, DateInputsModule, GridModule, TreeViewModule,MatSelectModule,DropDownsModule,FormsModule
+    MatInputModule, DateInputsModule, GridModule, TreeViewModule,MatSelectModule,DropDownsModule,FormsModule,MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   
   ],
   providers: [],
