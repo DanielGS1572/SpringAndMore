@@ -1,7 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<table style="border:1px solid black">
+<br>
+<br>
+<br>
+<table style="border:1px solid black;margin-left:auto; margin-right:auto; ">
   <th width="500px">Angular</th>
   <th width="500px">Kendo</th>
 
@@ -99,18 +101,18 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </td>
-    <td>
+    <td align="center">
       <kendo-calendar></kendo-calendar>
     </td>
   </tr>
   <tr>
-    <td>
+    <td align="center">
       <mat-checkbox labelPosition='before'>Check me!</mat-checkbox><br>
       <mat-checkbox labelPosition='after'>Check me!</mat-checkbox>
     </td>
 
   
-    <td>
+    <td align="center">
 
       <kendo-treeview [nodes]="data2" textField="text" kendoTreeViewExpandable kendoTreeViewSelectable
         kendoTreeViewHierarchyBinding childrenField="items">
@@ -119,8 +121,7 @@
     </td>
 
   </tr>
-  <tr><td>
-    <h4>Basic mat-select</h4>
+  <tr><td align="center">
     <mat-form-field>
       <mat-select placeholder="Favorite food">
         <mat-option *ngFor="let food of foods" [value]="food.value">
@@ -128,7 +129,7 @@
         </mat-option>
       </mat-select>
     </mat-form-field></td>
-    <td>
+    <td align="center">
       <div class="example-config">
         <input id="ac" type="checkbox" [(ngModel)]="allowCustom">
         <label for="ac">Allow custom values</label>
@@ -204,6 +205,19 @@
   </kendo-grid-column>
 
 </kendo-grid>
+
+
+<br>
+<p><a href="https://onsen.io/theme-roller/" target="_blank">Onsen</a></p>
+<p><a href="https://ionicframework.com/docs/components" target="_blank">Ionic</a></p>
+<p><a href="http://demos.shieldui.com/" target="_blank">Shield UI (javascript)</a></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 
 
 
