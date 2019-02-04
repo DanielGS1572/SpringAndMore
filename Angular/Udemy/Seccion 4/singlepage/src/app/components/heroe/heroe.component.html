@@ -1,0 +1,37 @@
+<!--
+      PIPES DISPONIBLES (se pueden crear pipes propios)
+*currency
+*date     ... para pasarle parametros se usan los dos puntos
+*uppercase
+*json
+*limitTo
+*lowercase
+*async
+*decimal
+*percent
+ -->
+
+
+<h1>{{heroe.nombre | uppercase }}<small>({{heroe.aparicion | date:'y'}})</small></h1>   <!--Se le pasan parametros al pipe -->
+<hr>
+<div class="row">
+  <div class="col-md-4">
+    <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
+    <br><br>
+    <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+
+  <div class="col-md-8">
+    <h3>{{heroe.nombre}}</h3>
+    <hr>
+    <p>
+      {{heroe.bio}}
+    </p>
+    <div>
+      <p *ngIf="heroe.casa == 'Marvel'">Marvel</p>
+      <p *ngIf="heroe.casa == 'DC'">DC</p>
+    </div>
+  </div>
+
+
+</div>

@@ -30,9 +30,10 @@
       </li>
      
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <form onsubmit="return false" class="form-inline my-2 my-lg-0">         <!--El onsubmit return false evita que con el enter del input text se haga un post del formulario -->
+      <!--Para que se busque con un enter se usa keyup.enter el #buscarTexto es una variable 'local' -->
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar heroe" aria-label="Search" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
+      <button (click)="buscarHeroe(buscarTexto.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
     </form>
   </div>
 </nav>
