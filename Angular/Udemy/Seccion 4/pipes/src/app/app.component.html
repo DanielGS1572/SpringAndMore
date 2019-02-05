@@ -1,0 +1,133 @@
+<div class="container">
+  <br>
+  <h1>Pipes</h1>
+  <hr>
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th scope="col">Variable</th>
+        <th scope="col">Pipe</th>
+        <th scope="col">Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> {{ nombre }} </td>
+        <td> uppercase </td>
+        <td> {{ nombre | uppercase}} </td>
+      </tr>
+
+      <tr>
+        <td> {{ nombre }} </td>
+        <td> lowercase </td>
+        <td> {{ nombre | lowercase}} </td>
+      </tr>
+
+      <tr>
+        <td> {{ nombre }} </td>
+        <td> slice:3 </td>
+        <td> {{ nombre | slice:3}} </td>
+      </tr>
+
+      <tr>
+        <td> {{ nombre }} </td>
+        <td> slice:0:3 </td>
+        <td> {{ nombre | slice:0:3}} </td>
+      </tr>
+
+      <tr>
+        <td> {{ arreglo }} </td>
+        <td> slice:0:3 </td>
+        <td> {{ arreglo | slice:0:3}} </td>
+      </tr>
+
+      <tr>
+        <td> {{ PI }} </td>
+        <td> number:'3.0-0' </td>
+        <td> {{ PI | number:'3.0-0'}} </td>
+      </tr>
+
+      <tr>
+        <td> {{ PI }} </td>
+        <td> number:'1.0-2' </td>
+        <td> {{ PI | number:'1.0-2'}} </td>
+      </tr>
+
+      <tr>
+        <td> {{ a }} </td>                                      <!--El pipe del porcentaje usa internacionalización (hay restricción de funcionamiento entre navegadores)-->
+        <td> percent </td>
+        <td> {{ a | percent }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ a }} </td>
+        <td> percent:'2.2-2' </td>
+        <td> {{ a | percent:'2.2-2' }} </td>
+      </tr>
+
+      <tr>
+        <td> {{ salario }} </td>
+        <td> currency:'EUR':true </td>
+        <td> {{ salario | currency:'EUR':true }} </td>          <!--El booleano es para que use el simbolo-->
+      </tr>
+
+      <tr>
+        <td> {{ valorDePromesa }} </td>           <!--Los pipes async se usan para ver información de observables o de promesas-->
+        <td> async</td>                               
+        <td> {{ valorDePromesa | async }} </td>           <!--Una vez que haya transcurrido el tiempo hace el pintado de la información-->
+      </tr>
+
+      <tr>
+        <td> {{ fecha }} </td>           <!--Los pipes async se usan para ver información de observables o de promesas-->
+        <td> date </td>                               
+        <td> {{ fecha | date }} </td>           <!--Una vez que haya transcurrido el tiempo hace el pintado de la información-->
+      </tr>
+
+      <tr>
+        <td> {{ fecha }} </td>           <!--Los pipes async se usan para ver información de observables o de promesas-->
+        <td> date:'medium' </td>                               
+        <td> {{ fecha | date:'medium' }} </td>           <!--Una vez que haya transcurrido el tiempo hace el pintado de la información-->
+      </tr>
+
+      <tr>
+        <td> {{ fecha }} </td>           <!--Los pipes async se usan para ver información de observables o de promesas-->
+        <td> date:'MMMM - dd' </td>                               
+        <td> {{ fecha | date:'MMMM - dd' }} </td>           <!--Una vez que haya transcurrido el tiempo hace el pintado de la información-->
+      </tr>
+
+      <tr>
+        <td> {{ nombre2 }} </td>           
+        <td> capitalizado </td>                               
+        <td> {{ nombre2 | capitalizado:2:1:4 }} </td>          
+      </tr>
+
+      <tr>
+        <td> {{ nombre2 }} </td>           
+        <td> contrasena:{{activar}} </td>                               
+        <td> {{ nombre2 | contrasena:activar}} </td> 
+               
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <button type="button" (click)="activar = !activar" class="btn">Activar/desactivar</button>  
+  <h4>Slice</h4>
+  <ul>
+    <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>     <!--A pesar que no existan los 20 elementos y el slice se pase, no arroja ningún error -->
+  </ul>
+
+  <h4>JSON</h4>
+  {{ heroe | json }}      <!--Si se quiere imprimir un objeto simplemente imprimirá object por lo que se usa json-->
+  <!--Pero mezclandolo con pre de bootstrap lo imprime mejor-->
+  <pre>{{ heroe | json }}</pre>
+
+  <h4>DOM Seguro</h4>     <!--Las urls no se puedan manejar en variables. Por lo que se utiliza el dom seguro, El error lo arroja la consola -->
+  <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/' " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
