@@ -1,19 +1,32 @@
 <h1>Resultados <small>de búsqueda</small></h1>
 <hr>
 
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el término: {{termino}}
+    </div>
+  </div>
+</div>
+
 <div class="card-columns">
+<app-heroe-tarjeta [heroe] = "foo" [index] = "i" *ngFor="let foo of heroes; let i = index; "></app-heroe-tarjeta>
+
+  <!-- 
   <div class="card animated fadeIn slow" *ngFor="let heroe of heroes; let i = index;">
-    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">     <!-- Entre llave hace que lo maneje angular y simplemente se pone entre comillas y ya no entre {{}} 
-    esto se puede hacer solamente con los atributos de una etiqueta-->
+    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+     Entre llave hace que lo maneje angular y simplemente se pone entre comillas y ya no entre {{}} 
+    esto se puede hacer solamente con los atributos de una etiqueta
     <div class="card-body">
       <h5 class="card-title">{{ heroe.nombre }}</h5>
       <p class="card-text">{{ heroe.bio }}</p>
       <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
-<!-- Dos formas de moverse, una con un boton y otra con un anchortag (el anchortag no necesita codigo en el .ts) --> 
+       Dos formas de moverse, una con un boton y otra con un anchortag (el anchortag no necesita codigo en el .ts) 
       <button (click)='verHeroe(i)' type="button" class="btn btn-outline-primary btn-block">
         Ver más... (btn)
       </button>
-      <a [routerLink] = "['/heroe', i]" class="btn btn-outline-primary btn-block">Ver más... (anchortag)</a>    <!--Con la diagonal en heroe le indica que será a nivel de heroe y no de heroes/heroe/0 -->
-</div>
-  </div>
+      <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary btn-block">Ver más... (anchortag)</a>
+      Con la diagonal en heroe le indica que será a nivel de heroe y no de heroes/heroe/0 
+    </div>
+  </div>-->
 </div>
