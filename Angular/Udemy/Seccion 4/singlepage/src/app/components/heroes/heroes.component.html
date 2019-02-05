@@ -1,0 +1,9 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+<hr>
+<div class="card-columns">
+  
+  <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="foo" [index]="i" *ngFor="let foo of heroes; let i = index;">
+      <!--[heroe] proviene de @input del componente  ... "heroe" proviene del *ngFor-->
+      <!--Con el signo de peso $ se atrapa el evento que esta emitiendose desde el hijo -->
+  </app-heroe-tarjeta>
+</div>
