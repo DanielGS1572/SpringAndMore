@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JQuery</title>
+</head>
+<script>
+  console.log('test');
+</script>
+<body>
+  <h1 style="text-align:center">Gauges</h1>
+  <div style="text-align: center">
+    <div style="display: inline-block" class="col-sm-12 col-md-2">
+      <kendo-lineargauge #linear [pointer]="{ value: 150 }" [scale]="{max : varMax, min:30}">
+      </kendo-lineargauge>
+    </div>
+    <div style="display: inline-block" class="col-sm-12 col-md-5">
+      <kendo-radialgauge #radial [pointer]="{ value: value }">
+      </kendo-radialgauge>
+    </div>
+    <div style="display: inline-block" class="col-sm-12 col-md-5">
+      <kendo-arcgauge #arc [value]="value">
+        <ng-template kendoArcGaugeCenterTemplate let-value="value">
+          {{ value }}
+        </ng-template>
+      </kendo-arcgauge>
+    </div>
+  </div>
+  <h1 style="text-align:center">Wizard</h1>
+  <h4 style="text-align:center">Horizontal</h4>
+  <button mat-raised-button (click)="isOptional = !isOptional">
+    {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
+  </button>
+
+  <mat-horizontal-stepper linear #stepper2>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+
+  <h4 style="text-align:center">Vertical</h4>
+
+
+
+  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-vertical-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+
+
+
+</body>
+
+</html>

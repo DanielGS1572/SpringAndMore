@@ -1,0 +1,6 @@
+Para crear rutas:
+[app.routes.ts]
+    - Generar un archivo .ts (ver app.routes.ts)
+        - Crear una constante en la que se definen las diferentes rutas
+[app.module.ts]
+    - En appModule importar RouterModule y declarar en los imports RouterModule.forRoot( [variable ROUTES definida en app.routes.ts] ) - Importar la constante
