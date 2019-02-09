@@ -8,6 +8,10 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
+import { HttpClientModule } from '@angular/common/http';
+//Cuando se vea la palabra module, asociar que va en la parte de los imports
+
+
 //importar rutas
 import { ROUTES } from './app.routes';
 
@@ -22,10 +26,8 @@ import { ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
- 
-    
-    
-    RouterModule.forRoot( ROUTES, { useHash: true})
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
