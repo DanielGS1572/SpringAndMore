@@ -1,0 +1,43 @@
+<!-- 3 formas diferentes de modificar las clases de css -->
+<!--1.- Directamente con el class -->
+<div class="alert alert-warning" role="alert">
+  A simple primary alert—check it out!
+</div>
+<!--2.- Pasandole el parametro a ngClass -->
+<div [ngClass]="'alert-info'" class="alert" role="alert">
+  A simple primary alert—check it out!
+</div>
+<!--3.- Mapeando el valor con typescript -->
+<div [ngClass]="alerta" class="alert" role="alert">
+  A simple primary alert—check it out!
+</div>
+<hr>
+<h3>Modificando clase con botones</h3>
+<div [ngClass]="segundaAlerta" class="alert" role="alert">
+  A simple primary alert—check it out!
+</div>
+
+<button class='btn btn-info' (click)="segundaAlerta = 'alert-info'">Info</button>
+<button class='btn btn-success' (click)="segundaAlerta = 'alert-success'">Success</button>
+
+<hr>
+<h3>Modificando con condicionales</h3>
+<h4 [ngClass]= "{ 'text-danger':true }">      <!--Lo que vaya entre { }... significa que es un objeto -->
+  Hola mundo
+</h4>
+
+<h4 [ngClass]= "{ 'text-danger':propiedades.danger, 'text-info' : !propiedades.danger }">   
+  Hola mundo
+</h4>
+
+<button type="button" class="btn btn-info" (click)="propiedades.danger = !propiedades.danger" [ngClass]="{ 'btn-danger':propiedades.danger, 'btn-info':!propiedades.danger }">Btn modifica</button>
+
+
+<hr>
+<h4>Proceso asincrono</h4>
+<button [disabled]="loading" (click)="ejecutar()" class="btn btn-primary" type="button" name="button">
+  <i [ngClass]="{'fa-save':!loading,'fa-sync fa-spin':loading}" class="fa"></i>
+  <span style="margin-left:10px" *ngIf="!loading">Guardar cambios</span>
+  <span style="margin-left:10px" *ngIf="loading">Espere por favor</span>
+  
+</button>
