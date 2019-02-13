@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h3>Fecha actual</h3>
+<div style="text-align:center">{{now | date:'medium'}}</div>
+
+  <h3>Justo ahora</h3>
+  <div title="{{now | date:'medium'}}" style="text-align:center">{{now | prettyTime}}</div>
+
+  <h3>Hace 10 días</h3>
+  <div title="{{minusTen | date:'medium'}}" style="text-align:center">{{minusTen | prettyTime}}</div>
+
+  <h3>Hace 60 días (Esp)</h3>
+  <div title="{{minusMonth | date:'medium'}}" style="text-align:center">{{minusMonth | prettyTime}}</div>
+
+  <h3>Hace 60 días (Short Date)</h3>
+  <div title="{{minusMonth | date:'shortDate'}}" style="text-align:center">{{minusMonth | prettyTime}}</div>
+
+
+  <router-outlet></router-outlet>

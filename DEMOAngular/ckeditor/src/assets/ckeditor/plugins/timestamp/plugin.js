@@ -1,7 +1,6 @@
 CKEDITOR.plugins.add( 'timestamp', {
 
 	// Register the icons. They must match command names.
-	icon: '/home/legosoft/Documentos/KATAS/SpringAndMore/DEMOAngular/ckeditor/src/assets/ckeditor/plugins/timestamp/icons/timestamp.png',
 
 	// The plugin initialization logic goes inside this method.
 	init: function( editor ) {
@@ -11,10 +10,10 @@ CKEDITOR.plugins.add( 'timestamp', {
 
 			// Define the function that will be fired when the command is executed.
 			exec: function( editor ) {
-				var now = new Date();
+				var texto = 'texto del botón ';
 
 				// Insert the timestamp into the document.
-				editor.insertHtml( 'The current date and time is: <em>' + now.toString() + '</em>' );
+				editor.insertHtml( texto );
 			}
 		});
 
@@ -22,7 +21,9 @@ CKEDITOR.plugins.add( 'timestamp', {
 		editor.ui.addButton( 'Timestamp', {
 			label: 'Insert Timestamp',
 			command: 'insertTimestamp',
-			toolbar: 'insert'
+			toolbar: 'insert',
+			icon: '/assets/ckeditor/plugins/timestamp/icons/timestamp.png'
+
 		});
 	}
 });
