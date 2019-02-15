@@ -16,11 +16,11 @@
       </kendo-lineargauge>
     </div>
     <div style="display: inline-block" class="col-sm-12 col-md-5">
-      <kendo-radialgauge #radial [pointer]="{ value: value }">
+      <kendo-radialgauge #radial [pointer]="{ value: numericValue }" [scale]="{max : varMax, min:0}">
       </kendo-radialgauge>
     </div>
     <div style="display: inline-block" class="col-sm-12 col-md-5">
-      <kendo-arcgauge #arc [value]="value">
+      <kendo-arcgauge #arc [value]="numericValue" [scale]="{max : varMax, min:0}">
         <ng-template kendoArcGaugeCenterTemplate let-value="value">
           {{ value }}
         </ng-template>

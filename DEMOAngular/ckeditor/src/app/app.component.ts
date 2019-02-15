@@ -9,7 +9,7 @@ import { CKEditorComponent } from 'ng2-ckeditor';
 })
 export class AppComponent {
   title = 'ckeditor';
-  ckeditorContent:string="<b>probando contenido</b>";
+  ckeditorContent:string= "probando contenido";
   @ViewChild(CKEditorComponent) ckEditor: CKEditorComponent;
 
   ngAfterViewChecked(){

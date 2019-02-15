@@ -10,7 +10,7 @@ CKEDITOR.plugins.add( 'timestamp', {
 
 			// Define the function that will be fired when the command is executed.
 			exec: function( editor ) {
-				var texto = 'texto del botón ';
+				var texto = ' Button clicked!! ';
 
 				// Insert the timestamp into the document.
 				editor.insertHtml( texto );
