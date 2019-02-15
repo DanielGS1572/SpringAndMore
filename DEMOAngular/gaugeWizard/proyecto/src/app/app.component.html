@@ -12,7 +12,7 @@
   <h1 style="text-align:center">Gauges</h1>
   <div style="text-align: center">
     <div style="display: inline-block" class="col-sm-12 col-md-2">
-      <kendo-lineargauge #linear [pointer]="{ value: 150 }" [scale]="{max : varMax, min:30}">
+      <kendo-lineargauge #linear [pointer]="{ value: numericValue }" [scale]="{max : varMax, min:0}">
       </kendo-lineargauge>
     </div>
     <div style="display: inline-block" class="col-sm-12 col-md-5">
@@ -27,6 +27,18 @@
       </kendo-arcgauge>
     </div>
   </div>
+
+
+
+  <div class="col-xs-12 col-sm-6 example-col">
+    <p>NumericTextBox</p>
+    <kendo-numerictextbox
+        [(ngModel)] = "numericValue"
+    ></kendo-numerictextbox>
+</div>
+
+
+
   <h1 style="text-align:center">Wizard</h1>
   <h4 style="text-align:center">Horizontal</h4>
   <button mat-raised-button (click)="isOptional = !isOptional">
@@ -108,6 +120,8 @@
       </div>
     </mat-step>
   </mat-vertical-stepper>
+
+
 
 
 

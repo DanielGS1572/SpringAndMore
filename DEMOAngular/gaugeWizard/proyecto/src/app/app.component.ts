@@ -6,13 +6,14 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  styles: [``]
 })
 export class AppComponent implements OnInit {
   isLinear = false;
-  varMax : number = 250;
+  varMax : number = 50;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  numericValue : number = 30;
 
   constructor(private _formBuilder: FormBuilder) {}
   value:number=30;

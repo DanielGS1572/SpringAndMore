@@ -7,6 +7,8 @@ import { GaugesModule } from '@progress/kendo-angular-gauges';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatStepperModule, MatInputModule, MatButtonModule, MatAutocompleteModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+
 
 
 
@@ -23,7 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     GaugesModule,
     BrowserAnimationsModule,
-    FormsModule, ReactiveFormsModule 
+    FormsModule, ReactiveFormsModule, InputsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
