@@ -1,6 +1,6 @@
 <h4>Formularios <small>template</small></h4>
 <hr>
-<form>
+<form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate="">
 
   <div>
 
@@ -10,7 +10,24 @@
 
         <input class="form-control"
                type="text"
-               placeholder="Nombre">
+               placeholder="Nombre"
+               name="nombre"
+               [(ngModel)]="usuario.nombre"     
+               minlength=5
+               required
+               #nombre="ngModel">        <!-- Con el ngModel entre [] hace el mapeo con el ts
+                                entre corchetes solo recibe la información pero no la actualiza,
+                                para que escuche y emita los cambios se usa entre parentesis.
+                                Por ejemplo, como caso pracito, Si se quiere mantener una copia del usuario se pone nada mas entre[] -->
+
+
+<!-- Para mostrar si hay error, ya sea por requerido o por que no cumple con el regex-->
+              <div *ngIf="nombre.errors?.required">       <!--El signo de interrogación se usa para ver si existe el campo -->
+                Este campo es requerido
+              </div>
+              <div *ngIf="nombre.errors?.minlength">
+                Por lo menos {{nombre.errors.minlength.requiredLength}} caracteres
+              </div>
       </div>
     </div>
 
@@ -20,7 +37,14 @@
 
         <input class="form-control"
                type="text"
-               placeholder="Apellido">
+               placeholder="Apellido"
+               name="apellido"
+               [(ngModel)]="usuario.apellido"
+               required
+              #apellido="ngModel">
+        <div *ngIf="apellido.errors?.required">
+          Campo requerido
+        </div>
       </div>
     </div>
 
@@ -32,7 +56,18 @@
 
       <input class="form-control"
              type="email"
-             placeholder="Correo electrónico">
+             placeholder="Correo electrónico"
+             name="correo"
+             [(ngModel)]="usuario.correo"
+             required
+             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+             #correo="ngModel">
+    <div *ngIf="correo.errors?.required">
+          Campo requerido
+    </div>
+    <div *ngIf="correo.errors?.pattern">
+          Validar el correo
+    </div>
     </div>
   </div>
 
