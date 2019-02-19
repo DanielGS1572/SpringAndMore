@@ -1,3 +1,60 @@
-<p>
-  data works!
-</p>
+<h4>Formularios <small>data</small></h4>
+<hr>
+<form [formGroup]="forma" (ngSubmit)="guardarCambios()" novalidate="novalidate">    <!--el novalidate es para
+   que html5 no haga la validacion natural de html, que esta demás pues las validaciones se haran en el controller-->
+
+  <div>
+
+    <div class="form-group row" [ngClass]="{ 'has-danger': !forma.get('nombre').valid }">   <!--AAAAA-->
+      <label class="col-2 col-form-label">Nombre</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Nombre"
+               formControlName="nombre">  <!--lo que va en el string es lo que debe existir en el controller-->
+      </div>
+      <div *ngIf="forma.controls['nombre'].errors?.required" class="form-control-feedback">
+        El nombre es necesario
+      </div>            <!-- el controls de forma contiene toda la información, otra forma de hacerlo es con .get ver AAAAA-->
+      <div *ngIf="forma.controls['nombre'].errors?.minlength" class="form-control-feedback">
+          Por lo menos 3 caracteres
+        </div> 
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Apellido</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Apellido"
+               formControlName="apellido">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Correo</label>
+    <div class="col-md-8">
+
+      <input class="form-control"
+             type="email"
+             placeholder="Correo electrónico"
+             formControlName="correo">
+    </div>
+  </div>
+
+
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary">
+        Guardar
+      </button>
+    </div>
+  </div>
+  La forma es valida? <span style="font-weight:bold">{{forma.valid}}</span>
+</form>

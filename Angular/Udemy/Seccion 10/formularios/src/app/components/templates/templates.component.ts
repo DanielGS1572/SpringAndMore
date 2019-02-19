@@ -11,21 +11,37 @@ import { NgForm } from '@angular/forms';
   `]
 })
 export class TemplatesComponent implements OnInit {
-  usuario:Object={
-    nombre:null,
-    apellido:null,
-    correo: null
+  usuario: Object = {
+    nombre: null,
+    apellido: null,
+    correo: null,
+    pais: "CRI",
+    sexo: "Hombre",
+    acepta: false
   }
+
+  paises = [{
+    codigo: "CRI",
+    nombre: "Costa Rica"
+  }, {
+    codigo: "ESP",
+    nombre: "España"
+  }
+  ]
+
+  sexos = ["Hombre","Mujer","Sin definir"]
+
+
   constructor() { }
 
   ngOnInit() {
   }
-  guardar( forma:NgForm ){
+  guardar(forma: NgForm) {
     console.log("formulario posteado");
     console.log("ngForm", forma);
     console.log("valor ", forma.value)      //trae todos los datos de la forma
     console.log("usuario", this.usuario);
-    
+
   }
 
 }

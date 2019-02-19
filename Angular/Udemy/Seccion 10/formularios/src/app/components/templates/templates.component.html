@@ -4,30 +4,28 @@
 
   <div>
 
-    <div class="form-group row">
+    <div class="form-group row"
+      [ngClass]="{'has-danger': (nombre.errors?.minlength || nombre.errors?.required) && nombre.touched}">
       <label class="col-2 col-form-label">Nombre</label>
       <div class="col-8">
 
-        <input class="form-control"
-               type="text"
-               placeholder="Nombre"
-               name="nombre"
-               [(ngModel)]="usuario.nombre"     
-               minlength=5
-               required
-               #nombre="ngModel">        <!-- Con el ngModel entre [] hace el mapeo con el ts
+        <input class="form-control" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="usuario.nombre"
+          minlength=5 required #nombre="ngModel">
+        <!-- Con el ngModel entre [] hace el mapeo con el ts
                                 entre corchetes solo recibe la información pero no la actualiza,
                                 para que escuche y emita los cambios se usa entre parentesis.
                                 Por ejemplo, como caso pracito, Si se quiere mantener una copia del usuario se pone nada mas entre[] -->
 
 
-<!-- Para mostrar si hay error, ya sea por requerido o por que no cumple con el regex-->
-              <div *ngIf="nombre.errors?.required">       <!--El signo de interrogación se usa para ver si existe el campo -->
-                Este campo es requerido
-              </div>
-              <div *ngIf="nombre.errors?.minlength">
-                Por lo menos {{nombre.errors.minlength.requiredLength}} caracteres
-              </div>
+        <!-- Para mostrar si hay error, ya sea por requerido o por que no cumple con el regex-->
+        <div *ngIf="nombre.errors?.required" class="form-control-feedback">
+          <!--El signo de interrogación se usa para ver si existe el campo -->
+          <!--form-control-feedback es de bootstrap para que tome el estilo-->
+          Este campo es requerido
+        </div>
+        <div *ngIf="nombre.errors?.minlength" class="form-control-feedback">
+          Por lo menos {{nombre.errors.minlength.requiredLength}} caracteres
+        </div>
       </div>
     </div>
 
@@ -35,13 +33,9 @@
       <label class="col-2 col-form-label">Apellido</label>
       <div class="col-8">
 
-        <input class="form-control"
-               type="text"
-               placeholder="Apellido"
-               name="apellido"
-               [(ngModel)]="usuario.apellido"
-               required
-              #apellido="ngModel">
+        <input class="form-control" type="text" placeholder="Apellido" name="apellido" [(ngModel)]="usuario.apellido"
+          required #apellido="ngModel">
+        <!--Si los campos marcados con required no estan completos la forma estara marcada como invalida-->
         <div *ngIf="apellido.errors?.required">
           Campo requerido
         </div>
@@ -54,32 +48,75 @@
     <label class="col-2 col-form-label">Correo</label>
     <div class="col-md-8">
 
-      <input class="form-control"
-             type="email"
-             placeholder="Correo electrónico"
-             name="correo"
-             [(ngModel)]="usuario.correo"
-             required
-             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-             #correo="ngModel">
-    <div *ngIf="correo.errors?.required">
-          Campo requerido
+      <input class="form-control" type="email" placeholder="Correo electrónico" name="correo"
+        [(ngModel)]="usuario.correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #correo="ngModel">
+      <div *ngIf="correo.errors?.required">
+        Campo requerido
+      </div>
+      <div *ngIf="correo.errors?.pattern">
+        Validar el correo
+      </div>
     </div>
-    <div *ngIf="correo.errors?.pattern">
-          Validar el correo
+  </div>
+  <!--COMBOBOX-->
+  <div class="form-group row">
+    <label class="col-2 col-form-label">País</label>
+    <div class="col-md-8">
+      <select [(ngModel)]="usuario.pais" class="form-control" name="pais">
+        <option value="">Seleccione un país</option>
+        <option *ngFor="let pais of paises" [value]="pais.codigo">{{pais.nombre}}</option>
+      </select>
     </div>
+  </div>
+  <!--RADIOBUTTONS-->
+  <div class="form-group row">
+    <label class="col-2 col-form-label">País</label>
+    <div class="col-md-8">
+
+      <label *ngFor="let s of sexos" class="custom-control custom-radio">
+        <input [(ngModel)]="usuario.sexo" [value]="s" name="sexo" type="radio" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">{{s}}</span>
+      </label>
+
+      <!--
+      <label class="custom-control custom-radio">
+          <input [(ngModel)]="usuario.sexo" value="Mujer" name="sexo" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Mujer</span>
+        </label>
+-->
     </div>
   </div>
 
+
+  <!--CHECKBOXES-->
+  <div class="form-group row">
+    <label class="col-2 col-form-label">País</label>
+    <div class="col-md-8">
+      <label class="custom-control custom-checkbox">
+          <input [(ngModel)]="usuario.acepta"
+                  name="acepta"
+                  required 
+          type="checkbox" class="custom-control-input">
+          <input class="custom-control-indicator">
+          <span class="custom-control-description">Acepta las condiciones</span>
+      </label>
+    </div>
+  </div>
 
 
   <div class="form-group row">
     <label class="col-2 col-form-label">&nbsp;</label>
     <div class="input-group col-md-8">
-      <button type="submit" class="btn btn-outline-primary">
+      <button [disabled]="!forma.valid" type="submit" class="btn btn-outline-primary">
         Guardar
       </button>
     </div>
   </div>
 
 </form>
+
+<pre>
+  {{usuario | json}}
+</pre>
