@@ -8,15 +8,23 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';    //Requie
 export class DataComponent {
 
   forma:FormGroup;
-
+  usuario:Object={
+    nombreCompleto:{
+      nombre:"fernando",
+      apellido:"herrera"
+    },correo:"correo@gmail.com"
+  }
   constructor() { 
-
+      console.log(this.usuario);
       this.forma = new FormGroup({
-        'nombre': new FormControl(''/*Nombre */, [
+
+        'nombreCompleto': new FormGroup({             /**Un formGroup dentro de otro FormGroup */
+           'nombre': new FormControl(''/*Nombre */, [
                                                   Validators.required,
                                                   Validators.minLength(3)
            ]   /**Regla de validacion ,Regla de validacion async */),
-        'apellido':new FormControl('', Validators.required),
+        'apellido':new FormControl('', Validators.required)
+        }),
         'correo':new FormControl('', [
                                       Validators.required, 
                                       Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")])
