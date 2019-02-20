@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';    //Requiere de ReactiveFormsModule en el app.module
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';    //Requiere de ReactiveFormsModule en el app.module
 @Component({
   selector: 'app-data',
   templateUrl: './data.component.html',
@@ -12,7 +12,8 @@ export class DataComponent {
     nombreCompleto:{
       nombre:"fernando",
       apellido:"herrera"
-    },correo:"correo@gmail.com"
+    },correo:"correo@gmail.com",
+     // pasatiempos:["Dormir","Comer","correr"]
   }
   constructor() { 
     /** 4 Formas de setear la forma AAA) BBB) CCC) DDD) */
@@ -29,12 +30,18 @@ export class DataComponent {
         }),
         'correo':new FormControl('', [
                                       Validators.required, 
-                                      Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")])
+                                      Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
+        'pasatiempos': new FormArray([
+            new FormControl('', [Validators.required])      /**Si hubieran varios validadores va entre [] */
+        ])
+
       });
-     this.forma.setValue( this.usuario );    //como el objeto tiene la misma estructura que el form setea los campos en automatico  BBB)
+     //this.forma.setValue( this.usuario );    //como el objeto tiene la misma estructura que el form setea los campos en automatico  BBB)
 
   }
-
+  agregarPasatiempo(){
+    (<FormArray>this.forma.controls['pasatiempos']).push(new FormControl('',Validators.required));
+  }
   guardarCambios(){
     console.log( this.forma.value );
     console.log( this.forma );
