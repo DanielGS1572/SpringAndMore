@@ -26,7 +26,8 @@ export class DataComponent {
                                                   Validators.required,
                                                   Validators.minLength(3)
            ]   /**Regla de validacion ,Regla de validacion async */),
-        'apellido':new FormControl('', Validators.required)
+        'apellido':new FormControl('', [Validators.required,this.noHerrera])          //this.noHerrera no lleva parentesis noHerrera()
+                                              //si no lleva parentesis es pasado como callback y no regresa el dato como tal
         }),
         'correo':new FormControl('', [
                                       Validators.required, 
@@ -42,20 +43,31 @@ export class DataComponent {
   agregarPasatiempo(){
     (<FormArray>this.forma.controls['pasatiempos']).push(new FormControl('',Validators.required));
   }
+
+  /**Validaciones personalizadas */
+  noHerrera( control:FormControl ): {[s:string]:boolean} {          //Esto sería como llave:valor
+      if( control.value === "herrera"){
+        return {
+          noherreras:true                 //el no herreras es para mostrar el tipo de error, no importa si es true o false, es simplemente para mostrar en consola
+        }
+      }
+      return null
+  }
   guardarCambios(){
     console.log( this.forma.value );
     console.log( this.forma );
 
     //PARA REGRESAR LA FORMA EN ESTADO PRISTINE SE USA RESET
     //this.forma.reset( this.usuario );
-   this.forma.reset( {                  
+   /** this.forma.reset( {                  
       nombreCompleto:{
         nombre:"",
         apellido: "" 
       
     },
         correo:""
-    });                 /** DDD) --> ESTE SETEO LO DEJA EN ESTADO PRISTINE*/
+    });*/   
+                  /** DDD) --> ESTE SETEO LO DEJA EN ESTADO PRISTINE*/
    /**this.forma.controls['correo'].setValue('nuevocorreo@gmail.com');            CCC)*/
   }
 }
