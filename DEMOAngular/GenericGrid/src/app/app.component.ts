@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { products } from './products';
-import { GridDataResult, DataStateChangeEvent, PageChangeEvent } from '@progress/kendo-angular-grid';
+import { GridDataResult, DataStateChangeEvent, PageChangeEvent, RowArgs } from '@progress/kendo-angular-grid';
 import { Observable } from 'rxjs';
 import { CategoriesService } from './northwind.service';
 import { State } from '@progress/kendo-data-query';
@@ -67,19 +67,24 @@ import { SelectableSettings } from '@progress/kendo-angular-grid';
           [height]="410"
           [loading]="view.loading"
           [selectable]="selectableSettings"
-          >
+          [kendoGridSelectBy]="''"
+          (selectedKeysChange)="selectedKeysChange($event)"
+         >
           <kendo-grid-checkbox-column [width]="100"></kendo-grid-checkbox-column>
-            <kendo-grid-column *ngFor="let col of columns" [field]="col.field"></kendo-grid-column>
+            <kendo-grid-column *ngFor="let col of columns" [field]="col.field" [title]="col.title"></kendo-grid-column>
         </kendo-grid>
+        <div kendo-grid></div>
     `
 })
 export class AppComponent {
-  public columns: any[] = [{ field: "ProductID" }, { field: "ProductName" }, { field: "QuantityPerUnit" }];
+  public columns: any[] = [{ field: "ProductID",  title:"ID"  }, { field: "ProductName",  title:"Nombre del producto" }, { field: "QuantityPerUnit",  title:"Cantidades por unidad" }];
   public bindingType: String = 'array';
   public view: Observable<GridDataResult>;
   public gridData: any = products;
   public gridDataResult: GridDataResult = { data: products, total: products.length };
   public selectableSettings: SelectableSettings;
+
+  public mySelection: any[] = [];
 
   public checkboxOnly = false;
     public mode:any = 'multiple';
@@ -93,6 +98,16 @@ export class AppComponent {
         checkboxOnly: this.checkboxOnly,
         mode: this.mode
     };
+}
+ 
+selectedKeysChange(rows: any[]) {
+  console.log(rows);
+  //rows.forEach(function(value){
+    //this.mySelection.push();
+   // this.mySelection.push(products.find(i => i.ProductID == value));
+  //});
+  //console.log(products);
+
 }
   changeBindingType(e) {
     switch (this.bindingType) {
