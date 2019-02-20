@@ -67,13 +67,15 @@ import { SelectableSettings } from '@progress/kendo-angular-grid';
           [height]="410"
           [loading]="view.loading"
           [selectable]="selectableSettings"
-          [kendoGridSelectBy]="''"
-          (selectedKeysChange)="selectedKeysChange($event)"
+          [kendoGridSelectBy]="selectedCallback"
+            [selectedKeys]="mySelection"
+            (pageChange)="pageChange($event)"
          >
           <kendo-grid-checkbox-column [width]="100"></kendo-grid-checkbox-column>
             <kendo-grid-column *ngFor="let col of columns" [field]="col.field" [title]="col.title"></kendo-grid-column>
         </kendo-grid>
         <div kendo-grid></div>
+        <pre>{{ mySelection | json }}</pre>
     `
 })
 export class AppComponent {
@@ -83,8 +85,9 @@ export class AppComponent {
   public gridData: any = products;
   public gridDataResult: GridDataResult = { data: products, total: products.length };
   public selectableSettings: SelectableSettings;
-
-  public mySelection: any[] = [];
+  public pageSize = 10;
+  public skip = 0;
+  public mySelection: number[] = [];
 
   public checkboxOnly = false;
     public mode:any = 'multiple';
@@ -99,7 +102,22 @@ export class AppComponent {
         mode: this.mode
     };
 }
- 
+public selectedCallback = (args) =>{
+  return  args.dataItem;
+} 
+public pageChange(event: PageChangeEvent): void {
+  this.skip = event.skip;
+  this.loadItems();
+
+  // Optionally, clear the selection when paging
+  // this.mySelection = [];
+}
+private loadItems(): void {
+  this.gridDataResult = {
+      data: this.gridData.slice(this.skip, this.skip + this.pageSize),
+      total: this.gridData.length
+  };
+}
 selectedKeysChange(rows: any[]) {
   console.log(rows);
   //rows.forEach(function(value){
