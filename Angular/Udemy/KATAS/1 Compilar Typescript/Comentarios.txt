@@ -4,7 +4,7 @@
 - Compilar el ts (de forma individual y global)
 - configurar modo observador al compilar																	tsc archivo.ts -w
 - Inicializar un proyecto de typescript																		tsc -init ... con esto crea un tsconfig.json (que tiene las reglas del compilador de typescript)
-
+- Se necesita un plugin especial para que al guardar se compile en automatico
 
 
 
