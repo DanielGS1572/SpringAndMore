@@ -1,0 +1,4 @@
+- Crear html
+- Crear .js con una funcion para desplegar un texto a traves de un objeto
+- Convertir el js en ts y que la funcion reciba un string
+- Compilar el ts
