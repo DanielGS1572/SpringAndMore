@@ -1,4 +1,16 @@
 - Crear html
 - Crear .js con una funcion para desplegar un texto a traves de un objeto
 - Convertir el js en ts y que la funcion reciba un string
-- Compilar el ts
+- Compilar el ts (de forma individual y global)
+- configurar modo observador al compilar																	tsc archivo.ts -w
+- Inicializar un proyecto de typescript																		tsc -init ... con esto crea un tsconfig.json (que tiene las reglas del compilador de typescript)
+
+
+
+
+
+
+
+
+DUDAS
+Que es el compilador de modulos de commonjs en module de tsconfig.json
