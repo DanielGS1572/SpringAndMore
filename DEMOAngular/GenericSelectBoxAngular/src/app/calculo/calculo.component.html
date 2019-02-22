@@ -1,0 +1,24 @@
+<h4>
+  Evento lanzado con Enter y usando el ngModel para hacer el doble binding
+</h4>
+<div>
+  <label>Monto:
+    <input [(ngModel)]="monto" value="monto" id="monto" name="monto" type="number"
+           placeholder="$000.00" (keydown.enter)="calculo1()">
+  </label>
+  &nbsp;&nbsp;
+  <label>IVA:
+    <input [(ngModel)]="iva" maxlength="3" value="iva" id="iva" name="iva" type="number"
+           placeholder="00%" (keydown.enter)="calculo1()">
+  </label>
+  &nbsp;&nbsp;
+  <label>Monto IVA:
+    <input [(ngModel)]="montoIva" value="montoIva" id="montoIva" name="montoIva" type="number"
+           placeholder="$000.00">
+  </label>
+  &nbsp;&nbsp;
+  <label>Monto Total:
+    <input [(ngModel)]="montoTotal" value="montoTotal" id="montoTotal" name="montoTotal" type="number"
+           placeholder="$000.00">
+  </label>
+</div>

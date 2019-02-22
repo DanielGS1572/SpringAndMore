@@ -1,0 +1,25 @@
+<!--<select>
+      <option [value]="0"></option>
+      <option *ngFor="let item of items" [value]=item>{{item[caption]}}</option>
+      
+</select>
+<mat-form-field>
+      <select matNativeControl [(ngModel)]="selectedItem" name="item">
+        <option value="" selected></option>
+        <option *ngFor="let item of items" [value]="item[caption]">
+          {{item[caption]}}
+        </option>
+      </select>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-select [(ngModel)]="selectedItem" name="item">
+        <mat-option *ngFor="let item of items" [value]="item[caption]">
+          {{item[caption]}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>-->
+
+<kendo-dropdownlist [defaultItem]="' '" [textField]="caption" [data]="items" [(ngModel)]="selectedValue">
+</kendo-dropdownlist>

@@ -1,0 +1,68 @@
+<form [formGroup]="formGroup" (ngSubmit)="updateProfile()">
+ <!--
+  <div>
+    <label translate>forms.name {{ 'forms.name' | translate }}, <etiqueta [translate]="'forms.name'">, <etiqueta translate>forms.name-->
+  <!-- <input  type="text" id="name" name="name"  placeholder="name" formControlName="name">
+ </label>
+</div>
+<br>
+<div>
+ <label translate>forms.lastName
+   <input  type="text" id="lastName" name="lastName"  placeholder="lastName" formControlName="lastName">
+ </label>
+</div>
+<br>
+<div>
+ <label translate>forms.rfc
+   <input type="text" id="rfc" name="rfc"  placeholder="rfc" formControlName="rfc">
+ </label>
+</div>
+<br>
+<div>
+ <label translate>forms.email
+   <input type="email" id="email" name="email"  placeholder="email" formControlName="email">
+ </label>
+</div>
+<br>
+<div>
+ <label translate>forms.telephone
+   <input type="number" id="telephone" name="telephone"  placeholder="telephone" formControlName="telephone">
+ </label>
+</div>
+<br>
+<div>
+ <label translate>forms.password
+   <input  type="password" id="password" name="password"  placeholder="password" formControlName="password">
+ </label>
+</div>
+<br>
+<div>
+ <label translate>forms.confirmPassword
+   <input type="password" id="confirmPassword" name="confirmPassword"  placeholder="confirm password" formControlName="confirmPassword">
+ </label>
+</div>-->
+  <div>
+    <label translate>forms.lastName
+      <input  type="text" id="lastName" name="lastName"  placeholder="lastName" formControlName="lastName" >
+    </label>
+  </div>
+  <br>
+  <div>
+    <label >Personas
+      <app-combo-box-component name="person" formControlName="person"></app-combo-box-component>
+    </label>
+  </div>
+  <br>
+  <div>
+    <app-radio-button-component name="sexo" formControlName="sexo"></app-radio-button-component>
+  </div>
+  <br>
+  <div>
+    <app-check-box-component name="regimenFiscal" formControlName="regimenFiscal"></app-check-box-component>
+  </div>
+
+  <br>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>

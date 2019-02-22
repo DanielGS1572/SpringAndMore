@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.required-message {
+  color: red;
+  width: auto;
+  display: block;
+  padding: 2px;
+  border-radius:  5px  5px  5px  5px;
+  font-size: 14;
+}

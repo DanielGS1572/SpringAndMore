@@ -1,0 +1,18 @@
+{
+  "ValidatorMessages": {
+    "notEmpty": "Required value",
+    "rfcError": "The RFC must be of 13 characters",
+    "emailError": "The email is invalid",
+    "title": "With LegoSoft "
+  },
+
+  "forms": {
+    "name": "Name: ",
+    "lastName": "Last Name:",
+    "email": "Email",
+    "password": "Password:",
+    "confirmPassword": "Confirm Password:",
+    "telephone": "Phone: ",
+    "rfc": "RFC: "
+  }
+}

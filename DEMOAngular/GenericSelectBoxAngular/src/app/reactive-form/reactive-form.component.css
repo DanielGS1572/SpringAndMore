@@ -1,0 +1,7 @@
+.required-message {
+  color: red;
+  width: fit-content;
+  display: inline-block;
+  padding: 2px;
+  border-radius:  5px  5px  5px  5px;
+}
