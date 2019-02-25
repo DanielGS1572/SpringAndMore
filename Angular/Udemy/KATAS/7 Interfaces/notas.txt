@@ -1,0 +1,4 @@
+poner los tres casos
+    - //se tiene el riesgo que no tenga la propiedad
+    - //se volvería tedioso con muchas propiedades
+    - //ya no hay problema pues mandaria error en codigo
