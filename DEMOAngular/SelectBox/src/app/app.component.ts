@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { InfoService } from './info.service';
+import { elementHostAttrs } from '@angular/core/src/render3';
 
 /** @title Select with 2-way value binding */
 @Component({
@@ -7,51 +9,62 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.css'],
 })
 
-export class AppComponent {
-  marca_level;
+export class AppComponent implements OnInit {
   modelo_title;
   modeloTitleList = [];
+  info: string[];
+  marca_level: string;
+  elementos;
+  constructor(private infoService: InfoService) {
 
+  }
 
-
+  ngOnInit(): void {
+    this.infoService.cast.subscribe(info => this.info = info);
+  }
 
   marcaList: any = [
     {
       'marca': 'Chevrolet',
       modeloTitleList: [
-        'Aveo','Camaro','Captiva','Cruze','Malibu','Trax'
+        'Aveo', 'Camaro', 'Captiva', 'Cruze', 'Malibu', 'Trax'
       ]
     },
     {
       'marca': 'Ferrari',
       modeloTitleList: [
-        '488 GTB', 'California T','Portofino','Purosangue'
+        '488 GTB', 'California T', 'Portofino', 'Purosangue'
       ]
     },
     {
       'marca': 'BMW',
       modeloTitleList: [
-        'Serie 1', 'Serie 2','Serie 3','Serie 4'
+        'Serie 1', 'Serie 2', 'Serie 3', 'Serie 4'
       ]
     }
   ];
 
 
-  
+
 
   educationLevelChangeAction(marca) {
-    this.modelo_title="";
+    this.modelo_title = "";
     let dropDownData = this.marcaList.find((data: any) => data.marca === marca);
     if (dropDownData) {
       this.modeloTitleList = dropDownData.modeloTitleList;
-      if(this.modeloTitleList){
-        this.modelo_title=this.modeloTitleList[0];
-      }
-      
+
+
     } else {
       this.modeloTitleList = [];
     }
+    this.changed();
 
+  }
+  changed() {
+    this.elementos = new Array();
+    this.elementos.push(this.marca_level, this.modelo_title);
+    console.log("changed");
+    this.infoService.editInfo(this.elementos);
   }
 
 

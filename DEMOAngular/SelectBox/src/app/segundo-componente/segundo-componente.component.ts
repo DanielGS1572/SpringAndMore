@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoService } from '../info.service';
 
 @Component({
   selector: 'app-segundo-componente',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./segundo-componente.component.css']
 })
 export class SegundoComponenteComponent implements OnInit {
+  info:string[];
 
-  constructor() { }
+  constructor(private infoService:InfoService){
 
-  ngOnInit() {
   }
+  
+ ngOnInit(): void {
+  this.infoService.cast.subscribe(info => this.info = info);
+}
 
 }

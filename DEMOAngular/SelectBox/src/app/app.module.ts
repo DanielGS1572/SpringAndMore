@@ -12,6 +12,7 @@ import {   MatButtonModule,
   MatInputModule,
   MatRippleModule, MatOptionModule, MatSelectModule } from '@angular/material';
 import { SegundoComponenteComponent } from './segundo-componente/segundo-componente.component';
+import { InfoService } from './info.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { SegundoComponenteComponent } from './segundo-componente/segundo-compone
     MatInputModule,
     MatRippleModule, MatOptionModule, MatSelectModule
   ],
-  providers: [],
+  providers: [InfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
