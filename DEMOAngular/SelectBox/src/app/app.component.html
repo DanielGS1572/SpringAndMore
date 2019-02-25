@@ -1,0 +1,21 @@
+<!--https://stackblitz.com/edit/angular-material-mat-select-dynamic-data-binding-in-angular?file=main.ts-->
+
+
+
+
+<mat-form-field>
+  <mat-select name="marca_level" (selectionChange)="educationLevelChangeAction(marca_level)" [(ngModel)]="marca_level" >
+    <mat-option *ngFor="let education of marcaList" [value]="education.marca" >{{ education.marca }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select name="modelo_title" [(ngModel)]="modelo_title">
+    <mat-option *ngFor="let degreeTitle of modeloTitleList" [value]="degreeTitle">{{ degreeTitle }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+----->  {{marca_level}} {{modelo_title}} 
+<app-segundo-componente></app-segundo-componente>
