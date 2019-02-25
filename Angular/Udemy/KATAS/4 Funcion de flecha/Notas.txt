@@ -1,0 +1,3 @@
+- Crear un ejemplo sencillo de funcion de flecha
+- Una función de flecha que problema soluciona al usar un timeout
+ 
