@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AppComponent } from '../app.component';
+import { PrimeroComponent } from '../primero/primero.component';
 import { products } from '../products';
 import { TableDataService } from '../table-data.service';
 
@@ -10,14 +10,17 @@ import { TableDataService } from '../table-data.service';
 })
 export class TerceroComponent implements OnInit {
   tableDataService:TableDataService;
-  @ViewChild(AppComponent) gridComponent: AppComponent;
+  @ViewChild(PrimeroComponent) gridComponent: PrimeroComponent;
 
 
   constructor() { }
 
   ngOnInit() {
+    this.gridComponent.columns = [{ field: "ProductID", title: "ID" }, 
+    { field: "ProductName", title: "Nombre del producto" }, 
+    { field: "QuantityPerUnit", title: "Cantidades por unidad" }];
+
     this.gridComponent.gridData = products;
-    this.gridComponent.gridDataResult = { data: products, total: products.length };
   }
 
 }
