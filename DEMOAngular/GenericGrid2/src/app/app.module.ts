@@ -7,15 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { GridModule } from '@progress/kendo-angular-grid';
 
 import { AppComponent } from './app.component';
-import { SegundoComponent } from './segundo/segundo.component';
+import { DetalleComponent } from './detalle/detalle.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
-import { TerceroComponent } from './tercero/tercero.component';
-import { PrimeroComponent } from './primero/primero.component';
+import { ConsumeComponent } from './consume/consume.component';
+import { GridComponent } from './grid/grid.component';
 
 
 @NgModule({
   imports: [ HttpClientModule, FormsModule, BrowserModule, BrowserAnimationsModule, GridModule, InputsModule ],
-  declarations: [ AppComponent, SegundoComponent, TerceroComponent, PrimeroComponent ],
+  declarations: [ AppComponent, DetalleComponent, ConsumeComponent, GridComponent ],
   providers: [  ],
   bootstrap: [ AppComponent ]
 })

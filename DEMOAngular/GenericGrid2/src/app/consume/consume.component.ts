@@ -1,16 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { PrimeroComponent } from '../primero/primero.component';
+import { GridComponent } from '../grid/grid.component';
 import { products } from '../products';
 import { TableDataService } from '../table-data.service';
 
 @Component({
-  selector: 'app-tercero',
-  templateUrl: './tercero.component.html',
-  styleUrls: ['./tercero.component.css']
+  selector: 'consume-component',
+  templateUrl: './consume.component.html'
 })
-export class TerceroComponent implements OnInit {
+export class ConsumeComponent implements OnInit {
   tableDataService:TableDataService;
-  @ViewChild(PrimeroComponent) gridComponent: PrimeroComponent;
+  @ViewChild(GridComponent) gridComponent: GridComponent;
 
 
   constructor() { }

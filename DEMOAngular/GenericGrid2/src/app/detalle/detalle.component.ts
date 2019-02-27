@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { TableDataService } from '../table-data.service';
 
 @Component({
-  selector: 'app-segundo',
-  templateUrl: './segundo.component.html',
-  styleUrls: ['./segundo.component.css']
+  selector: 'detalle-component',
+  templateUrl: './detalle.component.html'
 })
-export class SegundoComponent implements OnInit {
+export class DetalleComponent implements OnInit {
   info: any[];
   public arreglo: string[][] = [["ProductName", "Nombre Producto"], ["QuantityPerUnit", "Cantidad"]];
   constructor(private service:TableDataService) { }
