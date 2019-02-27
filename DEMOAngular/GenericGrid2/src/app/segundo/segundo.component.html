@@ -1,0 +1,12 @@
+<h1>Segundo Componente</h1>
+<table>
+  <div *ngFor="let element of info; let i = index">
+    <tr>
+      <div *ngFor="let arr of arreglo; let j = index">
+        <td >{{arreglo[j][1]}}:</td>
+        <td > <input type="text" [(value)]="element[arreglo[j][0]]" /></td>
+      </div>
+    </tr>
+    <br>
+  </div>
+</table>
