@@ -1,0 +1,17 @@
+- Descarga de bootstrap							(De la descarga no incluye el jquery)
+	/estilos 
+		/Solo dejar el .min
+	/JS
+		/Solo dejar el .min
+- Descarga de jquery 							(version slim)
+- Descargar tether.io							(Es otra libreria que ocupa bootstarp)
+	/Solo se ocupa el archivo de distribución de min.js
+- Descargar fontawesome	---> No aplica, mejor que sea via cdn en el index.hmtl antes del cierre del tag del body
+	/Colocar la carpeta completa en assets
+	/poner el min en la configuración de angular.json
+- probar que se ven los iconos de font-awesome
+	
+
+
+Agregar syles y scripts de angular.json
+-Recordar que solo tomará los cambios hasta que se reinicie el servidor
