@@ -1,10 +1,13 @@
-<kendo-grid  #var="kendoGrid"
-  [data]="gridData"
+<kendo-grid 
+  [data]="gridDataResult"
   [height]="410"
   [kendoGridSelectBy]="selectedCallback"
     [selectedKeys]="mySelection"
     (change)="onSelection()"
-    (cellClick)="onSelection()">
+    [sortable]="true"
+    [filterable]="true"
+    (cellClick)="onSelection()"
+    (dataStateChange)="dataStateChange($event)">
   <kendo-grid-checkbox-column [width]="100"></kendo-grid-checkbox-column>
     <kendo-grid-column *ngFor="let col of columns" [field]="col.field" [title]="col.title"></kendo-grid-column>
 </kendo-grid>
