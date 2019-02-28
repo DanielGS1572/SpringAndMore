@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Directive, Input, Renderer2 } from '@angular/core';
 import { products } from './products';
-import { GridDataResult, DataStateChangeEvent, PageChangeEvent, RowArgs } from '@progress/kendo-angular-grid';
+import { GridComponent,GridDataResult, DataStateChangeEvent, PageChangeEvent, RowArgs } from '@progress/kendo-angular-grid';
 import { Observable } from 'rxjs';
 import { CategoriesService } from './northwind.service';
-import { State } from '@progress/kendo-data-query';
+import { process,State } from '@progress/kendo-data-query';
 import { SelectableSettings } from '@progress/kendo-angular-grid';
 
 
@@ -49,52 +49,72 @@ import { SelectableSettings } from '@progress/kendo-angular-grid';
                         <span>Bind the data to:</span>
                         <input [(ngModel)]="bindingType" type="radio" name="datamode" id="array" value="array" class="k-radio"
                         (change)="changeBindingType($event)">
-                        <label class="k-radio-label" for="array">Array object</label>
-                        <input [(ngModel)]="bindingType" type="radio" name="datamode" id="gridDataResult" value="gridDataResult" class="k-radio"
+                        <label class="k-radio-label" for="array">Tabla 1</label>
+                      <!--  <input [(ngModel)]="bindingType" type="radio" name="datamode" id="gridDataResult" value="gridDataResult" class="k-radio"
                         (change)="changeBindingType($event)">
-                        <label class="k-radio-label" for="gridDataResult">GridDataResult object</label>
+                        <label class="k-radio-label" for="gridDataResult">GridDataResult object</label>-->
                         <input [(ngModel)]="bindingType" type="radio" name="datamode" id="async" value="async" class="k-radio"
                         (change)="changeBindingType($event)">
-                        <label class="k-radio-label" for="async">Asynchronous source</label>
+                        <label class="k-radio-label" for="async">Fuente asíncrona</label>
                     </div>
                   </fieldset>
               </div>
           </div>
         </div>
 
-        <kendo-grid
+        <kendo-grid  #var="kendoGrid"
           [data]="gridData"
           [height]="410"
-          [loading]="view.loading"
           [selectable]="selectableSettings"
+       
+          [sortable]="true"
+          [filterable]="true"
           [kendoGridSelectBy]="selectedCallback"
-            [selectedKeys]="mySelection"
-            (pageChange)="pageChange($event)"
+          [selectedKeys]="mySelection"
+          (change)="onSelection()"
+          (cellClick)="onSelection()"
+          (dataStateChange)="dataStateChange($event)"
          >
+
           <kendo-grid-checkbox-column [width]="100"></kendo-grid-checkbox-column>
             <kendo-grid-column *ngFor="let col of columns" [field]="col.field" [title]="col.title"></kendo-grid-column>
         </kendo-grid>
-        <div kendo-grid></div>
-        <pre>{{ mySelection | json }}</pre>
+
+        <table>
+        <div *ngFor="let element of elements; let i = index" >
+          <tr>
+            <div *ngFor="let arr of arreglo; let j = index">
+                <td align="right">{{arreglo[j][1]}}:</td><td align="right"> <input  type="text" [(value)]="element[arreglo[j][0]]"/></td>
+            </div>
+          </tr>
+          <br>
+        </div>
+        </table>
     `
 })
+
 export class AppComponent {
   public columns: any[] = [{ field: "ProductID",  title:"ID"  }, { field: "ProductName",  title:"Nombre del producto" }, { field: "QuantityPerUnit",  title:"Cantidades por unidad" }];
   public bindingType: String = 'array';
   public view: Observable<GridDataResult>;
-  public gridData: any = products;
-  public gridDataResult: GridDataResult = { data: products, total: products.length };
+
+public state: State = {
+  
+};
+
+  public gridData: GridDataResult  = process(products, this.state);
   public selectableSettings: SelectableSettings;
-  public pageSize = 10;
-  public skip = 0;
+  public arreglo:string[][] = [["ProductName","Nombre Producto"],["QuantityPerUnit","Cantidad"]];
   public mySelection: number[] = [];
+  public elements: any[] = []
+
 
   public checkboxOnly = false;
     public mode:any = 'multiple';
 
   constructor(private service: CategoriesService) {
-    this.view = service;
     this.setSelectableSettings();
+  
   }
   public setSelectableSettings(): void {
     this.selectableSettings = {
@@ -102,52 +122,32 @@ export class AppComponent {
         mode: this.mode
     };
 }
+public onSelection(){
+ this.elements=JSON.parse(JSON.stringify(this.mySelection));
+ 
+ this.mySelection
+ console.log(this.elements);
+  
+  return this.mySelection;
+}
 public selectedCallback = (args) =>{
   return  args.dataItem;
 } 
-public pageChange(event: PageChangeEvent): void {
-  this.skip = event.skip;
-  this.loadItems();
 
-  // Optionally, clear the selection when paging
-  // this.mySelection = [];
-}
-private loadItems(): void {
-  this.gridDataResult = {
-      data: this.gridData.slice(this.skip, this.skip + this.pageSize),
-      total: this.gridData.length
-  };
-}
-selectedKeysChange(rows: any[]) {
-  console.log(rows);
-  //rows.forEach(function(value){
-    //this.mySelection.push();
-   // this.mySelection.push(products.find(i => i.ProductID == value));
-  //});
-  //console.log(products);
-
+public dataStateChange(state: DataStateChangeEvent): void {
+  this.state = state;
+  console.log("testst")
+  this.gridData = process(products, this.state);
 }
   changeBindingType(e) {
     switch (this.bindingType) {
       case 'array': {
         this.columns = [{ field: "ProductID" }, { field: "ProductName" }, { field: "QuantityPerUnit" }];
-        this.gridData = products;
+        
         break;
+        
       }
-      case 'gridDataResult': {
-        this.columns = [{ field: "ProductID" }, { field: "ProductName" }, { field: "QuantityPerUnit" }];
-        this.gridData = this.gridDataResult;
-        break;
-      }
-      case 'async': {
-        const state: State = { skip: 0, take: 100 };
-        this.columns = [{ field: "CategoryID" }, { field: "CategoryName" }, { field: "Description" }];
-        this.service.query(state);
-        this.view.subscribe(res => {
-          this.gridData = res;
-        });
-        break;
-      }
+    
     }
   }
 }

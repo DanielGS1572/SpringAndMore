@@ -21,6 +21,8 @@ import { CheckBoxComponentComponent } from './check-box-component/check-box-comp
 import { MatFormFieldModule, MatInputModule,MatSelectModule  } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 
 
 
@@ -49,7 +51,8 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
         deps: [HttpClient]
       }
     }),
-    DropDownsModule
+    DropDownsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

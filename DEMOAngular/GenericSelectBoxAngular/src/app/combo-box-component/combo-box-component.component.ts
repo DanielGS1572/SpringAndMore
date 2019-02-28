@@ -24,9 +24,11 @@ export class ComboBoxComponentComponent implements ControlValueAccessor {
   value: string = '';
   @Input()
   caption: string;
-  selectedItem: string;
+  
 
-  onChange = (_: any) => {};
+  onChange = (_: any) => {
+    console.log("changed");
+  };
   onTouched = () => {};
 
   constructor() {

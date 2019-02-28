@@ -1,7 +1,6 @@
-"use strict";
 //Una promesa es del ES6, da la posibilidad de ejecutar una instrucción ó función cuando una tarea asincrona es terminada
-let prom1 = new Promise(function (resolve, reject) {
-    setTimeout(() => {
+var prom1 = new Promise(function (resolve, reject) {
+    setTimeout(function () {
         console.log("Promesa terminada");
         //termina bien
         resolve();

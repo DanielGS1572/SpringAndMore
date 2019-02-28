@@ -21,5 +21,5 @@
       </mat-select>
     </mat-form-field>-->
 
-<kendo-dropdownlist [defaultItem]="' '" [textField]="caption" [data]="items" [(ngModel)]="selectedValue">
-</kendo-dropdownlist>
+<kendo-dropdownlist [(ngModel)]="selectedItem" [valueField]="caption"  [textField]="caption" [data]="items" >
+</kendo-dropdownlist><div *ngIf="selectedItem">selected: {{selectedItem.name}} </div>
