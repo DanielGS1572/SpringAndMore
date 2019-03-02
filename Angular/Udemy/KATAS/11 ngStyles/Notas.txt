@@ -1,0 +1,10 @@
+- Crear en app component un div de class de bootstrap para que no pegue los componentes
+- crear un componente dentro de una carpeta nueva llamada components que se llame ngstyle con estilos y html en linea (no archivos separados)
+- hacer una etiqueta p que se afecte:
+    - el font size con css puro
+    - el font size recibido entre { } poniendolo en color rojo con ngStyle 
+    - afectar el font-size pero con directiva de angular
+    - afectar el font-size pero con directiva de angular pero pasandolo como variable e indicando el tipo de medida
+    - poner un boton con el simbolo de + en el que cada vez que den clic aumente de tamaño un div
+    - Setear las propiedades mediante un objeto
+    - Aplicar scopes y ver como angular setea etiquetas "especiales" ("Aplicando CSS a un solo componente")

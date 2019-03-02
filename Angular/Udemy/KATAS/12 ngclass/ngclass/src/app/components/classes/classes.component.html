@@ -1,0 +1,22 @@
+<div class="alert alert-success" role="alert">
+  <strong>Caso Base</strong>
+</div>
+
+<div [ngClass]="'alert-info'" class="alert" role="alert">
+    <strong>con ngClass</strong>
+  </div>
+
+  <div [ngClass]="alerta" class="alert" role="alert">
+    <strong>con ngClass</strong>
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="alerta='alert-info'"><i class="fa fa-plus"></i></button>
+
+
+  <h3 [ngClass]="{ 'text-danger':false}">
+    Hola Mundo
+  </h3>
+
+  <h3 [ngClass]="{ 'text-danger':propiedades.condicion, 'text-info':!propiedades.condicion}">
+      Hola Mundo
+    </h3>

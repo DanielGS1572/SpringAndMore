@@ -1,0 +1,8 @@
+- El ngClass viene siendo un poco sustituci�n de ngStyle
+- Es mejor por la reutilizaci�n de las clases
+
+- poner un alert de bootstrap (hacer el caso base)
+- Poner en div un ngClass que recibe un string plano
+- Poner un boton que modifique el tipo de alerta
+- De forma condicional (solo con true)
+- De forma condicional (Con objeto) (con que no aplique el primer caso que evalue un segundo)
