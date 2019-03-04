@@ -33,3 +33,6 @@ Poner el wildcard **
 Separar rutas hijas en un archivo separado
 Crear un archivo dentro de la carpeta de usuario ... usuario.routes.ts 
     - De esta forma se controlan todas las rutas referentes al usuario
+
+
+Desde una ruta hija obtener el parametro del padre                                                                                                          (con ActivatedRoute)
