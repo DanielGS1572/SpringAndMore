@@ -1,0 +1,11 @@
+Generar una nueva directiva                                                                                 ng g d directives/resaltado
+Lo que hara la directiva es que cada vez que el cursor se ponga sobre un elemento este se resalte
+Para eso hay que importar ElementRef de  @angular/core
+Para escuchar cada ves que se posicione sobre el elemento se requiere de HostListener
+        - hacerlo tanto para cuando entra como cuando sale
+
+
+Crear en la directiva para que pueda aceptar parametros (se debe importar Input)                            
+        - Hacerlo con alias y sin alias
+
+

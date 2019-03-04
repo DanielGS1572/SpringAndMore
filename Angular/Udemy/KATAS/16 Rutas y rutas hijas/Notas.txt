@@ -1,0 +1,35 @@
+Crear el archivo de rutas       app.routes.ts                                                                                       (a nivel de app components)
+    - En app.routes.ts deben de importarse RouterModule, Router y el componentente principal
+    - Se debe crear una constante de tipo Routes que contendra un arreglo de objetos:
+        - Uno que tenga path y el component
+        - otro que tenga path, pathMatch y redirectTo
+Importar el archivo de rutas en app.module y ponerlo en imports
+En el app-component poner la etiqueta de router-outlet
+
+Crear un componente de usuario y dentro de usuario crear otro componente llamado usuarioNuevo,usuarioEditar,usuarioDetalle, que sea
+inlineTemplate, inlineStyle y que lo deje en la misma carpeta                                                                       (para que lo deje en la misma carpeta debe ser con --flat)
+
+Crear un componente de navbar y pegar codigo de bootstrap del navbar
+Agregar en el archivo de router la ruta de usuario
+en el html de navbar poner el routerLinkActive y el routerLink                                                                       (quitar los href y la clase de active)}
+
+
+
+
+Rutas hijas
+Se busca que se tenga la funcionalidad que cuando seleccionen una opción, se arme una ruta en particular
+    por ejemplo localhost:4200/usuario/[id]/accion-a-realizar
+    accion-a-realizar:
+        - nuevo
+        - detalle
+        - editar
+
+Ocupar button group de bootstrap
+en routes.ts poner children y el objeto con su respectivo path y component
+En el grupo de botoner poner activeLinkRoute y el activeLink
+Poner el wildcard ** 
+
+
+Separar rutas hijas en un archivo separado
+Crear un archivo dentro de la carpeta de usuario ... usuario.routes.ts 
+    - De esta forma se controlan todas las rutas referentes al usuario

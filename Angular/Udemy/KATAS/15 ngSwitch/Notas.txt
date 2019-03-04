@@ -1,0 +1,2 @@
+poner un ngSwitch con las diferentes alertas que tiene bootstrap
+poner un boton con el que cambie a un solo tipo de alerta
