@@ -2,7 +2,7 @@ var mensaje = "hola"; //forma en la que se declaran variables noralmente en java
 let mensaje2 = "hola2"  //let es typescript y respeta el scope
 const OPCIONES = "todas";               //las constantes deben ser inicializadas cuan
 
-if(true){
+if(true){                                   //ESTO NO APLICA SI FUERA DESDE UNA FUNCION
     var mensaje = "adios";
     let mensaje2= "adios2";
     const OPCIONES = "todas2";      

@@ -21,7 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/ckeditor/plugins/timestamp/icons/timestamp.png"
+              "src/assets/ckeditor/plugins/diccionario/icons/timestamp.png"
             ],
             "styles": [
               "src/styles.css"
@@ -59,7 +59,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "ckeditor:build",
-            "port":4200
+            "port":4300
           },
           "configurations": {
             "production": {

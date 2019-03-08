@@ -1,9 +1,10 @@
 - Crear html
 - Crear .js con una funcion para desplegar un texto a traves de un objeto
-- Convertir el js en ts y que la funcion reciba un string
+- Convertir el js en ts (manualmente) y que la funcion reciba un string
 - Compilar el ts (de forma individual y global)
 - configurar modo observador al compilar																	tsc archivo.ts -w
-- Inicializar un proyecto de typescript																		tsc -init ... con esto crea un tsconfig.json (que tiene las reglas del compilador de typescript)
+- Inicializar un proyecto de typescript																		tsc -init ... con esto crea un tsconfig.json (que tiene las reglas del compilador de typescript)    
+                                                                                                            -- Cuando se crea el archivo tsconfig el parametro que recibe debe estar tipificado y acepta declarar las variables con let, antes no deja mas que con variables
 - Se necesita un plugin especial para que al guardar se compile en automatico
 
 

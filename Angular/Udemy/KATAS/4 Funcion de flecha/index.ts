@@ -2,15 +2,15 @@
 console.log("inicia");
 let nombre="Pepito";
 let hulk={
-    nombre:"Hulk",
+    nombre:"Hulk1",
     smash(){            //Tambien se puede declarar como function smash:function(){}
-        setTimeout( () => {console.log(this.nombre + " smash!")}, 1500)
+        setTimeout( () => console.log(this.nombre + " smash!"), 1500)
     }
 }
 
 
 let hulk2={
-    nombre:"Hulk",
+    nombre:"Hulk2",
     smash(){
         setTimeout( function() {
             console.log(this.nombre + " smash!")

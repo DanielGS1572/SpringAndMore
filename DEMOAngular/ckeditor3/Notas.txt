@@ -1,0 +1,5 @@
+npm install ng2-ckeditor
+https://github.com/chymz/ng2-ckeditor
+
+Tutorial:
+https://www.youtube.com/watch?v=DaeJPFSU3_c

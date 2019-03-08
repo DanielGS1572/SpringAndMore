@@ -1,3 +1,8 @@
 - Crear un ejemplo sencillo de funcion de flecha
-- Una función de flecha que problema soluciona al usar un timeout
+- Una función de flecha que problema soluciona al usar un timeout   -- soluciona que no pierde el scope
+- No hacer el tsc -init
+
+
+Duda
+Porque puede tener o no tener el tsconfig.json? Si no lo tiene con base a que ES lo hace
  
