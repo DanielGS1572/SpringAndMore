@@ -1,9 +1,61 @@
-<meta charset="UTF-8">
-<h1>Ejemplo de uso de editor</h1>
-<ckeditor 
-[(ngModel)] = "ckeditorContent">
-</ckeditor>
+<!doctype html>
+<html>
 
-<h1>Resultado</h1>
-{{ckeditorContent}}
-<router-outlet></router-outlet>
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .parent-contenedor {
+            border: 3px;
+        }
+
+        .contenedor {
+
+
+            margin: 10px;
+
+        }
+
+        .border-primary {
+            border: 3px;
+            width: 70%;
+            float: left;
+            height: 100%;
+        }
+
+        .border-secondary {
+            border: 3px;
+            width: 25%;
+            height: 100%;
+            float: right;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        kendo-tabstrip p {
+            margin: 0;
+            padding: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+       
+        <app-parametros></app-parametros>
+        <div class="parent-contenedor clearfix">
+            <app-datos-generales class="contenedor border-primary"></app-datos-generales>
+            <app-diccionario class="contenedor border-secondary"></app-diccionario>
+
+        </div>
+    </div>
+
+    <!--  <router-outlet></router-outlet> -->
+</body>
+
+</html>
