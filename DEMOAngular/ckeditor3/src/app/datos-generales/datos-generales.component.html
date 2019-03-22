@@ -1,32 +1,21 @@
 <h3>Datos Generales</h3>
 <div class="panel panel-default">
   <div class="panel-body">
+     
     <div>
       <table>
         <tr>
           <td style="width:33%">
             <div>Nombre notificación</div>
-            <input type="text">
+            <input [(ngModel)]="nombreNotificacion" type="text">
           </td>
           <td style="width:33%;padding-right: 100px">
             <div>Diccionario de datos</div>
-            <select>
-              <!--TODO-->
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>
+            <ls-combobox #diccionarioDatos></ls-combobox>
           </td>
           <td style="width:33%">
             <div>Canal Multiva</div>
-            <select>
-              <!--TODO-->
-              <option value="volvo2">Volvo</option>
-              <option value="saab2">Saab</option>
-              <option value="mercedes2">Mercedes</option>
-              <option value="audi2">Audi</option>
-            </select>
+            <ls-combobox #canalMultiva></ls-combobox>
           </td>
         </tr>
       </table>
@@ -37,47 +26,21 @@
 
       <kendo-tabstrip-tab [title]="'SMS'" [selected]="true">
         <ng-template kendoTabContent>
-          <table>
-            <tr>
-              <td>
-                <div>Template</div>
-                <select>
-                  <!--TODO-->
-                  <option value="volvo">Volvo</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-                </select>
-              </td>
-              <td>
-                <div>Envío</div>
-                <label style="padding-right: 10px;" class="radio-inline"><input type="radio" name="seleccion"
-                    value="si">Sí</label>
-                <label class="radio-inline"><input type="radio" name="seleccion" value="no">No</label>
-              </td>
-              <td>
-                <div>Subject</div>
-                <input type="text">
-              </td>
-              <td><div style="text-align: right;  padding-top: 20px;">
-                  <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-outline-primary">Previsualizar</button>
-                      <button type="button" class="btn btn-outline-primary">Guardar</button>
-                  </div>
-              </div></td>
-            </tr>
-          </table>
-          
+
+          <app-opciones></app-opciones>
           <ckeditor [(ngModel)]="ckeditorContent"></ckeditor>
         </ng-template>
       </kendo-tabstrip-tab>
       <kendo-tabstrip-tab [title]="'MAIL'">
         <ng-template kendoTabContent>
+          <app-opciones [displayType] = "'inline-block'"></app-opciones>
           <ckeditor [(ngModel)]="ckeditorContent2"></ckeditor>
         </ng-template>
       </kendo-tabstrip-tab>
-      <kendo-tabstrip-tab [title]="'WEB'">
+      <kendo-tabstrip-tab  [title]="'WEB'">
         <ng-template kendoTabContent>
+          <app-opciones></app-opciones>
+
           <app-diccionario></app-diccionario>
         </ng-template>
       </kendo-tabstrip-tab>

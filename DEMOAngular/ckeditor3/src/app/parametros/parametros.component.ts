@@ -1,23 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { FormGroup} from '@angular/forms';
+import { LsCheckboxComponent } from '../ls-checkbox/ls-checkbox.component';
 
 @Component({
   selector: 'app-parametros',
   templateUrl: './parametros.component.html',
   styleUrls: ['./parametros.component.css']
 })
-export class ParametrosComponent {
-  form: FormGroup;
-  parametros = [
-    {id: 1, name: 'Configurable por usuario final'},
-    {id: 2, name: 'Visible por usuario final'},
-    {id: 3, name: 'Monto configurable'},
-    {id: 4, name: 'Mostrar/Ocultar saldo disponible'},
-    {id: 5, name: 'Notificación interna'},
-    {id: 6, name: 'Cambia monto'}
-
-  ];
+export class ParametrosComponent implements OnInit {
+ 
+  @ViewChild(LsCheckboxComponent) chkComponent : LsCheckboxComponent = new LsCheckboxComponent();
+  llevaMonto: boolean;
   
-
+  ngOnInit(): void {
+    this.chkComponent.generateChecksArray(['Configurable por usuario final',
+    'Visible por usuario final',
+    'Monto configurable',
+    'Mostrar/Ocultar saldo disponible',
+    'Notificación interna',
+    'Lleva monto']);
+}
   submit() {}
+  updateStatus(selected){
+    console.log(selected);
+  }
 }

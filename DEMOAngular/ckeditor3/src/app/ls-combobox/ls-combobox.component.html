@@ -1,0 +1,4 @@
+<select class="form-control">
+  <option [value]="0"></option>
+  <option *ngFor="let item of items" [value]=item>{{item[caption]}}</option>
+</select>

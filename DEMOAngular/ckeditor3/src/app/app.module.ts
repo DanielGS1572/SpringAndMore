@@ -11,6 +11,9 @@ import { DatosGeneralesComponent } from './datos-generales/datos-generales.compo
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { OpcionesComponent } from './opciones/opciones.component';
+import { LsCheckboxComponent } from './ls-checkbox/ls-checkbox.component';
+import { LsComboBoxComponent } from './ls-combobox/ls-combobox.component';
 
 
 
@@ -20,7 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     ParametrosComponent,
     DiccionarioComponent,
-    DatosGeneralesComponent
+    DatosGeneralesComponent,
+    OpcionesComponent,
+    LsCheckboxComponent,
+    LsComboBoxComponent
   ],
   imports: [
     BrowserModule,

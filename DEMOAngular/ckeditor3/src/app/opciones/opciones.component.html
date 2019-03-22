@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <td>
+      <div>Template</div>
+      <ls-combobox #template></ls-combobox>
+    </td>
+    <td>
+      <div>Envío</div>
+      <label style="padding-right: 10px;" class="radio-inline"><input type="radio" name="seleccion"
+          value="si">Sí</label>
+      <label class="radio-inline"><input type="radio" name="seleccion" value="no">No</label>
+    </td>
+    <td [ngStyle]="{'display': displayType }">
+      <div>Subject</div>
+      <input type="text" [(ngModel)]="subject" >
+    </td>
+    <td><div style="text-align: right;  padding-top: 20px;">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" (click)="previsualizar()" class="btn btn-outline-primary">Previsualizar</button>
+            <button type="button" (click)="guardar()" class="btn btn-outline-primary">Guardar</button>
+        </div>
+    </div></td>
+  </tr>
+</table>
