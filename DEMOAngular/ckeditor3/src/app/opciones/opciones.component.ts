@@ -1,4 +1,4 @@
-import { Component,  Input, ViewChild, OnInit } from '@angular/core';
+import { Component,  Input, ViewChild, OnInit, ElementRef } from '@angular/core';
 import {  DataService } from '../service/data.service';
 import { DatosGeneralesComponent } from '../datos-generales/datos-generales.component';
 import { LsComboBoxComponent } from '../ls-combobox/ls-combobox.component';
@@ -25,7 +25,7 @@ export class OpcionesComponent implements OnInit {
   public constructor(private data: DataService) { 
     this.data.observable.subscribe((data) => this.datack = data);
   }
-  @ViewChild('template') cmbTemplate: LsComboBoxComponent = new LsComboBoxComponent();
+  @ViewChild('template') cmbTemplate: LsComboBoxComponent = new LsComboBoxComponent(null);
   
  
   /*

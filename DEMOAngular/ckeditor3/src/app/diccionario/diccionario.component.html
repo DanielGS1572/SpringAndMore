@@ -3,8 +3,8 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <ul *ngIf="diccionario">
-      <li *ngFor="let valor of diccionario.data">
-        <p>{{valor.first_name}} {{valor.last_name}}</p><!--Cambiar-->
+      <li *ngFor="let valor of diccionario">
+        <p>{{valor}}</p><!--Cambiar-->
       </li>
     </ul>
   </div>

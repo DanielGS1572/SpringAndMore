@@ -1,0 +1,54 @@
+{
+    "responseStatus": 200,
+    "responseError": "",
+    "result": [
+        {
+            "nombre": "DicNotif_Bup_DatosCuentas",
+            "descripcion": "Diccionario de datos para cuentas personales",
+            "core": "BUP",
+            "servicio": false,
+            "urlServicio": null,
+            "variablesEntrada": {
+                "monto": "",
+                "saldo": ""
+            },
+            "variablesSalida": {
+                "monto": "5000",
+                "saldo": "15000"
+            }
+        },
+        {
+            "nombre": "DicNotif_Bup_Datos_Persona",
+            "descripcion": "Diccionario de datos de datos por persona",
+            "core": "BUP",
+            "servicio": true,
+            "urlServicio": "http://multiva-ws-bup-core-esb-multiva.apps.dev.openshift.multivaloresgf.local/multiva-app/bup/buscar/personaPorIdOrCta",
+            "variablesEntrada": {
+                "id": "2000893122"
+            },
+            "variablesSalida": {
+                "razonSocial": "Gabriela Ramirez Velazquez",
+                "regimenFiscal": "Persona Fisica",
+                "id": "2000893122",
+                "rfc": "RACZ880725BJ5"
+            }
+        },
+        {
+            "nombre": "DicNotif_Bup_DatosPersonales",
+            "descripcion": "Diccionario de datos de datos personales",
+            "core": "BUP",
+            "servicio": false,
+            "urlServicio": null,
+            "variablesEntrada": {
+                "apellidoPaterno": "",
+                "nombre": "",
+                "idPersona": "10001806"
+            },
+            "variablesSalida": {
+                "apellidoPaterno": "Hernandez",
+                "nombre": "Carlos",
+                "idPersona": "10001806"
+            }
+        }
+    ]
+}

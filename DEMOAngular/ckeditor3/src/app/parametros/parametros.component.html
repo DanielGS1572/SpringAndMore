@@ -3,28 +3,11 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <div style="padding-left:10%;">
-       <!--   <table style="width:100%">
-          <tr>
-            <td style="width:33%"><input type="checkbox" [(ngModel)]="parametros[0].status">{{parametros[0].name}}</td>
-            <td style="width:33%"><input type="checkbox" [(ngModel)]="parametros[1].status">{{parametros[1].name}}</td>
-            <td style="width:33%"><input type="checkbox" [(ngModel)]="parametros[2].status">{{parametros[2].name}}</td>
-          </tr>
-          <tr>
-            <td style="width:33%"><input type="checkbox" [(ngModel)]="parametros[3].status">{{parametros[3].name}}</td>
-            <td style="width:33%"><input type="checkbox" [(ngModel)]="parametros[4].status">{{parametros[4].name}}</td>
-            <td style="width:33%"><input type="checkbox" [(ngModel)]="parametros[5].status">{{parametros[5].name}}<span
-                style="margin-left:10px "><input type="text"></span></td>
-          </tr>
-
-        </table><div class="container-fluid">-->
-       
+    
             <ls-checkbox  #chkComponent></ls-checkbox>
-          
+            <input type="text" (blur)="transformAmount($event)">
       
-       <!--  <li *ngFor="let bill of bills">
-          <input type="checkbox" [ngModel]="bill.status" (click)="updateStatus($event)"" /> 
-          <span>{{bill.description}}</span>
-        </li>-->
+       
       </div>
     </div>
   </div>

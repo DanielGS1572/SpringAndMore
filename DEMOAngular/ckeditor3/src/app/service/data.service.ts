@@ -8,7 +8,7 @@ import { Observable, Subject } from 'rxjs';
 export class DataService {
   observable: Observable<any>;
   private observableSubject = new Subject<any>();
-  private prefix : string = `
+  private prefix: string = `
   <html>
     <head>
       <meta charset="UTF-8">
@@ -16,7 +16,7 @@ export class DataService {
     
     <body>
   `;
-  private sufix : string =  ` 
+  private sufix: string = ` 
     </body>
   </html>`;
 
@@ -33,14 +33,24 @@ export class DataService {
     return this.http.post(this.url + "/mergeTemplate", data);
   }
 
-  getData(data){
+  getData(data) {
     data = this.prefix + data + this.sufix;
     console.log(data);
     this.observableSubject.next(btoa(data));
   }
-/*
-  getNombreTemplate(data){
-    this.observableSubject.next(data);
-  }*/
 
+  getDatosGenerales(data) {
+    this.observableSubject.next(data);
+  }
+  obtenerdicc(): Observable<any> {
+    return new Observable(
+      obs => {
+        this.http.get("../assets/diccionario.json").subscribe(data => {
+
+          obs.next(data);
+          obs.complete();
+        })
+      }
+    );
+  }
 }

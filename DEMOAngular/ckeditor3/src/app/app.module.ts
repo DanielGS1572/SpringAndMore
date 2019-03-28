@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { OpcionesComponent } from './opciones/opciones.component';
 import { LsCheckboxComponent } from './ls-checkbox/ls-checkbox.component';
 import { LsComboBoxComponent } from './ls-combobox/ls-combobox.component';
+import { CurrencyPipe } from "@angular/common";
+import { DataService } from './service/data.service';
 
 
 
@@ -38,7 +40,7 @@ import { LsComboBoxComponent } from './ls-combobox/ls-combobox.component';
     LayoutModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [CurrencyPipe, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

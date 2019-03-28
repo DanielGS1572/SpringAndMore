@@ -4,11 +4,11 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class InfoService {
-  private data = new BehaviorSubject<Array<string>>([]);
+  private data = new BehaviorSubject<string>('');
   cast = this.data.asObservable();
   constructor() { }
 
-  editInfo(args:string[]){
+  editInfo(args:string){
     this.data.next(args);
     console.log(args);
   }

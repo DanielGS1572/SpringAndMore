@@ -7,12 +7,30 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent{
-  
- /*Corregir, meter donde corresponde */
- constructor(private http:HttpClient){
+export class AppComponent {
+  @ViewChild('datosGenerales') datosGenerales;
+  @ViewChild('diccionarioDatos') diccionarioDatos;
 
- }
+  ngAfterViewChecked(): void {
+    console.log(this.datosGenerales.datosDiccionario);
+    
+    console.log(this.datosGenerales.selectedValue);
+    this.datosGenerales.event.subscribe((ref) => 
+  {
+    console.log(this.datosGenerales.selectedValue + " xxxxxxxxxa");
+    this.diccionarioDatos.diccionario  = [
+      'Diccionario1',
+    'Diccionario2',
+      'Diccionario3',
+       'Diccionario4',
+       'Diccionario5'
+    ];
+  
+});
+  }
+
+
+
 
  
 }

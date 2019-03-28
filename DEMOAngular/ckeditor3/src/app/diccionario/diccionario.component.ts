@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {DataService} from '../service/data.service';
+import { Observable } from 'rxjs';
+import { DatosGeneralesComponent } from '../datos-generales/datos-generales.component';
 
 @Component({
   selector: 'app-diccionario',
@@ -7,21 +9,20 @@ import {DataService} from '../service/data.service';
   styleUrls: ['./diccionario.component.css']
 })
 export class DiccionarioComponent implements OnInit {
- /* diccionario = [
-    'Diccionario1',
-  'Diccionario2',
-    'Diccionario3',
-     'Diccionario4',
-     'Diccionario5'
-  ];*/
-  diccionario: Object;
+public diccionario = [];
+  @ViewChild(DatosGeneralesComponent) datosGenerales : DatosGeneralesComponent;
+
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getDiccionario().subscribe(data =>{
-      this.diccionario = data;
-      console.log(this.diccionario);
-    })
-  }
+    this.data.getDiccionario().subscribe(resp =>{
+      console.log("resp " , resp);
+    });
+    
+   
 
+  }
+  
+
+  
 }
