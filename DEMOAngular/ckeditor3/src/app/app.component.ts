@@ -17,14 +17,10 @@ export class AppComponent {
     console.log(this.datosGenerales.selectedValue);
     this.datosGenerales.event.subscribe((ref) => 
   {
-    console.log(this.datosGenerales.selectedValue + " xxxxxxxxxa");
-    this.diccionarioDatos.diccionario  = [
-      'Diccionario1',
-    'Diccionario2',
-      'Diccionario3',
-       'Diccionario4',
-       'Diccionario5'
-    ];
+    let variablesEntrada  = JSON.parse(JSON.stringify(this.datosGenerales.selectedValue.variablesEntrada));
+    this.diccionarioDatos.diccionario = Object.keys(variablesEntrada);
+    console.log(Object.keys(variablesEntrada) + " xxxxxxxxxa");
+   
   
 });
   }

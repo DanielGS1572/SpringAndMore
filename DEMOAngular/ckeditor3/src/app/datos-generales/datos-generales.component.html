@@ -1,7 +1,7 @@
 <h3>Datos Generales</h3>
 <div class="panel panel-default">
   <div class="panel-body">
-     
+
     <div>
       <table>
         <tr>
@@ -14,7 +14,7 @@
             <select [(ngModel)]="selectedValue" class="form-control" (change)="changed(item)">
               <option *ngFor="let item of datosDiccionario" [ngValue]=item>{{item.nombre}}</option>
             </select>
-           <!-- <ls-combobox #diccionarioDatos></ls-combobox>-->
+            <!-- <ls-combobox #diccionarioDatos></ls-combobox>-->
           </td>
           <td style="width:33%">
             <div>Canal Multiva</div>
@@ -25,29 +25,37 @@
     </div>
 
 
-    <kendo-tabstrip (tabSelect)="onTabSelect($event)">
 
-      <kendo-tabstrip-tab [title]="'SMS'" [selected]="true">
-        <ng-template kendoTabContent>
 
-          <app-opciones></app-opciones>
-          <ckeditor #ckEditorSMS [(ngModel)]="ckeditorContent" ></ckeditor>
-        </ng-template>
-      </kendo-tabstrip-tab>
-      <kendo-tabstrip-tab [title]="'MAIL'">
-        <ng-template kendoTabContent>
-          <app-opciones [displayType] = "'inline-block'"></app-opciones>
-          <ckeditor [(ngModel)]="ckeditorContent2"></ckeditor>
-        </ng-template>
-      </kendo-tabstrip-tab>
-      <kendo-tabstrip-tab  [title]="'WEB'">
-        <ng-template kendoTabContent>
-          <app-opciones></app-opciones>
 
-          <app-diccionario></app-diccionario>
-        </ng-template>
-      </kendo-tabstrip-tab>
-    </kendo-tabstrip>
+
+    <div class="page-menu-container">
+      <div class="container">
+        <div class="page-menu">
+          <ul class="nav nav-tabs">
+            <li><a data-toggle="tab" data-target="#Tab1">SMS</a></li>
+            <li><a data-toggle="tab" data-target="#Tab2">MAIL</a></li>
+            <li><a data-toggle="tab" data-target="#Tab3">WEB</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content">
+      <div id='Tab1' class="tab-pane fade in active">
+        <app-opciones></app-opciones>
+        <ckeditor #ckEditorSMS [(ngModel)]="ckeditorContent"></ckeditor>
+      </div>
+
+      <div id='Tab2' class="tab-pane fade in active">
+        <app-opciones [displayType]="'inline-block'"></app-opciones>
+        <ckeditor #ckEditorMAIL [(ngModel)]="ckeditorContent2"></ckeditor>
+      </div>
+      <div id='Tab3' class="tab-pane fade in active">
+        <app-opciones></app-opciones>
+        <ckeditor #ckEditorWEB [(ngModel)]="ckeditorContent"></ckeditor>
+      </div>
+
+
+    </div>
   </div>
 </div>
-<p>test {{info}}</p>

@@ -18,7 +18,7 @@ CKEDITOR.plugins.add('diccionario', {
 								type: 'radio',
 								id: 'country',
 								label: 'Which country is bigger',
-								items: [['France', 'France'], ['Germany', 'Germany'], ['England', 'England']],
+								items: [['xxx', 'xxx'], ['Germany', 'Germany'], ['England', 'England']],
 								style:'display: inline-block'
 							/*	onClick: function() {
 									this.valor= this.getValue();

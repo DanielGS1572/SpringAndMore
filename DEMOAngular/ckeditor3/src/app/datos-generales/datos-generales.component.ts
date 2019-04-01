@@ -13,12 +13,13 @@ import { InfoService } from '../service/infoservice.service';
 export class DatosGeneralesComponent implements OnInit {
   dataSourceDicc : string[] = [];
   info:string;
+  contador : number = 0;
   selectedValue: Diccionario;
-  datosDiccionario: Diccionario[] = [
+  datosDiccionario: Diccionario[] = []/*[
     { nombre: 'nombre1' , descripcion:'descripcion' },
     { nombre: 'nombre1' , descripcion:'descripcion' },
     { nombre: 'nombre1' , descripcion:'descripcion' }
-  ];
+  ];*/
   @Input()
   public items: Diccionario[] = [];
   @Output()
@@ -38,10 +39,9 @@ export class DatosGeneralesComponent implements OnInit {
    // });
 
     this.data.obtenerdicc().subscribe(dato => {
-     /* let nombreDiccionario : any[] = JSON.parse(JSON.stringify(dato.result));
-      nombreDiccionario.forEach(elemento => this.dataSourceDicc.push(elemento));
-      console.log(this.dataSourceDicc);
-      this.cmbDiccionario.caption = "nombre";
+    let nombreDiccionario : any[] = JSON.parse(JSON.stringify(dato.result));
+      nombreDiccionario.forEach(elemento => this.datosDiccionario.push(elemento));
+      /*   this.cmbDiccionario.caption = "nombre";
       this.cmbDiccionario.items = this.getDiccionario();
       console.log("xxxxxxxxxxxxxxxxxxx" + this.cmbDiccionario.value);
 */
@@ -66,7 +66,8 @@ export class DatosGeneralesComponent implements OnInit {
   private nombreNotificacion: string;
   ckeditorContent2: string = `TEST`;
   @ViewChild('ckEditorSMS') ckEditorSMS;
-  @ViewChild('ckEditorMAIL') ckEditorMAIL = new CKEditorComponent(this.zone);
+  @ViewChild('ckEditorMAIL') ckEditorMAIL;
+  @ViewChild('ckEditorWEB') ckEditorWEB;
 
   //@ViewChild('diccionarioDatos') cmbDiccionario: LsComboBoxComponent = new LsComboBoxComponent(this.elementref);
   @ViewChild('canalMultiva') cmbCanalMultiva: LsComboBoxComponent = new LsComboBoxComponent(this.elementref);
@@ -79,15 +80,41 @@ export class DatosGeneralesComponent implements OnInit {
   
 
   public constructor(private data: DataService, private zone: NgZone,protected elementref:ElementRef, private infoService: InfoService) {
-    this.ckEditorSMS = new CKEditorComponent(this.zone);
+   this.ckEditorSMS = new CKEditorComponent(this.zone);
+   this.ckEditorMAIL = new CKEditorComponent(this.zone);
+   this.ckEditorWEB = new CKEditorComponent(this.zone);
 
   }
-ngAfterViewInit(): void {
- 
+  ngAfterViewInit(): void {
+    
+    
+  }
   
-}
-  
+  ngAfterViewChecked(){
+    
 
+      console.log("datos generales");
+      console.log("TABBBBBBBBBBBBBBBBBBBBBBBBcontador");
+      let editor = this.ckEditorSMS.instance;
+       console.log(this.ckEditorSMS.instance , " modofaocka2");
+  
+         editor.config.height = '400';
+         editor.config.toolbarGroups = [
+          /*{ name:'document', groups: ['mode', 'document', 'doctools']},
+          { name:'clipboard', groups: ['clipboard','undo']},
+          { name:'editing', groups: ['find','selection','spellchecker','editing']},
+          { name:'paragraph', groups: ['list','indent','blocks','align','bidi','paragraph']},
+          */{ name:'insert', groups: [/*'insert',*/'diccionario','valida']}
+        ]
+        //editor.config.extraPlugins = 'timestamp'
+        editor.config.extraPlugins = 'diccionario,valida';
+        editor.config.removeButton = 'Source, Save, Templates, Find, Replace, Scayt, SelectAll, Form, Radio';
+        this.data.getData(editor.getData());
+        //this.data.getNombreTemplate(this.nombreNotificacion);
+  
+    
+
+    }
   getDiccionario(): Diccionario[] {
     return this.datosDiccionario;
   }
