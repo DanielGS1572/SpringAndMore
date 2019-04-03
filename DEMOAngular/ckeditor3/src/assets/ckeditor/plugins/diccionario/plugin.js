@@ -1,23 +1,45 @@
 CKEDITOR.plugins.add('diccionario', {
-	// Register the icons. They must match command names.
-	// The plugin initialization logic goes inside this method.
+
 	init: function (editor) {
-		console.log("xxxxxxxxxxxxaasdfasdf");
+
 		CKEDITOR.dialog.add('diccDialog', function (editor) {
-			
-			var x = document.getElementsByClassName("valoresDiccionario");
 
-			console.log(x);
-
-			var arr2 = [];
-			var i=0;
+			var x;
+			var arr2;
+			x = document.getElementsByClassName("valoresDiccionario");
+			arr2 = [];
+			var i = 0;
 			for (i = 0; i < x.length; i++) {
 				var arr = [];
 				arr.push(x[i].innerText);
 				arr2.push(arr);
 			}
-			console.log(arr2);
+			console.log(arr2, "arr2");
+
+
 			return {
+
+				onShow: function () {
+					//	setCampos();
+					console.log(this.getContentElement('tab-basic','diccionario'),"getElementContent");
+						
+					console.log(this.getContentElement('tab-basic','diccionario').items.createElement);
+					this.getContentElement('tab-basic','diccionario').items.forEach(element => {
+						element.pop();
+					});
+//					select.add(["e"]);
+					console.log(CKEDITOR.currentInstance.name);
+					if (arr2.length === 0) {
+						alert("seleccionar un diccionario");
+						CKEDITOR.dialog.getCurrent().hide();
+					}
+			
+
+
+
+				},
+
+
 				title: 'Diccionario de datos',
 				minWidth: 400,
 				minHeight: 200,
@@ -29,36 +51,35 @@ CKEDITOR.plugins.add('diccionario', {
 						elements: [
 							{
 								type: 'radio',
-								id: 'country',
+								id: 'diccionario',
 								label: 'Selecciona un valor',
 								items: arr2,
-								style: 'display: inline-block'
-								/*	onClick: function() {
-										this.valor= this.getValue();
-									}	*/
+								style: 'display: inline-block',
+
 							}
 						]
 					}],
+
+
 				onOk: function () {
 
 					var dialog = this;
 
 
 					var abbr = editor.document.createElement('abbr');
-					abbr.setAttribute('title', dialog.getValueOf('tab-basic', 'country'));
-					abbr.setText("[" + dialog.getValueOf('tab-basic', 'country') + "] ");
+					abbr.setAttribute('title', dialog.getValueOf('tab-basic', 'diccionario'));
+					abbr.setText("[" + dialog.getValueOf('tab-basic', 'diccionario') + "] ");
 
 
 					editor.insertElement(abbr);
 
 				}
+
 			};
 		});
 
-		// Define the editor command that inserts a timestamp.
 		editor.addCommand('diccionarioDatos', new CKEDITOR.dialogCommand('diccDialog'));
 
-		// Create the toolbar button that executes the above command.
 		editor.ui.addButton('Diccionario', {
 			label: 'Diccionario de datos',
 			command: 'diccionarioDatos',

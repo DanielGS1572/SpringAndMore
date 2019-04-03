@@ -1,20 +1,23 @@
-import { Component, ViewChild, AfterViewInit, OnInit, Input, ɵConsole, NgZone, OnDestroy, OnChanges, ElementRef, Output, EventEmitter } from '@angular/core';
+import { Component, Inject, ViewChild,  OnInit, Input, NgZone,  Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CKEditorComponent } from 'ng2-ckeditor';
 import { DataService } from '../service/data.service';
 import { LsComboBoxComponent } from '../ls-combobox/ls-combobox.component';
 import { InfoService } from '../service/infoservice.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+
 
 @Component({
   selector: 'app-datos-generales',
-  templateUrl: './datos-generales.component.html',
-  styleUrls: ['./datos-generales.component.css']
+  templateUrl: './datos-generales.component.html'
 })
 export class DatosGeneralesComponent implements OnInit {
-  dataSourceDicc : string[] = [];
-  info:string;
-  contador : number = 0;
+  dataSourceDicc: string[] = [];
+  info: string;
   selectedValue: Diccionario;
+  arr=[];
+  cuerpo: string ;
+
   datosDiccionario: Diccionario[] = []/*[
     { nombre: 'nombre1' , descripcion:'descripcion' },
     { nombre: 'nombre1' , descripcion:'descripcion' },
@@ -23,40 +26,49 @@ export class DatosGeneralesComponent implements OnInit {
   @Input()
   public items: Diccionario[] = [];
   @Output()
-    public event = new EventEmitter();
+  public event = new EventEmitter();
+  disabled:Boolean=false;
   ngOnInit(): void {
     
 
-   /* this.cmbDiccionario.caption = 'nombre';
-    this.getDiccionario().forEach(o => {//TODO reemplazar por un servicio
-      console.log("o ", o);
-      this.cmbDiccionario.items.push(o);
-    });
-*/
-   // this.cmbCanalMultiva.caption = 'name';
-   // this.getPersons().forEach(o => {//TODO reemplazar por un servicio
-   //   this.cmbCanalMultiva.items.push(o);
-   // });
+    /* this.cmbDiccionario.caption = 'nombre';
+     this.getDiccionario().forEach(o => {//TODO reemplazar por un servicio
+       console.log("o ", o);
+       this.cmbDiccionario.items.push(o);
+     });
+ */
+    // this.cmbCanalMultiva.caption = 'name';
+    // this.getPersons().forEach(o => {//TODO reemplazar por un servicio
+    //   this.cmbCanalMultiva.items.push(o);
+    // });
 
     this.data.obtenerdicc().subscribe(dato => {
-    let nombreDiccionario : any[] = JSON.parse(JSON.stringify(dato.result));
+      let nombreDiccionario: any[] = JSON.parse(JSON.stringify(dato.result));
       nombreDiccionario.forEach(elemento => this.datosDiccionario.push(elemento));
       /*   this.cmbDiccionario.caption = "nombre";
       this.cmbDiccionario.items = this.getDiccionario();
       console.log("xxxxxxxxxxxxxxxxxxx" + this.cmbDiccionario.value);
 */
-      
+
     });
 
 
-    
+
   }
 
-  public changed(obj : Diccionario){
-    this.infoService.cast.subscribe(info => {console.log(info); this.info = info});
-    console.log("CAMBIE",this.selectedValue.nombre);
-    console.log('select',this.selectedValue);
+  public changed(obj: Diccionario) {
+    this.infoService.cast.subscribe(info => { console.log(info); this.info = info });
+    
     this.event.emit(this.selectedValue);
+    this.disabled=true;
+  
+    const dialogRef = this.dialog.open(DialogOverview, {
+      width: '800px', height: '1000px',
+      data: {cuerpo:this.cuerpo }
+      
+
+    });
+    
 
   }
   public title = 'ckeditor';
@@ -70,61 +82,52 @@ export class DatosGeneralesComponent implements OnInit {
   @ViewChild('ckEditorWEB') ckEditorWEB;
 
   //@ViewChild('diccionarioDatos') cmbDiccionario: LsComboBoxComponent = new LsComboBoxComponent(this.elementref);
-  @ViewChild('canalMultiva') cmbCanalMultiva: LsComboBoxComponent = new LsComboBoxComponent(this.elementref);
+  @ViewChild('canalMultiva') cmbCanalMultiva: LsComboBoxComponent = new LsComboBoxComponent();
   public datosGenerales: DatosGenerales = {
     NombreNotificacion: "NombreNotificacion",
     DicionarioDatos: "DicionarioDatos",
     CanalMultiva: "CanalMultiva"
   };
 
-  
 
-  public constructor(private data: DataService, private zone: NgZone,protected elementref:ElementRef, private infoService: InfoService) {
-   this.ckEditorSMS = new CKEditorComponent(this.zone);
-   this.ckEditorMAIL = new CKEditorComponent(this.zone);
-   this.ckEditorWEB = new CKEditorComponent(this.zone);
+
+  public constructor(private data: DataService, private zone: NgZone, private infoService: InfoService,public dialog: MatDialog) {
+     this.ckEditorSMS = new CKEditorComponent(this.zone);
+    this.ckEditorMAIL = new CKEditorComponent(this.zone);
+    this.ckEditorWEB = new CKEditorComponent(this.zone);
 
   }
   ngAfterViewInit(): void {
-    
-    
+
+   
+
   }
-  
-  ngAfterViewChecked(){
-    
 
-      console.log("datos generales");
-      console.log("TABBBBBBBBBBBBBBBBBBBBBBBBcontador");
-      let editor = this.ckEditorSMS.instance;
-       console.log(this.ckEditorSMS.instance , " modofaocka2");
-  
-         editor.config.height = '400';
-         editor.config.toolbarGroups = [
-          /*{ name:'document', groups: ['mode', 'document', 'doctools']},
-          { name:'clipboard', groups: ['clipboard','undo']},
-          { name:'editing', groups: ['find','selection','spellchecker','editing']},
-          { name:'paragraph', groups: ['list','indent','blocks','align','bidi','paragraph']},
-          */{ name:'insert', groups: [/*'insert',*/'diccionario','valida']}
-        ]
-        //editor.config.extraPlugins = 'timestamp'
-        editor.config.extraPlugins = 'diccionario,valida';
-        editor.config.removeButton = 'Source, Save, Templates, Find, Replace, Scayt, SelectAll, Form, Radio';
-        this.data.getData(editor.getData());
-        //this.data.getNombreTemplate(this.nombreNotificacion);
-  
-    
+  ngAfterViewChecked() {
+   
+    let editor = this.ckEditorSMS.instance;
 
-    }
+    editor.config.height = '400';
+    editor.config.toolbarGroups = [
+          { name: 'insert', groups: ['diccionario', 'valida'] }
+    ]
+   
+    editor.config.extraPlugins = 'diccionario,valida';
+    editor.config.removeButton = 'Source, Save, Templates, Find, Replace, Scayt, SelectAll, Form, Radio';
+    this.data.getData(editor.getData());
+
+
+
+
+
+  }
   getDiccionario(): Diccionario[] {
     return this.datosDiccionario;
   }
 
-  previsualizar() {
-    alert('test');
-  }
  
 
-  
+
 }
 
 
@@ -137,7 +140,45 @@ export interface DatosGenerales {
 
 
 
-export interface Diccionario{
+export interface Diccionario {
   "nombre": string,
   "descripcion": string
+}
+
+
+@Component({
+  selector: 'confirmacion',
+  templateUrl: 'confirmacion.html'
+})
+export class DialogOverview  {
+  
+  i = 0; 
+  arr = [];
+  texto:string;
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverview>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+ngAfterContentInit(): void { 
+  var x;
+  x = document.getElementsByClassName("valoresDiccionario");
+  for (this.i = 0; this.i < x.length; this.i++) {
+   
+    this.arr.push(x[this.i].innerText);
+  }
+  this.texto = "hey";
+  console.log(this.arr,"ARRRRRRRRRRRRR",x.length);
+  
+}
+  
+    btnOk(){
+      this.dialogRef.close(false);
+    }
+    btnCancelar(){
+      this.dialogRef.close(false);
+      location.reload();
+    }
+}
+
+export interface DialogData {
+  cuerpo: string;
 }

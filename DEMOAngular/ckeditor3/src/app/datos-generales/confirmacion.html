@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div mat-dialog-content>
+        <div>Los siguientes datos se encuentran en el diccionario seleccionado
+
+        </div>
+        <ul>
+            <div *ngFor="let item of arr">
+                <li>{{item}}</li>
+            </div>
+        </ul>
+        - Si elige <b>cancelar</b> la pantalla se refresacará por completo
+        <br>- Si elige <b>aceptar</b> es el diccionario que se utilizará y el campo quedará bloqueado
+    </div>
+    <button mat-button (click)="btnCancelar()">Cancelar</button>
+    <button mat-button (click)="btnOk()">OK</button>
+
+</body>
+
+</html>

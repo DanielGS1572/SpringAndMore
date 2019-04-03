@@ -11,10 +11,9 @@
           </td>
           <td style="width:33%;padding-right: 100px">
             <div>Diccionario de datos</div>
-            <select [(ngModel)]="selectedValue" class="form-control" (change)="changed(item)">
+            <select [(ngModel)]="selectedValue" class="form-control" (change)="changed(item)" [disabled]="disabled">
               <option *ngFor="let item of datosDiccionario" [ngValue]=item>{{item.nombre}}</option>
             </select>
-            <!-- <ls-combobox #diccionarioDatos></ls-combobox>-->
           </td>
           <td style="width:33%">
             <div>Canal Multiva</div>
@@ -43,7 +42,7 @@
     <div class="tab-content">
       <div id='Tab1' class="tab-pane fade in active">
         <app-opciones></app-opciones>
-        <ckeditor #ckEditorSMS [(ngModel)]="ckeditorContent"></ckeditor>
+        <ckeditor #ckEditorSMS></ckeditor>
       </div>
 
       <div id='Tab2' class="tab-pane fade in active">

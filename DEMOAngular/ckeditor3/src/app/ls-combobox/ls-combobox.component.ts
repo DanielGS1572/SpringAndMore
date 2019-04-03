@@ -1,5 +1,5 @@
-import {Component, forwardRef, Input, ViewChild, EventEmitter, Output, ElementRef, OnInit} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import { Component, forwardRef, Input, ViewChild, EventEmitter, Output, ElementRef, OnInit } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Observable, from, fromEvent } from 'rxjs';
 import { InfoService } from '../service/infoservice.service';
 
@@ -17,8 +17,8 @@ import { InfoService } from '../service/infoservice.service';
     ],
 })
 export class LsComboBoxComponent implements ControlValueAccessor {
-    
-    
+
+
 
     @Input()
     public items: any[] = [];
@@ -31,20 +31,17 @@ export class LsComboBoxComponent implements ControlValueAccessor {
     caption: string = 'name';
     info: string;
     selectedItem: any;
-    @ViewChild('combo') combo;
-   // @Output()
-   @Output()
+    @Output()
     public event = new EventEmitter();
 
-    onChange = (_: any) => {};
-    onTouched = () => {};
-    
-    constructor(private elementref : ElementRef) {
+    onChange = (_: any) => { };
+    onTouched = () => { };
 
-}
+    constructor() {
 
- changed(){
-        console.log('select',this.selectedItem);
+    }
+
+    changed() {
         this.event.emit(this.selectedItem);
     }
 

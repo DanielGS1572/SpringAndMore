@@ -2,9 +2,16 @@ CKEDITOR.plugins.add('valida', {
 
 	init: function (editor) {
 		editor.addCommand('validaContenido', {
-			// Define the function that will be fired when the command is executed.
 			exec: function (editor) {
-				var diccionario = ["Germany", "France", "England", "sit", "amet"];
+				var x;
+			x = document.getElementsByClassName("valoresDiccionario");
+			var diccionario  = [];
+			var i = 0;
+			for (i = 0; i < x.length; i++) {
+				diccionario.push(x[i].innerText);
+			}
+			console.log(diccionario, "diccionario");
+				
 				var valoresOk = [];
 				var cadena = editor.getData();
 
