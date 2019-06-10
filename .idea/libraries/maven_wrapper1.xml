@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="maven-wrapper1">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/PizzaSystem/.mvn/wrapper/maven-wrapper.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HibernateDemo/.mvn/wrapper/maven-wrapper.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -3,27 +3,35 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Generales/Generales.iml" filepath="$PROJECT_DIR$/Generales/Generales.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaOne/JavaOne.iml" filepath="$PROJECT_DIR$/JavaOne/JavaOne.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaRecipes/JavaRecipes.iml" filepath="$PROJECT_DIR$/JavaRecipes/JavaRecipes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Katas/Katas.iml" filepath="$PROJECT_DIR$/Katas/Katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Katas/src/Katas.iml" filepath="$PROJECT_DIR$/Katas/src/Katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Katas/Katas1.iml" filepath="$PROJECT_DIR$/Katas/Katas1.iml" />
       <module fileurl="file://$PROJECT_DIR$/KatasOCP/KatasOCP.iml" filepath="$PROJECT_DIR$/KatasOCP/KatasOCP.iml" />
       <module fileurl="file://$PROJECT_DIR$/OCPCap1/OCPCap1.iml" filepath="$PROJECT_DIR$/OCPCap1/OCPCap1.iml" />
       <module fileurl="file://$PROJECT_DIR$/OCPCap2/OCPCap2.iml" filepath="$PROJECT_DIR$/OCPCap2/OCPCap2.iml" />
       <module fileurl="file://$PROJECT_DIR$/OCPCap3/OCPCap3.iml" filepath="$PROJECT_DIR$/OCPCap3/OCPCap3.iml" />
       <module fileurl="file://$PROJECT_DIR$/OCPCap4/OCPCap4.iml" filepath="$PROJECT_DIR$/OCPCap4/OCPCap4.iml" />
       <module fileurl="file://$PROJECT_DIR$/REST Service/RestJR/RestJR.iml" filepath="$PROJECT_DIR$/REST Service/RestJR/RestJR.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaSystem/src/main/main.iml" filepath="$PROJECT_DIR$/PizzaSystem/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HibernateDemo/src/main/main1.iml" filepath="$PROJECT_DIR$/HibernateDemo/src/main/main1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CourseCreation/src/main/main2.iml" filepath="$PROJECT_DIR$/CourseCreation/src/main/main2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringTelusko/src/main/main3.iml" filepath="$PROJECT_DIR$/SpringTelusko/src/main/main3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HibernateTelusko/src/main/main4.iml" filepath="$PROJECT_DIR$/HibernateTelusko/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTelusko/src/main/main.iml" filepath="$PROJECT_DIR$/SpringTelusko/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring1/e-reservation/src/main/main1.iml" filepath="$PROJECT_DIR$/Spring1/e-reservation/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HibernateDemo/src/main/main2.iml" filepath="$PROJECT_DIR$/HibernateDemo/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootManyToOne/src/main/main3.iml" filepath="$PROJECT_DIR$/SpringBootManyToOne/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CourseCreation/src/main/main4.iml" filepath="$PROJECT_DIR$/CourseCreation/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HibernateTelusko/src/main/main5.iml" filepath="$PROJECT_DIR$/HibernateTelusko/src/main/main5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootHolaMundoJSP/src/main/main6.iml" filepath="$PROJECT_DIR$/SpringBootHolaMundoJSP/src/main/main6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaSystem/src/main/main7.iml" filepath="$PROJECT_DIR$/PizzaSystem/src/main/main7.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-mvc-demo/spring-mvc-demo.iml" filepath="$PROJECT_DIR$/spring-mvc-demo/spring-mvc-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spudemy-spring-demo-annotations/spudemy-spring-demo-annotations.iml" filepath="$PROJECT_DIR$/spudemy-spring-demo-annotations/spudemy-spring-demo-annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/spudemy-spring-demo-one/spudemy-spring-demo-one.iml" filepath="$PROJECT_DIR$/spudemy-spring-demo-one/spudemy-spring-demo-one.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PizzaSystem/src/test/test.iml" filepath="$PROJECT_DIR$/PizzaSystem/src/test/test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HibernateDemo/src/test/test1.iml" filepath="$PROJECT_DIR$/HibernateDemo/src/test/test1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringTelusko/src/test/test2.iml" filepath="$PROJECT_DIR$/SpringTelusko/src/test/test2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HibernateTelusko/src/test/test3.iml" filepath="$PROJECT_DIR$/HibernateTelusko/src/test/test3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CourseCreation/src/test/test4.iml" filepath="$PROJECT_DIR$/CourseCreation/src/test/test4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HibernateTelusko/src/test/test.iml" filepath="$PROJECT_DIR$/HibernateTelusko/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring1/e-reservation/src/test/test1.iml" filepath="$PROJECT_DIR$/Spring1/e-reservation/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaSystem/src/test/test2.iml" filepath="$PROJECT_DIR$/PizzaSystem/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CourseCreation/src/test/test3.iml" filepath="$PROJECT_DIR$/CourseCreation/src/test/test3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootHolaMundoJSP/src/test/test4.iml" filepath="$PROJECT_DIR$/SpringBootHolaMundoJSP/src/test/test4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTelusko/src/test/test5.iml" filepath="$PROJECT_DIR$/SpringTelusko/src/test/test5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HibernateDemo/src/test/test6.iml" filepath="$PROJECT_DIR$/HibernateDemo/src/test/test6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootManyToOne/src/test/test7.iml" filepath="$PROJECT_DIR$/SpringBootManyToOne/src/test/test7.iml" />
     </modules>
   </component>
 </project>
